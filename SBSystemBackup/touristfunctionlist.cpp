@@ -1,12 +1,7 @@
-#include "sbsmanager.h"
 #include "touristfunctionlist.h"
 #include "ui_touristfunctionlist.h"
-#include "allsite.h"
 #include "global.h"
-#include "touristinfo.h"
-#include "orderlist.h"
 
-#include <QDebug>
 
 TouristFunctionList::TouristFunctionList(QWidget *parent) :
     QMainWindow(parent),

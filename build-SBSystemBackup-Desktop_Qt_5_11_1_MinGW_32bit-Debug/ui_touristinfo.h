@@ -13,7 +13,6 @@
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QMainWindow>
-#include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPlainTextEdit>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QStatusBar>
@@ -45,7 +44,6 @@ public:
     QLabel *tel;
     QTextEdit *changeTel;
     QPushButton *back;
-    QMenuBar *menubar;
     QStatusBar *statusbar;
 
     void setupUi(QMainWindow *touristinfo)
@@ -136,10 +134,6 @@ public:
         back->setGeometry(QRect(370, 450, 151, 51));
         back->setFont(font1);
         touristinfo->setCentralWidget(centralwidget);
-        menubar = new QMenuBar(touristinfo);
-        menubar->setObjectName(QStringLiteral("menubar"));
-        menubar->setGeometry(QRect(0, 0, 800, 26));
-        touristinfo->setMenuBar(menubar);
         statusbar = new QStatusBar(touristinfo);
         statusbar->setObjectName(QStringLiteral("statusbar"));
         touristinfo->setStatusBar(statusbar);

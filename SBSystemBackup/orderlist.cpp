@@ -1,13 +1,8 @@
-#include "sbsmanager.h"
+
 #include "orderlist.h"
 #include "ui_orderlist.h"
-#include "ordersite.h"
+#include "global.h"
 
-#include <QDateTime>
-#include <QList>
-#include <QLabel>
-#include <QPushButton>
-#include <QHBoxLayout>
 
 
 orderlist::orderlist(QWidget *parent) :

@@ -46,7 +46,6 @@ HEADERS += \
     touristfunctionlist.h \
     adminfuntionlist.h \
     allsite.h \
-    global.h \
     addsite.h \
     touristinfo.h \
     admininfo.h \
@@ -55,7 +54,8 @@ HEADERS += \
     timelim.h \
     onesite.h \
     sbsdatabase.h \
-    sbsmanager.h
+    sbsmanager.h \
+    global.h
 
 FORMS += \
         mainwindow.ui \

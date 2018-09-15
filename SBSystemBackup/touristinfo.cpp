@@ -1,10 +1,7 @@
-#include "sbsmanager.h"
 #include "touristinfo.h"
 #include "ui_touristinfo.h"
+#include "global.h"
 
-#include <QString>
-#include <QPlainTextEdit>
-#include <QTextEdit>
 
 #define TEL_LEN 11
 

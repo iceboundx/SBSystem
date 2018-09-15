@@ -12,7 +12,6 @@
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QMainWindow>
-#include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QWidget>
@@ -28,7 +27,6 @@ public:
     QPushButton *orderinfo;
     QPushButton *addsite;
     QPushButton *info;
-    QMenuBar *menubar;
     QStatusBar *statusbar;
 
     void setupUi(QMainWindow *AdminFuntionList)
@@ -62,10 +60,6 @@ public:
         info->setGeometry(QRect(320, 420, 481, 71));
         info->setFont(font);
         AdminFuntionList->setCentralWidget(centralwidget);
-        menubar = new QMenuBar(AdminFuntionList);
-        menubar->setObjectName(QStringLiteral("menubar"));
-        menubar->setGeometry(QRect(0, 0, 1148, 26));
-        AdminFuntionList->setMenuBar(menubar);
         statusbar = new QStatusBar(AdminFuntionList);
         statusbar->setObjectName(QStringLiteral("statusbar"));
         AdminFuntionList->setStatusBar(statusbar);

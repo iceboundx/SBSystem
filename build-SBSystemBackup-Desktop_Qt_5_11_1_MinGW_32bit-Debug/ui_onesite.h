@@ -14,7 +14,6 @@
 #include <QtWidgets/QGroupBox>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QMainWindow>
-#include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QWidget>
@@ -52,7 +51,6 @@ public:
     QPushButton *add;
     QPushButton *add_2;
     QLabel *profile;
-    QMenuBar *menubar;
     QStatusBar *statusbar;
 
     void setupUi(QMainWindow *onesite)
@@ -176,10 +174,6 @@ public:
         profile->setGeometry(QRect(170, 140, 581, 101));
         profile->setFont(font);
         onesite->setCentralWidget(centralwidget);
-        menubar = new QMenuBar(onesite);
-        menubar->setObjectName(QStringLiteral("menubar"));
-        menubar->setGeometry(QRect(0, 0, 945, 26));
-        onesite->setMenuBar(menubar);
         statusbar = new QStatusBar(onesite);
         statusbar->setObjectName(QStringLiteral("statusbar"));
         onesite->setStatusBar(statusbar);

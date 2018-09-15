@@ -18,7 +18,6 @@
 #include <QtWidgets/QLineEdit>
 #include <QtWidgets/QListWidget>
 #include <QtWidgets/QMainWindow>
-#include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QSpinBox>
 #include <QtWidgets/QStatusBar>
@@ -73,7 +72,6 @@ public:
     QLabel *disprompt;
     QComboBox *comboBox;
     QLabel *label_17;
-    QMenuBar *menubar;
     QStatusBar *statusbar;
 
     void setupUi(QMainWindow *addsite)
@@ -286,10 +284,6 @@ public:
         label_17->setGeometry(QRect(450, 510, 91, 21));
         label_17->setFont(font1);
         addsite->setCentralWidget(centralwidget);
-        menubar = new QMenuBar(addsite);
-        menubar->setObjectName(QStringLiteral("menubar"));
-        menubar->setGeometry(QRect(0, 0, 966, 26));
-        addsite->setMenuBar(menubar);
         statusbar = new QStatusBar(addsite);
         statusbar->setObjectName(QStringLiteral("statusbar"));
         addsite->setStatusBar(statusbar);

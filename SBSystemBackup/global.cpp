@@ -1,1 +1,1 @@
-int back;
+int now_window;

@@ -10,14 +10,11 @@
 #define UI_ALLSITE_H
 
 #include <QtCore/QVariant>
-#include <QtWidgets/QAction>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QCheckBox>
 #include <QtWidgets/QCommandLinkButton>
 #include <QtWidgets/QListWidget>
 #include <QtWidgets/QMainWindow>
-#include <QtWidgets/QMenu>
-#include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QTextEdit>
@@ -36,8 +33,6 @@ public:
     QCommandLinkButton *commandLinkButton;
     QPushButton *back;
     QListWidget *listWidget;
-    QMenuBar *menubar;
-    QMenu *menuAll_Sites;
     QStatusBar *statusbar;
 
     void setupUi(QMainWindow *allsite)
@@ -81,17 +76,9 @@ public:
         listWidget->setObjectName(QStringLiteral("listWidget"));
         listWidget->setGeometry(QRect(110, 170, 541, 331));
         allsite->setCentralWidget(centralwidget);
-        menubar = new QMenuBar(allsite);
-        menubar->setObjectName(QStringLiteral("menubar"));
-        menubar->setGeometry(QRect(0, 0, 800, 26));
-        menuAll_Sites = new QMenu(menubar);
-        menuAll_Sites->setObjectName(QStringLiteral("menuAll_Sites"));
-        allsite->setMenuBar(menubar);
         statusbar = new QStatusBar(allsite);
         statusbar->setObjectName(QStringLiteral("statusbar"));
         allsite->setStatusBar(statusbar);
-
-        menubar->addAction(menuAll_Sites->menuAction());
 
         retranslateUi(allsite);
 
@@ -106,7 +93,6 @@ public:
         pushButton->setText(QApplication::translate("allsite", "\346\220\234\347\264\242", nullptr));
         commandLinkButton->setText(QApplication::translate("allsite", "\346\220\234\347\264\242", nullptr));
         back->setText(QApplication::translate("allsite", "\350\277\224\345\233\236", nullptr));
-        menuAll_Sites->setTitle(QApplication::translate("allsite", "All Sites", nullptr));
     } // retranslateUi
 
 };

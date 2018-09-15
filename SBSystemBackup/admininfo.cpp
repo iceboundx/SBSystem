@@ -1,12 +1,6 @@
-#include "sbsmanager.h"
+#include "global.h"
 #include "admininfo.h"
 #include "ui_admininfo.h"
-
-#include <QDebug>
-#include <QRegExp>
-#include <QRegExpValidator>
-#include <QValidator>
-
 #define TEL_LEN 11
 
 struct admin change;

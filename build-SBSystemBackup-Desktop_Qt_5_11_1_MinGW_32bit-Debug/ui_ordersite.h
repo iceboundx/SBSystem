@@ -12,7 +12,6 @@
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QMainWindow>
-#include <QtWidgets/QMenuBar>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QWidget>
 
@@ -21,7 +20,6 @@ QT_BEGIN_NAMESPACE
 class Ui_ordersite
 {
 public:
-    QMenuBar *menubar;
     QWidget *centralwidget;
     QStatusBar *statusbar;
 
@@ -30,9 +28,6 @@ public:
         if (ordersite->objectName().isEmpty())
             ordersite->setObjectName(QStringLiteral("ordersite"));
         ordersite->resize(800, 600);
-        menubar = new QMenuBar(ordersite);
-        menubar->setObjectName(QStringLiteral("menubar"));
-        ordersite->setMenuBar(menubar);
         centralwidget = new QWidget(ordersite);
         centralwidget->setObjectName(QStringLiteral("centralwidget"));
         ordersite->setCentralWidget(centralwidget);

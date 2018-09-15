@@ -1,12 +1,8 @@
-#include "sbsmanager.h"
+
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
-//#include "sb.h"
-#include <QWidget>
-#include <QDebug>
-#include <QTextEdit>
-#include "touristfunctionlist.h"
-#include "adminfuntionlist.h"
+#include "global.h"
+
 
 #define MIN_LEN 6
 #define MAX_LEN 10
@@ -45,7 +41,7 @@ void MainWindow::on_touristlogin_clicked()
 
     if(1){  //登录成功
         this->hide();
-        touristfunction->show();
+        now_window=2;
     }
     else ui->warn->show();  //用户名或密码错误提示
 
@@ -61,7 +57,7 @@ void MainWindow::on_adminlogin_clicked()
 
     if(1){
         this->hide();
-        adminfunction->show();
+        now_window=3;
     }
     else ui->warn_2->show();
 

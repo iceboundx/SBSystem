@@ -1,7 +1,7 @@
-#include "sbsmanager.h"
+
 #include "timelim.h"
 #include "ui_timelim.h"
-
+#include "global.h"
 //#include <QString>
 
 timelim::timelim(QWidget *parent) :

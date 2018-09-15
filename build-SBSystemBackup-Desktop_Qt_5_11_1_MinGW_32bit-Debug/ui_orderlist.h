@@ -10,12 +10,9 @@
 #define UI_ORDERLIST_H
 
 #include <QtCore/QVariant>
-#include <QtWidgets/QAction>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QListWidget>
 #include <QtWidgets/QMainWindow>
-#include <QtWidgets/QMenu>
-#include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QWidget>
@@ -28,8 +25,6 @@ public:
     QWidget *centralwidget;
     QListWidget *list;
     QPushButton *seeall;
-    QMenuBar *menubar;
-    QMenu *menu;
     QStatusBar *statusbar;
 
     void setupUi(QMainWindow *orderlist)
@@ -50,17 +45,9 @@ public:
         font.setPointSize(10);
         seeall->setFont(font);
         orderlist->setCentralWidget(centralwidget);
-        menubar = new QMenuBar(orderlist);
-        menubar->setObjectName(QStringLiteral("menubar"));
-        menubar->setGeometry(QRect(0, 0, 800, 26));
-        menu = new QMenu(menubar);
-        menu->setObjectName(QStringLiteral("menu"));
-        orderlist->setMenuBar(menubar);
         statusbar = new QStatusBar(orderlist);
         statusbar->setObjectName(QStringLiteral("statusbar"));
         orderlist->setStatusBar(statusbar);
-
-        menubar->addAction(menu->menuAction());
 
         retranslateUi(orderlist);
 
@@ -71,7 +58,6 @@ public:
     {
         orderlist->setWindowTitle(QApplication::translate("orderlist", "MainWindow", nullptr));
         seeall->setText(QApplication::translate("orderlist", "\346\237\245\347\234\213\346\211\200\346\234\211\350\256\242\345\215\225", nullptr));
-        menu->setTitle(QApplication::translate("orderlist", "\350\256\242\345\215\225\345\210\227\350\241\250", nullptr));
     } // retranslateUi
 
 };

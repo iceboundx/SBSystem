@@ -14,7 +14,6 @@
 #include <QtWidgets/QDateTimeEdit>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QMainWindow>
-#include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QSpinBox>
 #include <QtWidgets/QStatusBar>
@@ -35,7 +34,6 @@ public:
     QPushButton *cancel;
     QDateTimeEdit *begin;
     QDateTimeEdit *end;
-    QMenuBar *menubar;
     QStatusBar *statusbar;
 
     void setupUi(QMainWindow *timelim)
@@ -99,10 +97,6 @@ public:
         end->setGeometry(QRect(130, 100, 194, 22));
         end->setFrame(false);
         timelim->setCentralWidget(centralwidget);
-        menubar = new QMenuBar(timelim);
-        menubar->setObjectName(QStringLiteral("menubar"));
-        menubar->setGeometry(QRect(0, 0, 576, 26));
-        timelim->setMenuBar(menubar);
         statusbar = new QStatusBar(timelim);
         statusbar->setObjectName(QStringLiteral("statusbar"));
         timelim->setStatusBar(statusbar);

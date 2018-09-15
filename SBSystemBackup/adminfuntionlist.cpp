@@ -1,12 +1,6 @@
-#include "sbsmanager.h"
+#include "global.h"
 #include "adminfuntionlist.h"
 #include "ui_adminfuntionlist.h"
-#include "allsite.h"
-#include "addsite.h"
-#include "admininfo.h"
-
-#include <QDebug>
-
 AdminFuntionList::AdminFuntionList(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::AdminFuntionList)

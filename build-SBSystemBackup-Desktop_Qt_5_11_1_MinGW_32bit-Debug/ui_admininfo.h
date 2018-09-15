@@ -14,7 +14,6 @@
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
 #include <QtWidgets/QMainWindow>
-#include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QTextEdit>
@@ -44,7 +43,6 @@ public:
     QPushButton *save;
     QPushButton *back;
     QLineEdit *newemail;
-    QMenuBar *menubar;
     QStatusBar *statusbar;
 
     void setupUi(QMainWindow *admininfo)
@@ -127,10 +125,6 @@ public:
         newemail->setObjectName(QStringLiteral("newemail"));
         newemail->setGeometry(QRect(550, 250, 181, 31));
         admininfo->setCentralWidget(centralwidget);
-        menubar = new QMenuBar(admininfo);
-        menubar->setObjectName(QStringLiteral("menubar"));
-        menubar->setGeometry(QRect(0, 0, 800, 26));
-        admininfo->setMenuBar(menubar);
         statusbar = new QStatusBar(admininfo);
         statusbar->setObjectName(QStringLiteral("statusbar"));
         admininfo->setStatusBar(statusbar);

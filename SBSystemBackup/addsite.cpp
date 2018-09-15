@@ -1,15 +1,6 @@
-#include "sbsmanager.h"
+#include "global.h"
 #include "addsite.h"
 #include "ui_addsite.h"
-#include "timelim.h"
-#include "ui_timelimit.h"
-
-#include <QString>
-#include <QList>
-#include <QDateTime>
-#include <QListWidget>
-#include <QListWidgetItem>
-
 #define MAX_LEN 200
 #define ID_LEN 6
 

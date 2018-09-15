@@ -1,14 +1,7 @@
-#include "sbsmanager.h"
-#include <QDebug>
-#include<QLabel>
-#include "main.cpp"
 #include "allsite.h"
 #include "ui_allsite.h"
 #include "global.h"
 
-#include <QList>
-#include <QHBoxLayout>
-#include <QListWidgetItem>
 
 
 allsite::allsite(QWidget *parent) :
@@ -47,7 +40,7 @@ void allsite::on_discount_stateChanged(int arg1)//勾选折扣
 void allsite::on_back_clicked()
 {
     qDebug()<<"back";
-    back = 1;
+    //back = 1;
 }
 
 void allsite:: create_item(){

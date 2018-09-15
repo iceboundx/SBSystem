@@ -12,7 +12,6 @@
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QMainWindow>
-#include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QWidget>
@@ -26,7 +25,6 @@ public:
     QPushButton *allsite;
     QPushButton *info;
     QPushButton *order;
-    QMenuBar *menubar;
     QStatusBar *statusbar;
 
     void setupUi(QMainWindow *TouristFunctionList)
@@ -52,10 +50,6 @@ public:
         order->setGeometry(QRect(330, 230, 391, 71));
         order->setFont(font);
         TouristFunctionList->setCentralWidget(centralwidget);
-        menubar = new QMenuBar(TouristFunctionList);
-        menubar->setObjectName(QStringLiteral("menubar"));
-        menubar->setGeometry(QRect(0, 0, 1069, 26));
-        TouristFunctionList->setMenuBar(menubar);
         statusbar = new QStatusBar(TouristFunctionList);
         statusbar->setObjectName(QStringLiteral("statusbar"));
         TouristFunctionList->setStatusBar(statusbar);

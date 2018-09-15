@@ -14,12 +14,10 @@
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
 #include <QtWidgets/QMainWindow>
-#include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QTabWidget>
 #include <QtWidgets/QTextEdit>
-#include <QtWidgets/QToolBar>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -49,8 +47,6 @@ public:
     QLabel *warn_2;
     QLineEdit *apasswd;
     QLabel *aprompt;
-    QMenuBar *menuBar;
-    QToolBar *mainToolBar;
     QStatusBar *statusBar;
 
     void setupUi(QMainWindow *MainWindow)
@@ -210,20 +206,13 @@ public:
         aprompt->setGeometry(QRect(690, 130, 171, 20));
         tabWidget->addTab(admin, QString());
         MainWindow->setCentralWidget(centralWidget);
-        menuBar = new QMenuBar(MainWindow);
-        menuBar->setObjectName(QStringLiteral("menuBar"));
-        menuBar->setGeometry(QRect(0, 0, 902, 26));
-        MainWindow->setMenuBar(menuBar);
-        mainToolBar = new QToolBar(MainWindow);
-        mainToolBar->setObjectName(QStringLiteral("mainToolBar"));
-        MainWindow->addToolBar(Qt::TopToolBarArea, mainToolBar);
         statusBar = new QStatusBar(MainWindow);
         statusBar->setObjectName(QStringLiteral("statusBar"));
         MainWindow->setStatusBar(statusBar);
 
         retranslateUi(MainWindow);
 
-        tabWidget->setCurrentIndex(1);
+        tabWidget->setCurrentIndex(0);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -234,14 +223,14 @@ public:
         MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", nullptr));
         label_5->setText(QApplication::translate("MainWindow", "username", nullptr));
         label_6->setText(QApplication::translate("MainWindow", "password", nullptr));
-        cancel_3->setText(QApplication::translate("MainWindow", "Cancel", nullptr));
-        touristlogin->setText(QApplication::translate("MainWindow", "Login", nullptr));
+        cancel_3->setText(QApplication::translate("MainWindow", "\346\263\250\345\206\214", nullptr));
+        touristlogin->setText(QApplication::translate("MainWindow", "\347\231\273\351\231\206", nullptr));
         label_3->setText(QApplication::translate("MainWindow", "Login as Tourist", nullptr));
         warn->setText(QApplication::translate("MainWindow", "\347\224\250\346\210\267\345\220\215\346\210\226\345\257\206\347\240\201\351\224\231\350\257\257\357\274\214\350\257\267\345\206\215\350\257\225\344\270\200\346\254\241", nullptr));
         tprompt->setText(QApplication::translate("MainWindow", "\347\224\250\346\210\267\345\220\215\351\225\277\345\272\246\344\270\2726-10", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(tourist), QApplication::translate("MainWindow", "Tourist", nullptr));
-        cancel_2->setText(QApplication::translate("MainWindow", "Cancel", nullptr));
-        adminlogin->setText(QApplication::translate("MainWindow", "Login", nullptr));
+        cancel_2->setText(QApplication::translate("MainWindow", " \346\263\250\345\206\214", nullptr));
+        adminlogin->setText(QApplication::translate("MainWindow", "\347\231\273\351\231\206", nullptr));
         label->setText(QApplication::translate("MainWindow", "username", nullptr));
         label_2->setText(QApplication::translate("MainWindow", "password", nullptr));
         label_4->setText(QApplication::translate("MainWindow", "Login as Administrator", nullptr));

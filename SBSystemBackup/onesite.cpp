@@ -1,9 +1,7 @@
-#include "sbsmanager.h"
+
 #include "onesite.h"
 #include "ui_onesite.h"
-
-#include <QString>
-#include <QDateTime>
+#include "global.h"
 
 struct site thissite;
 
