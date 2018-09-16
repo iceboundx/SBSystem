@@ -1,3 +1,4 @@
+//管理员个人信息
 #include "global.h"
 #include "admininfo.h"
 #include "ui_admininfo.h"
@@ -29,13 +30,14 @@ void admininfo::on_editpasswd_clicked()
     change.password = ui->newpasswd->toPlainText();
 }
 
+//控制电话输入长度
 void admininfo::on_edittel_clicked()
-{
-    //控制电话输入长度
+{    
     ui->newtel->show();
     QString textContent;
     int length;
     textContent = ui->newtel->toPlainText();
+
     if(length==TEL_LEN) ui->prompttel->hide();
     else if(length>TEL_LEN){
         int position;
@@ -60,6 +62,7 @@ void admininfo::on_editemail_clicked()
 
 }
 
+//点击保存修改
 void admininfo::on_save_clicked()
 {
     int telValid, mailValid;

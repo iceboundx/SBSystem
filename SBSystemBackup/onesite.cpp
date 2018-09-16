@@ -1,4 +1,4 @@
-
+//用户查看单个景点信息
 #include "onesite.h"
 #include "ui_onesite.h"
 #include "global.h"

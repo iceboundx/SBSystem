@@ -1,3 +1,4 @@
+//用户功能列表
 #include "touristfunctionlist.h"
 #include "ui_touristfunctionlist.h"
 #include "global.h"
@@ -21,7 +22,8 @@ TouristFunctionList::~TouristFunctionList()
     delete Orderlist;
 }
 
-void TouristFunctionList::on_allsite_clicked()//点击“所有景点”查看和搜索景点
+//点击“所有景点”
+void TouristFunctionList::on_allsite_clicked()
 {
     qDebug()<<"viewallsite";
     this->hide();
@@ -30,6 +32,7 @@ void TouristFunctionList::on_allsite_clicked()//点击“所有景点”查看�
 
 }
 
+//点击个人信息
 void TouristFunctionList::on_info_clicked()
 {
     qDebug()<<"viewinfo";
@@ -37,6 +40,7 @@ void TouristFunctionList::on_info_clicked()
     Touristinfo->show();
 }
 
+//点击历史订单
 void TouristFunctionList::on_order_clicked()
 {
     Orderlist->show();

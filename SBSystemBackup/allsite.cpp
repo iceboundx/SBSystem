@@ -1,3 +1,4 @@
+//用户所有景点列表
 #include "allsite.h"
 #include "ui_allsite.h"
 #include "global.h"
@@ -18,8 +19,8 @@ allsite::~allsite()
     delete ui;
 }
 
-
-void allsite::on_ticket_stateChanged(int arg1)//勾选有票
+//勾选有票
+void allsite::on_ticket_stateChanged(int arg1)
 {
     if(ui->ticket->isChecked()==true) {
         qDebug()<<"ticket"<<" "<<"down";
@@ -27,8 +28,8 @@ void allsite::on_ticket_stateChanged(int arg1)//勾选有票
     else qDebug()<<"up";
 }
 
-
-void allsite::on_discount_stateChanged(int arg1)//勾选折扣
+//勾选折扣
+void allsite::on_discount_stateChanged(int arg1)
 {
     qDebug()<<"discount";
     if(ui->discount->isChecked()==true) {
@@ -37,12 +38,14 @@ void allsite::on_discount_stateChanged(int arg1)//勾选折扣
     else qDebug()<<"up";
 }
 
+//点击返回
 void allsite::on_back_clicked()
 {
     qDebug()<<"back";
     //back = 1;
 }
 
+//每个景点
 void allsite:: create_item(){
     struct site sites;
 

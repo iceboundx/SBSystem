@@ -1,4 +1,4 @@
-
+//特殊时段门票量编辑窗口
 #include "timelim.h"
 #include "ui_timelim.h"
 #include "global.h"
@@ -14,14 +14,14 @@ timelim::timelim(QWidget *parent) :
 timelim::~timelim()
 {
     delete ui;
-}
 
-void timelim::on_addtimelim_clicked()//保存特殊时段门票
+}
+//保存特殊时段门票
+void timelim::on_addtimelim_clicked()
 {
     struct t_lim limit;
     limit.begin = ui->begin->dateTime();
     limit.end = ui->end->dateTime();
-//    QString ticketnum;
     limit.lim = ui->ticketnum->value();
-//    limit.lim = QString::toInt(ticketnum);
+
 }

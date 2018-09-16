@@ -1,4 +1,4 @@
-
+//登录界面
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "global.h"
@@ -31,6 +31,7 @@ MainWindow::~MainWindow()
     delete adminfunction;
 }
 
+//游客团登录
 void MainWindow::on_touristlogin_clicked()
 {
     struct tourist tou;
@@ -48,6 +49,7 @@ void MainWindow::on_touristlogin_clicked()
     qDebug()<<"login";
 }
 
+//管理员登录
 void MainWindow::on_adminlogin_clicked()
 {
     struct admin ad;
@@ -74,14 +76,13 @@ void MainWindow::on_cancel_3_clicked()
     exit(0);
 }
 
-
-void MainWindow::on_tusername_textChanged()//检测id长度
+//控制ID输入长度
+void MainWindow::on_tusername_textChanged()
 {
     QString textContent;
     textContent = ui->tusername->toPlainText();
     int length = textContent.count();
 
-    //控制username输入长度
     if(length>MAX_LEN){
         ui->tprompt->show();
 
@@ -97,14 +98,13 @@ void MainWindow::on_tusername_textChanged()//检测id长度
 }
 
 
-
-void MainWindow::on_ausername_textChanged()//检测id长度
+//控制ID输入长度
+void MainWindow::on_ausername_textChanged()
 {
     QString textContent;
     textContent = ui->ausername->toPlainText();
     int length = textContent.count();
 
-    //控制username输入长度
     if(length>MAX_LEN){
         ui->aprompt->show();
         int position;

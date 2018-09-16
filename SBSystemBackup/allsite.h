@@ -26,8 +26,6 @@ private slots:
 
     void on_back_clicked();
 
-    void on_pushButton_clicked();
-
 private:
     Ui::allsite *ui;
 

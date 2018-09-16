@@ -19,7 +19,6 @@ public:
 
 private slots:
 
-    void on_seeall_clicked();
 
 private:
     Ui::orderlist *ui;

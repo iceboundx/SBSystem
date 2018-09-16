@@ -23,7 +23,7 @@
       <x>0</x>
       <y>10</y>
       <width>891</width>
-      <height>511</height>
+      <height>571</height>
      </rect>
     </property>
     <property name="palette">
@@ -447,7 +447,7 @@
      </font>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>1</number>
     </property>
     <widget class="QWidget" name="tourist">
      <attribute name="title">
@@ -510,6 +510,7 @@
       </property>
       <property name="font">
        <font>
+        <family>微软雅黑</family>
         <pointsize>13</pointsize>
        </font>
       </property>
@@ -528,6 +529,7 @@
       </property>
       <property name="font">
        <font>
+        <family>微软雅黑</family>
         <pointsize>14</pointsize>
        </font>
       </property>
@@ -614,6 +616,7 @@
       </property>
       <property name="font">
        <font>
+        <family>微软雅黑</family>
         <pointsize>13</pointsize>
        </font>
       </property>
@@ -642,6 +645,7 @@
       </property>
       <property name="font">
        <font>
+        <family>微软雅黑</family>
         <pointsize>14</pointsize>
        </font>
       </property>

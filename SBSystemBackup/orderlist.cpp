@@ -1,4 +1,4 @@
-
+//用户订单列表
 #include "orderlist.h"
 #include "ui_orderlist.h"
 #include "global.h"
@@ -10,6 +10,8 @@ orderlist::orderlist(QWidget *parent) :
     ui(new Ui::orderlist)
 {
     ui->setupUi(this);
+
+    create_item();
 }
 
 orderlist::~orderlist()
@@ -17,7 +19,7 @@ orderlist::~orderlist()
     delete ui;
 }
 
-
+//单个订单
 void orderlist::create_item()
 {
     struct order orders;
@@ -40,9 +42,3 @@ void orderlist::create_item()
 }
 
 
-
-
-void orderlist::on_seeall_clicked()
-{
-    create_item();
-}

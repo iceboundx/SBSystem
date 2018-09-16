@@ -1,3 +1,4 @@
+//管理员添加景点功能
 #include "global.h"
 #include "addsite.h"
 #include "ui_addsite.h"
@@ -35,8 +36,8 @@ void addsite::on_timelimit_clicked()
 
 
 
-
-void addsite::on_save_clicked()//保存草稿
+//保存草稿
+void addsite::on_save_clicked()
 {
 
     save.is_pub = 0;
@@ -62,22 +63,26 @@ void addsite::on_save_clicked()//保存草稿
 
 }
 
-void addsite::on_listWidget_itemClicked(QListWidgetItem *item)//添加特殊票价
+//添加特殊票价
+void addsite::on_listWidget_itemClicked(QListWidgetItem *item)
 {
     ui->newid->show();
     ui->newlabel->show();
     ui->newprice->show();    
 }
 
-void addsite::on_saveprice_clicked()//保存特殊票价
+//保存特殊票价
+void addsite::on_saveprice_clicked()
 {    
     QString newid, newprice;
     //判断输入的折扣格式为 0.xx
     QString textContent;
     int judge = 1;
     textContent = ui->newprice->text();
-    if(textContent[0] != 0) judge = 0;
-    else if(textContent[1] != ".") judge = 0;
+    if(textContent[0] != 0)
+        judge = 0;
+    else if(textContent[1] != ".")
+        judge = 0;
     else {
         for(int i=2; i<=newprice.size(); i++){
             if(!textContent[i].isDigit()) {
@@ -101,7 +106,8 @@ void addsite::on_saveprice_clicked()//保存特殊票价
     ui->newprice->clear();        
 }
 
-void addsite::on_id_textChanged()//景点id检查
+//景点id检查
+void addsite::on_id_textChanged()
 {
     QString textContent;
     textContent = ui->id->toPlainText();
@@ -134,7 +140,7 @@ void addsite::on_id_textChanged()//景点id检查
     qDebug()<<is_num;
 }
 
-
+//选择适合人群
 void addsite::on_comboBox_activated(int index)
 {
     save.age_type = 0;
@@ -158,14 +164,13 @@ void addsite::on_comboBox_activated(int index)
     qDebug()<<save.age_type;
 }
 
-
+//控制profile输入长度
 void addsite::on_profile_textChanged()
 {
     QString textContent;
     textContent = ui->profile->toPlainText();
     int length = textContent.count();
 
-    //控制profile输入长度
     if(length>MAX_LEN){
         int position;
         position = ui->profile->textCursor().position();
@@ -177,8 +182,8 @@ void addsite::on_profile_textChanged()
     }
 }
 
-
-void addsite::on_publish_clicked()//发布景点
+//发布景点
+void addsite::on_publish_clicked()
 {
     save.is_pub = 1;
 }

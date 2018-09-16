@@ -1,7 +1,9 @@
+//用户个人信息
 #include "touristinfo.h"
 #include "ui_touristinfo.h"
 #include "global.h"
 
+#include <QString>
 
 #define TEL_LEN 11
 
@@ -37,14 +39,13 @@ touristinfo::~touristinfo()
 void touristinfo::on_changePasswd_2_clicked()
 {
     ui->changePasswd->show();
-    tchange.password = ui->changePasswd->toPlainText();
 }
 
+//控制电话输入长度
 void touristinfo::on_changeTel_2_clicked()
 {
     ui->changeTel->show();
 
-    //控制电话输入长度
     QString textContent;
     textContent = ui->changeTel->toPlainText();
     if(length==TEL_LEN) ui->promptTel->hide();
@@ -59,6 +60,7 @@ void touristinfo::on_changeTel_2_clicked()
     }
 }
 
+//点击保存
 void touristinfo::on_save_clicked()
 {
     //检查电话规范
@@ -82,4 +84,12 @@ void touristinfo::on_save_clicked()
     }
 
     //成功更新信息
+    tchange.password = ui->changePasswd->toPlainText();
+    tchange.phone = ui->changeTel->toPlainText();
+    //其他信息不变
+    tchange.id = ui->id->text();
+ //   tchange.age_low = QString::toInt(ui->agelow->text());
+ //   tchange.num = QString::toInt(ui->num->text());
+  //  tchange.age_max = QString::toInt(ui->agehigh->text());
+
 }
