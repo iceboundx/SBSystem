@@ -22,13 +22,18 @@ touristinfo::touristinfo(QWidget *parent) :
     ui->promptTel->hide();
 
     //显示个人信息
-    ui->id->text() = tchange.id;
-    ui->passwd->text() = tchange.password;
-    ui->tel->text() = tchange.phone;
-    ui->agehigh->text() = tchange.age_max;
-    ui->agelow->text() = tchange.age_low;
-    ui->num->text() = tchange.num;
 
+}
+
+void touristinfo::send_info(tourist usr)
+{
+    user=usr;
+    ui->id->setText(user.id);
+    ui->passwd->setText("*******");
+    ui->tel->setText(user.phone);
+    ui->agehigh->setNum(user.age_max);
+    ui->agelow->setNum(user.age_low);
+    ui->num->setNum(user.num);
 }
 
 touristinfo::~touristinfo()

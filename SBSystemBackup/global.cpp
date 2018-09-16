@@ -1,1 +1,2 @@
-int now_window;
+#include "global.h"
+SBSmanager *man;

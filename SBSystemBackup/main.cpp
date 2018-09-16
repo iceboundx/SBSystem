@@ -8,7 +8,7 @@
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
- //   man=new SBSmanager("db_name.db");
+    man=new SBSmanager("new914_1.db");
     MainWindow w;
     w.show();
     qDebug()<<"test";

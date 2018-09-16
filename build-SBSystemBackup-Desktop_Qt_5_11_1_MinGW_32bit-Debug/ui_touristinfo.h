@@ -156,7 +156,7 @@ public:
         changeTel_2->setText(QApplication::translate("touristinfo", "\344\277\256\346\224\271", nullptr));
         promptTel->setText(QApplication::translate("touristinfo", "\347\224\265\350\257\235\345\217\267\347\240\201\345\277\205\351\241\273\344\270\27211\344\275\215\346\225\260\345\255\227\357\274\201", nullptr));
         id->setText(QApplication::translate("touristinfo", "0", nullptr));
-        passwd->setText(QApplication::translate("touristinfo", "0", nullptr));
+        passwd->setText(QApplication::translate("touristinfo", "******", nullptr));
         num->setText(QApplication::translate("touristinfo", "0", nullptr));
         agelow->setText(QApplication::translate("touristinfo", "0", nullptr));
         id_5->setText(QApplication::translate("touristinfo", "-", nullptr));

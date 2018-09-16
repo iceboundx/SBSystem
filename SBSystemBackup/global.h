@@ -18,6 +18,6 @@
 #include <QPushButton>
 #include <QPlainTextEdit>
 #include "sbsmanager.h"
-//SBSmanager *man;
+extern SBSmanager *man;
 //int back;
-extern int now_window;
+//extern int now_window;

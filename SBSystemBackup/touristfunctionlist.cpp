@@ -9,24 +9,27 @@ TouristFunctionList::TouristFunctionList(QWidget *parent) :
     ui(new Ui::TouristFunctionList)    
 {
     ui->setupUi(this);
-    Allsite = new allsite;
-    Touristinfo = new touristinfo;
-    Orderlist = new orderlist;
+    Allsite = new allsite(this);
+    Touristinfo = new touristinfo(this);
+    Orderlist = new orderlist(this);
+   // connect(Allsite,SIGNAL(hide_now()),this,SLOT(reshow()));
+   // connect(Touristinfo,SIGNAL(hide_now()),this,SLOT(reshow()));
+   // connect(Orderlist,SIGNAL(hide_now()),this,SLOT(reshow()));
 }
 
 TouristFunctionList::~TouristFunctionList()
 {
     delete ui;
-    delete Allsite;
-    delete Touristinfo;
-    delete Orderlist;
+   // delete Allsite;
+   // delete Touristinfo;
+   // delete Orderlist;
 }
 
 //点击“所有景点”
 void TouristFunctionList::on_allsite_clicked()
 {
     qDebug()<<"viewallsite";
-    this->hide();
+    //this->hide();
     Allsite->show();
 
 
@@ -36,7 +39,8 @@ void TouristFunctionList::on_allsite_clicked()
 void TouristFunctionList::on_info_clicked()
 {
     qDebug()<<"viewinfo";
-    this->hide();
+   // this->hide();
+    Touristinfo->send_info(man->get_tourist());
     Touristinfo->show();
 }
 
@@ -44,4 +48,9 @@ void TouristFunctionList::on_info_clicked()
 void TouristFunctionList::on_order_clicked()
 {
     Orderlist->show();
+}
+
+void TouristFunctionList::reshow()
+{
+    this->show();
 }

@@ -2,7 +2,7 @@
 #define ORDERLIST_H
 
 #include <QMainWindow>
-
+#include "global.h"
 namespace Ui {
 class orderlist;
 }
@@ -19,7 +19,8 @@ public:
 
 private slots:
 
-
+signals:
+    void hide_now();
 private:
     Ui::orderlist *ui;
 };

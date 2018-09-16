@@ -22,7 +22,7 @@ QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_admininfo_t {
     QByteArrayData data[7];
-    char stringdata0[111];
+    char stringdata0[98];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -32,17 +32,17 @@ struct qt_meta_stringdata_admininfo_t {
 static const qt_meta_stringdata_admininfo_t qt_meta_stringdata_admininfo = {
     {
 QT_MOC_LITERAL(0, 0, 9), // "admininfo"
-QT_MOC_LITERAL(1, 10, 21), // "on_editpasswd_clicked"
-QT_MOC_LITERAL(2, 32, 0), // ""
-QT_MOC_LITERAL(3, 33, 18), // "on_edittel_clicked"
-QT_MOC_LITERAL(4, 52, 20), // "on_editemail_clicked"
-QT_MOC_LITERAL(5, 73, 21), // "on_pushButton_clicked"
-QT_MOC_LITERAL(6, 95, 15) // "on_save_clicked"
+QT_MOC_LITERAL(1, 10, 8), // "hide_now"
+QT_MOC_LITERAL(2, 19, 0), // ""
+QT_MOC_LITERAL(3, 20, 21), // "on_editpasswd_clicked"
+QT_MOC_LITERAL(4, 42, 18), // "on_edittel_clicked"
+QT_MOC_LITERAL(5, 61, 20), // "on_editemail_clicked"
+QT_MOC_LITERAL(6, 82, 15) // "on_save_clicked"
 
     },
-    "admininfo\0on_editpasswd_clicked\0\0"
+    "admininfo\0hide_now\0\0on_editpasswd_clicked\0"
     "on_edittel_clicked\0on_editemail_clicked\0"
-    "on_pushButton_clicked\0on_save_clicked"
+    "on_save_clicked"
 };
 #undef QT_MOC_LITERAL
 
@@ -57,17 +57,21 @@ static const uint qt_meta_data_admininfo[] = {
        0,    0, // enums/sets
        0,    0, // constructors
        0,       // flags
-       0,       // signalCount
+       1,       // signalCount
+
+ // signals: name, argc, parameters, tag, flags
+       1,    0,   39,    2, 0x06 /* Public */,
 
  // slots: name, argc, parameters, tag, flags
-       1,    0,   39,    2, 0x08 /* Private */,
        3,    0,   40,    2, 0x08 /* Private */,
        4,    0,   41,    2, 0x08 /* Private */,
        5,    0,   42,    2, 0x08 /* Private */,
        6,    0,   43,    2, 0x08 /* Private */,
 
- // slots: parameters
+ // signals: parameters
     QMetaType::Void,
+
+ // slots: parameters
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
@@ -82,11 +86,21 @@ void admininfo::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, v
         admininfo *_t = static_cast<admininfo *>(_o);
         Q_UNUSED(_t)
         switch (_id) {
-        case 0: _t->on_editpasswd_clicked(); break;
-        case 1: _t->on_edittel_clicked(); break;
-        case 2: _t->on_editemail_clicked(); break;
+        case 0: _t->hide_now(); break;
+        case 1: _t->on_editpasswd_clicked(); break;
+        case 2: _t->on_edittel_clicked(); break;
+        case 3: _t->on_editemail_clicked(); break;
         case 4: _t->on_save_clicked(); break;
         default: ;
+        }
+    } else if (_c == QMetaObject::IndexOfMethod) {
+        int *result = reinterpret_cast<int *>(_a[0]);
+        {
+            using _t = void (admininfo::*)();
+            if (*reinterpret_cast<_t *>(_a[1]) == static_cast<_t>(&admininfo::hide_now)) {
+                *result = 0;
+                return;
+            }
         }
     }
     Q_UNUSED(_a);
@@ -126,6 +140,12 @@ int admininfo::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         _id -= 5;
     }
     return _id;
+}
+
+// SIGNAL 0
+void admininfo::hide_now()
+{
+    QMetaObject::activate(this, &staticMetaObject, 0, nullptr);
 }
 QT_WARNING_POP
 QT_END_MOC_NAMESPACE

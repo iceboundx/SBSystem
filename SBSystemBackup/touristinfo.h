@@ -2,6 +2,7 @@
 #define TOURISTINFO_H
 
 #include <QMainWindow>
+#include "global.h"
 
 namespace Ui {
 class touristinfo;
@@ -13,6 +14,7 @@ class touristinfo : public QMainWindow
 
 public:
     explicit touristinfo(QWidget *parent = 0);
+    void send_info(tourist usr);
     ~touristinfo();
 
 private slots:
@@ -21,9 +23,11 @@ private slots:
     void on_changeTel_2_clicked();
 
     void on_save_clicked();
-
+signals:
+    void hide_now();
 private:
     Ui::touristinfo *ui;
+    tourist user;
 };
 
 #endif // TOURISTINFO_H

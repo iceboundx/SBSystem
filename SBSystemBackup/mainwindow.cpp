@@ -2,7 +2,8 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "global.h"
-
+#include "touristfunctionlist.h"
+#include "adminfuntionlist.h"
 
 #define MIN_LEN 6
 #define MAX_LEN 10
@@ -13,8 +14,8 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    touristfunction = new TouristFunctionList;
-    adminfunction = new AdminFuntionList;
+    touristfunction = new TouristFunctionList();
+    adminfunction = new AdminFuntionList();
 
     ui->warn->hide();
     ui->warn_2->hide();
@@ -40,9 +41,9 @@ void MainWindow::on_touristlogin_clicked()
     tou.password = ui->tpasswd->text();
     qDebug()<<tou.id<<" "<<tou.password;
 
-    if(1){  //登录成功
+    if(man->login(tou.id,tou.password,0)){  //登录成功
         this->hide();
-        now_window=2;
+        touristfunction->show();
     }
     else ui->warn->show();  //用户名或密码错误提示
 
@@ -57,9 +58,10 @@ void MainWindow::on_adminlogin_clicked()
     ad.password = ui->apasswd->text();
     qDebug()<<ad.id<<" "<<ad.password;
 
-    if(1){
+    if(man->login(ad.id,ad.password,1)){
         this->hide();
-        now_window=3;
+        //now_window=3;
+        adminfunction->show();
     }
     else ui->warn_2->show();
 

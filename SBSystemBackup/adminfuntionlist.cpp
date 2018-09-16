@@ -7,19 +7,19 @@ AdminFuntionList::AdminFuntionList(QWidget *parent) :
     ui(new Ui::AdminFuntionList)
 {
     ui->setupUi(this);
-    Allsite = new allsite;
-    Addsite = new addsite;
-    Admininfo = new admininfo;
-
-
+   // Allsite = new allsite(this);
+    Addsite = new addsite(this);
+    Admininfo = new admininfo(this);
+  //  connect(Allsite,SIGNAL(hide_now()),this,SLOT(reshow()));
+   // connect(Admininfo,SIGNAL(hide_now()),this,SLOT(reshow()));
 }
 
 AdminFuntionList::~AdminFuntionList()
 {
     delete ui;
-    delete Allsite;
-    delete Addsite;
-    delete Admininfo;
+   // delete Allsite;
+   // delete Addsite;
+   // delete Admininfo;
 }
 
 
@@ -27,14 +27,15 @@ AdminFuntionList::~AdminFuntionList()
 void AdminFuntionList::on_allsite_clicked()
 {
     qDebug()<<"viewallsite";
-//    this->hide();
-    Allsite->show();
+    //this->hide();
+   // Allsite->show();
 }
 
 //点击添加景点
 void AdminFuntionList::on_addsite_clicked()
 {
     qDebug()<<"addsite";
+    //this->hide();
     Addsite->show();
 }
 
@@ -42,5 +43,17 @@ void AdminFuntionList::on_addsite_clicked()
 void AdminFuntionList::on_info_clicked()
 {
     qDebug()<<"info";
+    Admininfo->send_info(man->get_admin());
+   // this->hide();
     Admininfo->show();
+}
+
+void AdminFuntionList::reshow()
+{
+    this->show();
+}
+
+void AdminFuntionList::on_vieworder_clicked()
+{
+
 }

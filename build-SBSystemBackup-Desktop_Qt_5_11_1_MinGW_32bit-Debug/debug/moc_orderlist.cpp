@@ -22,7 +22,7 @@ QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_orderlist_t {
     QByteArrayData data[3];
-    char stringdata0[29];
+    char stringdata0[20];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -32,11 +32,11 @@ struct qt_meta_stringdata_orderlist_t {
 static const qt_meta_stringdata_orderlist_t qt_meta_stringdata_orderlist = {
     {
 QT_MOC_LITERAL(0, 0, 9), // "orderlist"
-QT_MOC_LITERAL(1, 10, 17), // "on_seeall_clicked"
-QT_MOC_LITERAL(2, 28, 0) // ""
+QT_MOC_LITERAL(1, 10, 8), // "hide_now"
+QT_MOC_LITERAL(2, 19, 0) // ""
 
     },
-    "orderlist\0on_seeall_clicked\0"
+    "orderlist\0hide_now\0"
 };
 #undef QT_MOC_LITERAL
 
@@ -51,12 +51,12 @@ static const uint qt_meta_data_orderlist[] = {
        0,    0, // enums/sets
        0,    0, // constructors
        0,       // flags
-       0,       // signalCount
+       1,       // signalCount
 
- // slots: name, argc, parameters, tag, flags
-       1,    0,   19,    2, 0x08 /* Private */,
+ // signals: name, argc, parameters, tag, flags
+       1,    0,   19,    2, 0x06 /* Public */,
 
- // slots: parameters
+ // signals: parameters
     QMetaType::Void,
 
        0        // eod
@@ -68,8 +68,17 @@ void orderlist::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, v
         orderlist *_t = static_cast<orderlist *>(_o);
         Q_UNUSED(_t)
         switch (_id) {
-        case 0: _t->on_seeall_clicked(); break;
+        case 0: _t->hide_now(); break;
         default: ;
+        }
+    } else if (_c == QMetaObject::IndexOfMethod) {
+        int *result = reinterpret_cast<int *>(_a[0]);
+        {
+            using _t = void (orderlist::*)();
+            if (*reinterpret_cast<_t *>(_a[1]) == static_cast<_t>(&orderlist::hide_now)) {
+                *result = 0;
+                return;
+            }
         }
     }
     Q_UNUSED(_a);
@@ -109,6 +118,12 @@ int orderlist::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         _id -= 1;
     }
     return _id;
+}
+
+// SIGNAL 0
+void orderlist::hide_now()
+{
+    QMetaObject::activate(this, &staticMetaObject, 0, nullptr);
 }
 QT_WARNING_POP
 QT_END_MOC_NAMESPACE

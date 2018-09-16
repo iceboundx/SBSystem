@@ -17,7 +17,8 @@ public:
 
 private slots:
     void on_addtimelim_clicked();
-
+signals:
+    void hide_now();
 private:
     Ui::timelim *ui;
 };

@@ -24,6 +24,8 @@ private slots:
     void on_addsite_clicked();
 
     void on_info_clicked();
+    void reshow();
+    void on_vieworder_clicked();
 
 private:
     Ui::AdminFuntionList *ui;

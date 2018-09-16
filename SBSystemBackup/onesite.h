@@ -19,7 +19,8 @@ public:
 
 public slots:
 
-
+signals:
+    void hide_now();
 private:
     Ui::onesite *ui;
 };

@@ -25,6 +25,7 @@ private slots:
     void on_info_clicked();
 
     void on_order_clicked();
+    void reshow();
 
 private:
     Ui::TouristFunctionList *ui;

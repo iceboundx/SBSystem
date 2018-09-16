@@ -24,6 +24,15 @@ admininfo::~admininfo()
     delete ui;
 }
 
+void admininfo::send_info(admin usr)
+{
+    user=usr;
+    ui->id->setText(user.id);
+    ui->password->setText("********");
+    ui->phone->setText(user.phone);
+    ui->email->setText(user.mail);
+}
+
 void admininfo::on_editpasswd_clicked()
 {
     ui->newpasswd->show();

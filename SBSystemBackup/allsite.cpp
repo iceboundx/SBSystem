@@ -42,6 +42,7 @@ void allsite::on_discount_stateChanged(int arg1)
 void allsite::on_back_clicked()
 {
     qDebug()<<"back";
+    emit hide_now();
     //back = 1;
 }
 

@@ -25,7 +25,8 @@ private slots:
     void on_discount_stateChanged(int arg1);
 
     void on_back_clicked();
-
+signals:
+    void hide_now();
 private:
     Ui::allsite *ui;
 
