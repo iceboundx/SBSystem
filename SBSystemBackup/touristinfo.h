@@ -23,6 +23,10 @@ private slots:
     void on_changeTel_2_clicked();
 
     void on_save_clicked();
+    void on_changePasswd_textChanged();
+
+    void on_changeTel_textChanged();
+
 signals:
     void hide_now();
 private:

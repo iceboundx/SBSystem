@@ -13,7 +13,6 @@
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QMainWindow>
-#include <QtWidgets/QPlainTextEdit>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QTextEdit>
@@ -31,7 +30,6 @@ public:
     QLabel *label_4;
     QLabel *label_5;
     QPushButton *save;
-    QPlainTextEdit *changePasswd;
     QPushButton *changePasswd_2;
     QPushButton *changeTel_2;
     QLabel *promptTel;
@@ -43,7 +41,8 @@ public:
     QLabel *agehigh;
     QLabel *tel;
     QTextEdit *changeTel;
-    QPushButton *back;
+    QLabel *promptpasswd;
+    QTextEdit *changePasswd;
     QStatusBar *statusbar;
 
     void setupUi(QMainWindow *touristinfo)
@@ -78,14 +77,11 @@ public:
         label_5->setFont(font);
         save = new QPushButton(centralwidget);
         save->setObjectName(QStringLiteral("save"));
-        save->setGeometry(QRect(540, 450, 151, 51));
+        save->setGeometry(QRect(510, 440, 151, 51));
         QFont font1;
         font1.setFamily(QString::fromUtf8("\345\276\256\350\275\257\351\233\205\351\273\221"));
         font1.setPointSize(12);
         save->setFont(font1);
-        changePasswd = new QPlainTextEdit(centralwidget);
-        changePasswd->setObjectName(QStringLiteral("changePasswd"));
-        changePasswd->setGeometry(QRect(510, 140, 231, 31));
         changePasswd_2 = new QPushButton(centralwidget);
         changePasswd_2->setObjectName(QStringLiteral("changePasswd_2"));
         changePasswd_2->setGeometry(QRect(420, 140, 71, 28));
@@ -129,10 +125,12 @@ public:
         changeTel = new QTextEdit(centralwidget);
         changeTel->setObjectName(QStringLiteral("changeTel"));
         changeTel->setGeometry(QRect(510, 280, 231, 31));
-        back = new QPushButton(centralwidget);
-        back->setObjectName(QStringLiteral("back"));
-        back->setGeometry(QRect(370, 450, 151, 51));
-        back->setFont(font1);
+        promptpasswd = new QLabel(centralwidget);
+        promptpasswd->setObjectName(QStringLiteral("promptpasswd"));
+        promptpasswd->setGeometry(QRect(510, 180, 211, 16));
+        changePasswd = new QTextEdit(centralwidget);
+        changePasswd->setObjectName(QStringLiteral("changePasswd"));
+        changePasswd->setGeometry(QRect(510, 140, 231, 31));
         touristinfo->setCentralWidget(centralwidget);
         statusbar = new QStatusBar(touristinfo);
         statusbar->setObjectName(QStringLiteral("statusbar"));
@@ -151,18 +149,18 @@ public:
         label_3->setText(QApplication::translate("touristinfo", "\344\272\272\346\225\260", nullptr));
         label_4->setText(QApplication::translate("touristinfo", "\345\271\264\351\276\204\345\261\202\346\254\241", nullptr));
         label_5->setText(QApplication::translate("touristinfo", "\350\201\224\347\263\273\344\272\272\347\224\265\350\257\235", nullptr));
-        save->setText(QApplication::translate("touristinfo", "\344\277\235\345\255\230\344\277\256\346\224\271", nullptr));
+        save->setText(QApplication::translate("touristinfo", "\347\241\256\350\256\244", nullptr));
         changePasswd_2->setText(QApplication::translate("touristinfo", "\344\277\256\346\224\271", nullptr));
         changeTel_2->setText(QApplication::translate("touristinfo", "\344\277\256\346\224\271", nullptr));
-        promptTel->setText(QApplication::translate("touristinfo", "\347\224\265\350\257\235\345\217\267\347\240\201\345\277\205\351\241\273\344\270\27211\344\275\215\346\225\260\345\255\227\357\274\201", nullptr));
+        promptTel->setText(QApplication::translate("touristinfo", "\347\224\265\350\257\235\345\217\267\347\240\201\345\277\205\351\241\273\344\270\27211\344\275\215\346\225\260\345\255\227", nullptr));
         id->setText(QApplication::translate("touristinfo", "0", nullptr));
-        passwd->setText(QApplication::translate("touristinfo", "******", nullptr));
+        passwd->setText(QApplication::translate("touristinfo", "***********", nullptr));
         num->setText(QApplication::translate("touristinfo", "0", nullptr));
         agelow->setText(QApplication::translate("touristinfo", "0", nullptr));
         id_5->setText(QApplication::translate("touristinfo", "-", nullptr));
         agehigh->setText(QApplication::translate("touristinfo", "0", nullptr));
         tel->setText(QApplication::translate("touristinfo", "0", nullptr));
-        back->setText(QApplication::translate("touristinfo", "\350\277\224\345\233\236", nullptr));
+        promptpasswd->setText(QApplication::translate("touristinfo", "\345\257\206\347\240\201\351\225\277\345\272\246\346\234\200\345\244\247\344\270\27215\345\255\227\347\254\246", nullptr));
     } // retranslateUi
 
 };

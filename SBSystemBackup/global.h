@@ -17,6 +17,7 @@
 #include <QTextEdit>
 #include <QPushButton>
 #include <QPlainTextEdit>
+#include <QMessageBox>
 #include "sbsmanager.h"
 extern SBSmanager *man;
 //int back;

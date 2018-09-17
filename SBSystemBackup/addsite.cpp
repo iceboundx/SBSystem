@@ -4,29 +4,54 @@
 #include "ui_addsite.h"
 #define MAX_LEN 200
 #define ID_LEN 6
-
-struct site save;
-
+#define R_LEN 15
 
 addsite::addsite(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::addsite)
 {
     ui->setupUi(this);
-    Timelim = new timelim;
-
-    ui->idprompt->hide();
-    ui->newid->hide();
-    ui->newlabel->hide();
-    ui->newprice->hide();
-    ui->disprompt->hide();
-    ui->saveprice->hide();
-
+    Timelim = new timelim(this);
+    connect(Timelim,SIGNAL(add_lim(t_lim)),this,SLOT(get_lim(t_lim)));
+    QDoubleValidator *double_v=new QDoubleValidator(0.01,0.99,2,ui->dis_num);
+    double_v->setNotation(QDoubleValidator::StandardNotation);
+    ui->dis_num->setValidator(double_v);
+    ui->id->setMaxLength(ID_LEN);
+    ui->name->setMaxLength(R_LEN);
+    ui->area->setMaxLength(R_LEN);
+    ui->dis_name->setMaxLength(4);
+    QIntValidator *int_v=new QIntValidator(0,60*24,ui->time);
+    ui->time->setValidator(int_v);
 }
 
 addsite::~addsite()
 {
     delete ui;
+}
+
+void addsite::clear_all()
+{
+    ui->disprompt->hide();
+    ui->date_begin->clear();
+    ui->date_end->clear();
+    ui->area->clear();
+    ui->dis_name->clear();
+    ui->dis_num->clear();
+    ui->id->clear();
+    ui->name->clear();
+    ui->profile->clear();
+    ui->pricehigh->clear();
+    ui->pricelow->clear();
+    ui->price_list->clear();
+    ui->level->clear();
+    ui->maprice->clear();
+    ui->time->clear();
+    ui->ticketnum->clear();
+}
+
+void addsite::get_lim(t_lim lim)
+{
+    now_site.lim.append(lim);
 }
 
 void addsite::on_timelimit_clicked()
@@ -39,130 +64,20 @@ void addsite::on_timelimit_clicked()
 //保存草稿
 void addsite::on_save_clicked()
 {
-
-    save.is_pub = 0;
-    if(1)
-    {   //成功保存
-        save.id = ui->id->toPlainText();
-        save.name = ui->name->toPlainText();
-        save.price_high = ui->pricehigh->value();
-        save.price_low = ui->pricelow->value();
-        save.profile = ui->profile->toPlainText();
-        save.level = ui->level->value();
-        save.area = ui->area->toPlainText();
-        save.ma_price = ui->maprice->value();
-        save.begin_time = ui->dateEdit->dateTime();
-        save.end_time = ui->dateEdit_3->dateTime();
-        QString time;
-        time = ui->time->toPlainText();
-        save.time = time.toInt();
-
-        qDebug()<<"savesuccess";
+    save_site();
+    if(man->add_site(now_site))
+    {
+        QMessageBox::about(this,"添加成功","添加成功了！");
     }
-
-
+    else
+    {
+        QMessageBox::about(this,"添加失败","添加失败，可能是ID冲突");
+    }
 }
 
 //添加特殊票价
-void addsite::on_listWidget_itemClicked(QListWidgetItem *item)
-{
-    ui->newid->show();
-    ui->newlabel->show();
-    ui->newprice->show();    
-}
 
 //保存特殊票价
-void addsite::on_saveprice_clicked()
-{    
-    QString newid, newprice;
-    //判断输入的折扣格式为 0.xx
-    QString textContent;
-    int judge = 1;
-    textContent = ui->newprice->text();
-    if(textContent[0] != 0)
-        judge = 0;
-    else if(textContent[1] != ".")
-        judge = 0;
-    else {
-        for(int i=2; i<=newprice.size(); i++){
-            if(!textContent[i].isDigit()) {
-                judge = 0;
-                break;
-             }break;
-         }
-    }
-
-    if(judge){
-        newid = ui->newid->toPlainText();
-        ui->listWidget->addItem(newid);
-
-        struct discount dis;
-        dis.d_price = textContent.toDouble();
-        dis.type = newid;
-    }
-    else ui->disprompt->show();
-
-    ui->newid->clear();
-    ui->newprice->clear();        
-}
-
-//景点id检查
-void addsite::on_id_textChanged()
-{
-    QString textContent;
-    textContent = ui->id->toPlainText();
-    int length = textContent.count();
-
-    int is_num;
-    is_num = 1;
-    for(int i=0; i<length;i++){
-        if(!textContent[i].isDigit()){
-            is_num = 0;
-            break;
-        }
-    }
-    if(!is_num) ui->idprompt->show(); //id是否纯数字
-
-    if(length<ID_LEN){
-        ui->idprompt->show();
-    }
-    else if(length==ID_LEN && is_num) ui->idprompt->hide();
-    else if(length>ID_LEN){  //控制id输入长度
-        int position;
-        position = ui->id->textCursor().position();
-        QTextCursor textCursor = ui->id->textCursor();
-        textContent.remove(position - (length - ID_LEN), length - ID_LEN);
-        ui->id->setText(textContent);
-        textCursor.setPosition(position - (length - ID_LEN));
-        ui->id->setTextCursor(textCursor);
-    }
-
-    qDebug()<<is_num;
-}
-
-//选择适合人群
-void addsite::on_comboBox_activated(int index)
-{
-    save.age_type = 0;
-    switch (index) {
-    case 0:
-        save.age_type = 0;
-        break;
-    case 1:
-        save.age_type = 1;
-        break;
-    case 2:
-        save.age_type = 2;
-        break;
-    case 3:
-        save.age_type = 3;
-        break;
-    default:
-        break;
-    }
-
-    qDebug()<<save.age_type;
-}
 
 //控制profile输入长度
 void addsite::on_profile_textChanged()
@@ -185,6 +100,72 @@ void addsite::on_profile_textChanged()
 //发布景点
 void addsite::on_publish_clicked()
 {
-    save.is_pub = 1;
+    save_site();
+    now_site.is_pub=1;
+    if(man->add_site(now_site))
+    {
+        QMessageBox::about(this,"添加成功","添加成功了！");
+    }
+    else
+    {
+        QMessageBox::about(this,"添加失败","添加失败，可能是ID冲突");
+    }
 }
 
+
+void addsite::on_id_textChanged(const QString &arg1)
+{
+    int len=ui->id->text().size();
+    if(len==6)ui->disprompt->hide();
+    else ui->disprompt->show();
+}
+
+void addsite::on_date_begin_userDateChanged(const QDate &date)
+{
+    change_date_tip();
+}
+
+void addsite::on_date_end_userDateChanged(const QDate &date)
+{
+    change_date_tip();
+}
+
+void addsite::save_site()
+{
+    now_site.id=ui->id->text();
+    now_site.name=ui->name->text();
+    now_site.area=ui->area->text();
+    now_site.profile=ui->profile->toPlainText();
+    now_site.price_high=ui->pricehigh->value();
+    now_site.price_low=ui->pricelow->value();
+    now_site.time=ui->time->text().toInt();
+    now_site.level=ui->level->value();
+    now_site.ma_price=ui->maprice->value();
+    now_site.age_type=ui->people->currentIndex();
+    now_site.begin_time=ui->date_begin->dateTime();
+    now_site.end_time=ui->date_end->dateTime();
+    now_site.is_pub=0;
+}
+
+void addsite::change_date_tip()
+{
+    QDate l=ui->date_begin->date(),r=ui->date_end->date();
+    if(l<=r)
+    {
+        ui->label_y->setText("至今年");
+    }
+    else ui->label_y->setText("至明年");
+}
+
+void addsite::on_saveprice_clicked()
+{
+    QString now_type=ui->dis_name->text();
+    QString now_num=ui->dis_num->text();
+    discount dis;
+    dis.d_price =now_num.toDouble();
+    dis.type=now_type;
+    now_site.dis.append(dis);
+    ui->price_list->addItem(now_type+"  折扣:"+now_num);
+    ui->dis_name->clear();
+    ui->dis_num->clear();
+}

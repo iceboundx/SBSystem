@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>576</width>
-    <height>398</height>
+    <height>312</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,8 +17,8 @@
    <widget class="QLabel" name="label_3">
     <property name="geometry">
      <rect>
-      <x>90</x>
-      <y>150</y>
+      <x>30</x>
+      <y>160</y>
       <width>72</width>
       <height>21</height>
      </rect>
@@ -33,30 +33,11 @@
      <string>门票量为</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_7">
-    <property name="geometry">
-     <rect>
-      <x>390</x>
-      <y>100</y>
-      <width>111</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>微软雅黑</family>
-      <pointsize>10</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>此时间段内</string>
-    </property>
-   </widget>
    <widget class="QLabel" name="label_4">
     <property name="geometry">
      <rect>
-      <x>90</x>
-      <y>60</y>
+      <x>30</x>
+      <y>70</y>
       <width>31</width>
       <height>21</height>
      </rect>
@@ -74,8 +55,8 @@
    <widget class="QLabel" name="label_5">
     <property name="geometry">
      <rect>
-      <x>90</x>
-      <y>100</y>
+      <x>30</x>
+      <y>110</y>
       <width>72</width>
       <height>21</height>
      </rect>
@@ -93,8 +74,8 @@
    <widget class="QPushButton" name="addtimelim">
     <property name="geometry">
      <rect>
-      <x>370</x>
-      <y>270</y>
+      <x>150</x>
+      <y>220</y>
       <width>121</width>
       <height>41</height>
      </rect>
@@ -112,8 +93,8 @@
    <widget class="QSpinBox" name="ticketnum">
     <property name="geometry">
      <rect>
-      <x>170</x>
-      <y>150</y>
+      <x>110</x>
+      <y>160</y>
       <width>121</width>
       <height>31</height>
      </rect>
@@ -145,8 +126,8 @@
    <widget class="QPushButton" name="cancel">
     <property name="geometry">
      <rect>
-      <x>260</x>
-      <y>280</y>
+      <x>20</x>
+      <y>220</y>
       <width>91</width>
       <height>31</height>
      </rect>
@@ -164,8 +145,8 @@
    <widget class="QDateTimeEdit" name="begin">
     <property name="geometry">
      <rect>
-      <x>130</x>
-      <y>60</y>
+      <x>70</x>
+      <y>70</y>
       <width>194</width>
       <height>22</height>
      </rect>
@@ -180,8 +161,8 @@
    <widget class="QDateTimeEdit" name="end">
     <property name="geometry">
      <rect>
-      <x>130</x>
-      <y>100</y>
+      <x>70</x>
+      <y>110</y>
       <width>194</width>
       <height>22</height>
      </rect>
@@ -191,6 +172,16 @@
     </property>
     <property name="displayFormat">
      <string>yyyy/Mm/dd HH:mm</string>
+    </property>
+   </widget>
+   <widget class="QListView" name="listView">
+    <property name="geometry">
+     <rect>
+      <x>290</x>
+      <y>70</y>
+      <width>256</width>
+      <height>192</height>
+     </rect>
     </property>
    </widget>
   </widget>

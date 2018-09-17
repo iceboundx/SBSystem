@@ -6,7 +6,7 @@
 #include <QString>
 
 #define TEL_LEN 11
-
+#define PASS_LEN 15
 int isnum;
 int length;
 struct tourist tchange;
@@ -17,17 +17,19 @@ touristinfo::touristinfo(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    ui->changePasswd->hide();
-    ui->changeTel->hide();
-    ui->promptTel->hide();
-
-    //显示个人信息
-
 }
 
 void touristinfo::send_info(tourist usr)
 {
     user=usr;
+    ui->changePasswd->hide();
+    ui->changeTel->hide();
+    ui->changePasswd->clear();
+    ui->changeTel->clear();
+
+    ui->promptTel->hide();
+    ui->promptpasswd->hide();
+
     ui->id->setText(user.id);
     ui->passwd->setText("*******");
     ui->tel->setText(user.phone);
@@ -41,60 +43,92 @@ touristinfo::~touristinfo()
     delete ui;
 }
 
+//点击修改密码
 void touristinfo::on_changePasswd_2_clicked()
 {
-    ui->changePasswd->show();
+    if(!ui->changePasswd->isVisible())
+    ui->changePasswd->show(),ui->changePasswd_2->setText("取消");
+    else
+    ui->changePasswd->setText(""),ui->changePasswd->hide(),ui->changePasswd_2->setText("修改"),ui->promptpasswd->hide();
 }
 
-//控制电话输入长度
+//点击修改电话
 void touristinfo::on_changeTel_2_clicked()
 {
-    ui->changeTel->show();
-
-    QString textContent;
-    textContent = ui->changeTel->toPlainText();
-    if(length==TEL_LEN) ui->promptTel->hide();
-    else if(length>TEL_LEN){
-        int position;
-        position = ui->changeTel->textCursor().position();
-        QTextCursor textCursor = ui->changeTel->textCursor();
-        textContent.remove(position - (length - TEL_LEN), length - TEL_LEN);
-        ui->changeTel->setText(textContent);
-        textCursor.setPosition(position - (length - TEL_LEN));
-        ui->changeTel->setTextCursor(textCursor);
-    }
+    if(!ui->changeTel->isVisible())
+    ui->changeTel->show(),ui->changeTel_2->setText("取消"),ui->promptTel->show();
+    else
+    ui->changeTel->setText(""),ui->changeTel->hide(),ui->changeTel_2->setText("修改"),ui->promptTel->hide();
 }
 
 //点击保存
 void touristinfo::on_save_clicked()
 {
-    //检查电话规范
-    if(ui->changeTel->isVisible()){
-        QString textContent;
-        textContent = ui->changeTel->toPlainText();
-        length = textContent.count();
-
-        int is_num;
-        for(int i=0; i<length;i++){
-            if(textContent[i].isDigit()){
-                is_num = 0;
-                break;
-            }break;
-        }
-        if(!is_num) ui->promptTel->show(); //电话是否纯数字
-
-        if(length!=TEL_LEN){
-            ui->promptTel->show();
-        }
+    if(ui->promptTel->isVisible())
+    {
+        QMessageBox::critical(NULL, "错误", "信息有误，请您仔细检查", QMessageBox::Yes, QMessageBox::Yes);
     }
+    else
+    {
+        tourist new_user;
+        bool is_pa=0;
+        bool flag=0;
+        new_user=man->get_tourist();
+        if(ui->changePasswd->isVisible())
+        new_user.password=ui->changePasswd->toPlainText(),is_pa=1,flag=1;
+        if(ui->changeTel->isVisible())
+        new_user.phone=ui->changeTel->toPlainText(),flag=1;
+        if(flag)
+        {
+            man->change_tourist(new_user,is_pa);
+            QMessageBox::about(NULL, "设置成功", "设置成功了！");
+        }
+        this->hide();
+    }
+}
 
-    //成功更新信息
-    tchange.password = ui->changePasswd->toPlainText();
-    tchange.phone = ui->changeTel->toPlainText();
-    //其他信息不变
-    tchange.id = ui->id->text();
- //   tchange.age_low = QString::toInt(ui->agelow->text());
- //   tchange.num = QString::toInt(ui->num->text());
-  //  tchange.age_max = QString::toInt(ui->agehigh->text());
+void touristinfo::on_changePasswd_textChanged()
+{
+    QString now_text=ui->changePasswd->toPlainText();
+    int length=now_text.size();
+     if(length==0)return;
+    QString textContent=now_text;
+    if(length>PASS_LEN){
+        int position;
+        ui->promptpasswd->show();
+        position = ui->changePasswd->textCursor().position();
+        QTextCursor textCursor = ui->changePasswd->textCursor();
+        textContent.remove(position - (length - PASS_LEN), length - PASS_LEN);
+        ui->changePasswd->setText(textContent);
+        textCursor.setPosition(position - (length - PASS_LEN));
+        ui->changePasswd->setTextCursor(textCursor);
+    }
+}
 
+void touristinfo::on_changeTel_textChanged()
+{
+    QString now_text=ui->changeTel->toPlainText();
+    int length=now_text.size();
+    if(length==0)return;
+    QString textContent;
+    bool flag=0;
+    for(int i=0;i<length;i++)
+    {
+        if(now_text.at(i).isDigit())  textContent.append(now_text.at(i));
+        else flag=1;
+    }
+    QChar ed=now_text.at(length-1);
+    qDebug()<<ed;
+    if(length>TEL_LEN||flag){
+        ui->promptTel->show();
+        if(flag && ed.isDigit()) ui->changeTel->setText(textContent);
+        else
+        ui->changeTel->setText(now_text.left(length-1));
+        int position = ui->changeTel->textCursor().position();
+        QTextCursor textCursor= ui->changeTel->textCursor();
+        textCursor.setPosition(position + length-1);
+        ui->changeTel->setTextCursor(textCursor);
+    }
+    if(length==TEL_LEN) ui->promptTel->hide();
+    if(length<TEL_LEN) ui->promptTel->show();
 }

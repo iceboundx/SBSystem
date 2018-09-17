@@ -112,8 +112,8 @@
    <widget class="QPushButton" name="save">
     <property name="geometry">
      <rect>
-      <x>540</x>
-      <y>450</y>
+      <x>510</x>
+      <y>440</y>
       <width>151</width>
       <height>51</height>
      </rect>
@@ -125,17 +125,7 @@
      </font>
     </property>
     <property name="text">
-     <string>保存修改</string>
-    </property>
-   </widget>
-   <widget class="QPlainTextEdit" name="changePasswd">
-    <property name="geometry">
-     <rect>
-      <x>510</x>
-      <y>140</y>
-      <width>231</width>
-      <height>31</height>
-     </rect>
+     <string>确认</string>
     </property>
    </widget>
    <widget class="QPushButton" name="changePasswd_2">
@@ -174,7 +164,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>电话号码必须为11位数字！</string>
+     <string>电话号码必须为11位数字</string>
     </property>
    </widget>
    <widget class="QLabel" name="id">
@@ -212,7 +202,7 @@
      </font>
     </property>
     <property name="text">
-     <string>******</string>
+     <string>***********</string>
     </property>
    </widget>
    <widget class="QLabel" name="num">
@@ -320,23 +310,27 @@
      </rect>
     </property>
    </widget>
-   <widget class="QPushButton" name="back">
+   <widget class="QLabel" name="promptpasswd">
     <property name="geometry">
      <rect>
-      <x>370</x>
-      <y>450</y>
-      <width>151</width>
-      <height>51</height>
+      <x>510</x>
+      <y>180</y>
+      <width>211</width>
+      <height>16</height>
      </rect>
     </property>
-    <property name="font">
-     <font>
-      <family>微软雅黑</family>
-      <pointsize>12</pointsize>
-     </font>
-    </property>
     <property name="text">
-     <string>返回</string>
+     <string>密码长度最大为15字符</string>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="changePasswd">
+    <property name="geometry">
+     <rect>
+      <x>510</x>
+      <y>140</y>
+      <width>231</width>
+      <height>31</height>
+     </rect>
     </property>
    </widget>
   </widget>

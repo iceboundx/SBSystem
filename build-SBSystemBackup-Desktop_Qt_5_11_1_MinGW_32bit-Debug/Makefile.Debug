@@ -304,6 +304,65 @@ debug/moc_mainwindow.cpp: ../../../QT/5.11.1/mingw53_32/include/QtWidgets/QMainW
 		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qtabbar.h \
 		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qrubberband.h \
 		../SBSystemBackup/touristinfo.h \
+		../SBSystemBackup/global.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/QString \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/QList \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/QDateTime \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qdatetime.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/QListWidget \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/QDebug \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/QRegExp \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/QRegExpValidator \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/QValidator \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/QHBoxLayout \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qboxlayout.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qlayout.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qlayoutitem.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qgridlayout.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/QLabel \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qlabel.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/QWidget \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/QTextEdit \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qtextedit.h \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/qtextdocument.h \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/qtextoption.h \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/qtextcursor.h \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/qtextformat.h \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/qpen.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/QPushButton \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qpushbutton.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qabstractbutton.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/QPlainTextEdit \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qplaintextedit.h \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/qabstracttextdocumentlayout.h \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/qtextlayout.h \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/qglyphrun.h \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/qrawfont.h \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/qfontdatabase.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/QMessageBox \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qmessagebox.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qdialog.h \
+		../SBSystemBackup/sbsmanager.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/QObject \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/QCoreApplication \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qcoreapplication.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qeventloop.h \
+		../../../QT/5.11.1/mingw53_32/include/QtSql/QSql \
+		../../../QT/5.11.1/mingw53_32/include/QtSql/qtsqlglobal.h \
+		../../../QT/5.11.1/mingw53_32/include/QtSql/QSqlDatabase \
+		../../../QT/5.11.1/mingw53_32/include/QtSql/qsqldatabase.h \
+		../../../QT/5.11.1/mingw53_32/include/QtSql/QSqlError \
+		../../../QT/5.11.1/mingw53_32/include/QtSql/qsqlerror.h \
+		../../../QT/5.11.1/mingw53_32/include/QtSql/QSqlQuery \
+		../../../QT/5.11.1/mingw53_32/include/QtSql/qsqlquery.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/QFile \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/QVector \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/QCryptographicHash \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qcryptographichash.h \
+		../SBSystemBackup/sbsdatabase.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/QVariantList \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/QtGlobal \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/Qmap \
 		../SBSystemBackup/orderlist.h \
 		../SBSystemBackup/adminfuntionlist.h \
 		../SBSystemBackup/addsite.h \
@@ -440,6 +499,65 @@ debug/moc_touristfunctionlist.cpp: ../../../QT/5.11.1/mingw53_32/include/QtWidge
 		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qtabbar.h \
 		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qrubberband.h \
 		../SBSystemBackup/touristinfo.h \
+		../SBSystemBackup/global.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/QString \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/QList \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/QDateTime \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qdatetime.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/QListWidget \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/QDebug \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/QRegExp \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/QRegExpValidator \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/QValidator \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/QHBoxLayout \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qboxlayout.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qlayout.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qlayoutitem.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qgridlayout.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/QLabel \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qlabel.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/QWidget \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/QTextEdit \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qtextedit.h \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/qtextdocument.h \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/qtextoption.h \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/qtextcursor.h \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/qtextformat.h \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/qpen.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/QPushButton \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qpushbutton.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qabstractbutton.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/QPlainTextEdit \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qplaintextedit.h \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/qabstracttextdocumentlayout.h \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/qtextlayout.h \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/qglyphrun.h \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/qrawfont.h \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/qfontdatabase.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/QMessageBox \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qmessagebox.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qdialog.h \
+		../SBSystemBackup/sbsmanager.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/QObject \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/QCoreApplication \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qcoreapplication.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qeventloop.h \
+		../../../QT/5.11.1/mingw53_32/include/QtSql/QSql \
+		../../../QT/5.11.1/mingw53_32/include/QtSql/qtsqlglobal.h \
+		../../../QT/5.11.1/mingw53_32/include/QtSql/QSqlDatabase \
+		../../../QT/5.11.1/mingw53_32/include/QtSql/qsqldatabase.h \
+		../../../QT/5.11.1/mingw53_32/include/QtSql/QSqlError \
+		../../../QT/5.11.1/mingw53_32/include/QtSql/qsqlerror.h \
+		../../../QT/5.11.1/mingw53_32/include/QtSql/QSqlQuery \
+		../../../QT/5.11.1/mingw53_32/include/QtSql/qsqlquery.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/QFile \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/QVector \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/QCryptographicHash \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qcryptographichash.h \
+		../SBSystemBackup/sbsdatabase.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/QVariantList \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/QtGlobal \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/Qmap \
 		../SBSystemBackup/orderlist.h \
 		../SBSystemBackup/touristfunctionlist.h \
 		debug/moc_predefs.h \
@@ -574,6 +692,65 @@ debug/moc_adminfuntionlist.cpp: ../../../QT/5.11.1/mingw53_32/include/QtWidgets/
 		../SBSystemBackup/addsite.h \
 		../SBSystemBackup/timelim.h \
 		../SBSystemBackup/admininfo.h \
+		../SBSystemBackup/global.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/QString \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/QList \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/QDateTime \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qdatetime.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/QListWidget \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/QDebug \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/QRegExp \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/QRegExpValidator \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/QValidator \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/QHBoxLayout \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qboxlayout.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qlayout.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qlayoutitem.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qgridlayout.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/QLabel \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qlabel.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/QWidget \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/QTextEdit \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qtextedit.h \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/qtextdocument.h \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/qtextoption.h \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/qtextcursor.h \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/qtextformat.h \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/qpen.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/QPushButton \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qpushbutton.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qabstractbutton.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/QPlainTextEdit \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qplaintextedit.h \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/qabstracttextdocumentlayout.h \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/qtextlayout.h \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/qglyphrun.h \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/qrawfont.h \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/qfontdatabase.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/QMessageBox \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qmessagebox.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qdialog.h \
+		../SBSystemBackup/sbsmanager.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/QObject \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/QCoreApplication \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qcoreapplication.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qeventloop.h \
+		../../../QT/5.11.1/mingw53_32/include/QtSql/QSql \
+		../../../QT/5.11.1/mingw53_32/include/QtSql/qtsqlglobal.h \
+		../../../QT/5.11.1/mingw53_32/include/QtSql/QSqlDatabase \
+		../../../QT/5.11.1/mingw53_32/include/QtSql/qsqldatabase.h \
+		../../../QT/5.11.1/mingw53_32/include/QtSql/QSqlError \
+		../../../QT/5.11.1/mingw53_32/include/QtSql/qsqlerror.h \
+		../../../QT/5.11.1/mingw53_32/include/QtSql/QSqlQuery \
+		../../../QT/5.11.1/mingw53_32/include/QtSql/qsqlquery.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/QFile \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/QVector \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/QCryptographicHash \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qcryptographichash.h \
+		../SBSystemBackup/sbsdatabase.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/QVariantList \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/QtGlobal \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/Qmap \
 		../SBSystemBackup/adminfuntionlist.h \
 		debug/moc_predefs.h \
 		../../../QT/5.11.1/mingw53_32/bin/moc.exe
@@ -944,6 +1121,83 @@ debug/moc_touristinfo.cpp: ../../../QT/5.11.1/mingw53_32/include/QtWidgets/QMain
 		../../../QT/5.11.1/mingw53_32/include/QtGui/qtouchdevice.h \
 		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qtabwidget.h \
 		../../../QT/5.11.1/mingw53_32/include/QtGui/qicon.h \
+		../SBSystemBackup/global.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/QString \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/QList \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/QDateTime \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qdatetime.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/QListWidget \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qlistwidget.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qlistview.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qabstractitemview.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qabstractscrollarea.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qframe.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qabstractitemmodel.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qitemselectionmodel.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qabstractitemdelegate.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qstyleoption.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qabstractspinbox.h \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/qvalidator.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qregularexpression.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qslider.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qabstractslider.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qstyle.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qtabbar.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qrubberband.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/QListWidgetItem \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/QDebug \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/QRegExp \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/QRegExpValidator \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/QValidator \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/QHBoxLayout \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qboxlayout.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qlayout.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qlayoutitem.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qgridlayout.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/QLabel \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qlabel.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/QWidget \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/QTextEdit \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qtextedit.h \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/qtextdocument.h \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/qtextoption.h \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/qtextcursor.h \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/qtextformat.h \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/qpen.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/QPushButton \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qpushbutton.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qabstractbutton.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/QPlainTextEdit \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qplaintextedit.h \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/qabstracttextdocumentlayout.h \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/qtextlayout.h \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/qglyphrun.h \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/qrawfont.h \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/qfontdatabase.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/QMessageBox \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qmessagebox.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qdialog.h \
+		../SBSystemBackup/sbsmanager.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/QObject \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/QCoreApplication \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qcoreapplication.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qeventloop.h \
+		../../../QT/5.11.1/mingw53_32/include/QtSql/QSql \
+		../../../QT/5.11.1/mingw53_32/include/QtSql/qtsqlglobal.h \
+		../../../QT/5.11.1/mingw53_32/include/QtSql/QSqlDatabase \
+		../../../QT/5.11.1/mingw53_32/include/QtSql/qsqldatabase.h \
+		../../../QT/5.11.1/mingw53_32/include/QtSql/QSqlError \
+		../../../QT/5.11.1/mingw53_32/include/QtSql/qsqlerror.h \
+		../../../QT/5.11.1/mingw53_32/include/QtSql/QSqlQuery \
+		../../../QT/5.11.1/mingw53_32/include/QtSql/qsqlquery.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/QFile \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/QVector \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/QCryptographicHash \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qcryptographichash.h \
+		../SBSystemBackup/sbsdatabase.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/QVariantList \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/QtGlobal \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/Qmap \
 		../SBSystemBackup/touristinfo.h \
 		debug/moc_predefs.h \
 		../../../QT/5.11.1/mingw53_32/bin/moc.exe
@@ -1055,6 +1309,83 @@ debug/moc_admininfo.cpp: ../../../QT/5.11.1/mingw53_32/include/QtWidgets/QMainWi
 		../../../QT/5.11.1/mingw53_32/include/QtGui/qtouchdevice.h \
 		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qtabwidget.h \
 		../../../QT/5.11.1/mingw53_32/include/QtGui/qicon.h \
+		../SBSystemBackup/global.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/QString \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/QList \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/QDateTime \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qdatetime.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/QListWidget \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qlistwidget.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qlistview.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qabstractitemview.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qabstractscrollarea.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qframe.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qabstractitemmodel.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qitemselectionmodel.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qabstractitemdelegate.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qstyleoption.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qabstractspinbox.h \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/qvalidator.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qregularexpression.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qslider.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qabstractslider.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qstyle.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qtabbar.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qrubberband.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/QListWidgetItem \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/QDebug \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/QRegExp \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/QRegExpValidator \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/QValidator \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/QHBoxLayout \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qboxlayout.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qlayout.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qlayoutitem.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qgridlayout.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/QLabel \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qlabel.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/QWidget \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/QTextEdit \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qtextedit.h \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/qtextdocument.h \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/qtextoption.h \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/qtextcursor.h \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/qtextformat.h \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/qpen.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/QPushButton \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qpushbutton.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qabstractbutton.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/QPlainTextEdit \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qplaintextedit.h \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/qabstracttextdocumentlayout.h \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/qtextlayout.h \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/qglyphrun.h \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/qrawfont.h \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/qfontdatabase.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/QMessageBox \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qmessagebox.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qdialog.h \
+		../SBSystemBackup/sbsmanager.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/QObject \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/QCoreApplication \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qcoreapplication.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qeventloop.h \
+		../../../QT/5.11.1/mingw53_32/include/QtSql/QSql \
+		../../../QT/5.11.1/mingw53_32/include/QtSql/qtsqlglobal.h \
+		../../../QT/5.11.1/mingw53_32/include/QtSql/QSqlDatabase \
+		../../../QT/5.11.1/mingw53_32/include/QtSql/qsqldatabase.h \
+		../../../QT/5.11.1/mingw53_32/include/QtSql/QSqlError \
+		../../../QT/5.11.1/mingw53_32/include/QtSql/qsqlerror.h \
+		../../../QT/5.11.1/mingw53_32/include/QtSql/QSqlQuery \
+		../../../QT/5.11.1/mingw53_32/include/QtSql/qsqlquery.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/QFile \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/QVector \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/QCryptographicHash \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qcryptographichash.h \
+		../SBSystemBackup/sbsdatabase.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/QVariantList \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/QtGlobal \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/Qmap \
 		../SBSystemBackup/admininfo.h \
 		debug/moc_predefs.h \
 		../../../QT/5.11.1/mingw53_32/bin/moc.exe
@@ -1166,6 +1497,83 @@ debug/moc_orderlist.cpp: ../../../QT/5.11.1/mingw53_32/include/QtWidgets/QMainWi
 		../../../QT/5.11.1/mingw53_32/include/QtGui/qtouchdevice.h \
 		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qtabwidget.h \
 		../../../QT/5.11.1/mingw53_32/include/QtGui/qicon.h \
+		../SBSystemBackup/global.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/QString \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/QList \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/QDateTime \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qdatetime.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/QListWidget \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qlistwidget.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qlistview.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qabstractitemview.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qabstractscrollarea.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qframe.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qabstractitemmodel.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qitemselectionmodel.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qabstractitemdelegate.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qstyleoption.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qabstractspinbox.h \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/qvalidator.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qregularexpression.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qslider.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qabstractslider.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qstyle.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qtabbar.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qrubberband.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/QListWidgetItem \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/QDebug \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/QRegExp \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/QRegExpValidator \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/QValidator \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/QHBoxLayout \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qboxlayout.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qlayout.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qlayoutitem.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qgridlayout.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/QLabel \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qlabel.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/QWidget \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/QTextEdit \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qtextedit.h \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/qtextdocument.h \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/qtextoption.h \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/qtextcursor.h \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/qtextformat.h \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/qpen.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/QPushButton \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qpushbutton.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qabstractbutton.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/QPlainTextEdit \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qplaintextedit.h \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/qabstracttextdocumentlayout.h \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/qtextlayout.h \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/qglyphrun.h \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/qrawfont.h \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/qfontdatabase.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/QMessageBox \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qmessagebox.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qdialog.h \
+		../SBSystemBackup/sbsmanager.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/QObject \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/QCoreApplication \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qcoreapplication.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qeventloop.h \
+		../../../QT/5.11.1/mingw53_32/include/QtSql/QSql \
+		../../../QT/5.11.1/mingw53_32/include/QtSql/qtsqlglobal.h \
+		../../../QT/5.11.1/mingw53_32/include/QtSql/QSqlDatabase \
+		../../../QT/5.11.1/mingw53_32/include/QtSql/qsqldatabase.h \
+		../../../QT/5.11.1/mingw53_32/include/QtSql/QSqlError \
+		../../../QT/5.11.1/mingw53_32/include/QtSql/qsqlerror.h \
+		../../../QT/5.11.1/mingw53_32/include/QtSql/QSqlQuery \
+		../../../QT/5.11.1/mingw53_32/include/QtSql/qsqlquery.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/QFile \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/QVector \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/QCryptographicHash \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qcryptographichash.h \
+		../SBSystemBackup/sbsdatabase.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/QVariantList \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/QtGlobal \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/Qmap \
 		../SBSystemBackup/orderlist.h \
 		debug/moc_predefs.h \
 		../../../QT/5.11.1/mingw53_32/bin/moc.exe
@@ -1277,6 +1685,83 @@ debug/moc_ordersite.cpp: ../../../QT/5.11.1/mingw53_32/include/QtWidgets/QMainWi
 		../../../QT/5.11.1/mingw53_32/include/QtGui/qtouchdevice.h \
 		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qtabwidget.h \
 		../../../QT/5.11.1/mingw53_32/include/QtGui/qicon.h \
+		../SBSystemBackup/global.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/QString \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/QList \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/QDateTime \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qdatetime.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/QListWidget \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qlistwidget.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qlistview.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qabstractitemview.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qabstractscrollarea.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qframe.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qabstractitemmodel.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qitemselectionmodel.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qabstractitemdelegate.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qstyleoption.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qabstractspinbox.h \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/qvalidator.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qregularexpression.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qslider.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qabstractslider.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qstyle.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qtabbar.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qrubberband.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/QListWidgetItem \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/QDebug \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/QRegExp \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/QRegExpValidator \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/QValidator \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/QHBoxLayout \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qboxlayout.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qlayout.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qlayoutitem.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qgridlayout.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/QLabel \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qlabel.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/QWidget \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/QTextEdit \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qtextedit.h \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/qtextdocument.h \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/qtextoption.h \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/qtextcursor.h \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/qtextformat.h \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/qpen.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/QPushButton \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qpushbutton.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qabstractbutton.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/QPlainTextEdit \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qplaintextedit.h \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/qabstracttextdocumentlayout.h \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/qtextlayout.h \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/qglyphrun.h \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/qrawfont.h \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/qfontdatabase.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/QMessageBox \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qmessagebox.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qdialog.h \
+		../SBSystemBackup/sbsmanager.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/QObject \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/QCoreApplication \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qcoreapplication.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qeventloop.h \
+		../../../QT/5.11.1/mingw53_32/include/QtSql/QSql \
+		../../../QT/5.11.1/mingw53_32/include/QtSql/qtsqlglobal.h \
+		../../../QT/5.11.1/mingw53_32/include/QtSql/QSqlDatabase \
+		../../../QT/5.11.1/mingw53_32/include/QtSql/qsqldatabase.h \
+		../../../QT/5.11.1/mingw53_32/include/QtSql/QSqlError \
+		../../../QT/5.11.1/mingw53_32/include/QtSql/qsqlerror.h \
+		../../../QT/5.11.1/mingw53_32/include/QtSql/QSqlQuery \
+		../../../QT/5.11.1/mingw53_32/include/QtSql/qsqlquery.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/QFile \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/QVector \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/QCryptographicHash \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qcryptographichash.h \
+		../SBSystemBackup/sbsdatabase.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/QVariantList \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/QtGlobal \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/Qmap \
 		../SBSystemBackup/ordersite.h \
 		debug/moc_predefs.h \
 		../../../QT/5.11.1/mingw53_32/bin/moc.exe
@@ -1677,11 +2162,11 @@ compiler_clean: compiler_moc_predefs_clean compiler_moc_header_clean compiler_ui
 
 ####### Compile
 
-debug/main.o: ../SBSystemBackup/main.cpp ../SBSystemBackup/sbsmanager.h \
-		../../../QT/5.11.1/mingw53_32/include/QtCore/QObject \
-		../../../QT/5.11.1/mingw53_32/include/QtCore/qobject.h \
-		../../../QT/5.11.1/mingw53_32/include/QtCore/qobjectdefs.h \
-		../../../QT/5.11.1/mingw53_32/include/QtCore/qnamespace.h \
+debug/main.o: ../SBSystemBackup/main.cpp ../SBSystemBackup/mainwindow.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/QMainWindow \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qmainwindow.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qtwidgetsglobal.h \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/qtguiglobal.h \
 		../../../QT/5.11.1/mingw53_32/include/QtCore/qglobal.h \
 		../../../QT/5.11.1/mingw53_32/include/QtCore/qconfig-bootstrapped.h \
 		../../../QT/5.11.1/mingw53_32/include/QtCore/qconfig.h \
@@ -1703,7 +2188,15 @@ debug/main.o: ../SBSystemBackup/main.cpp ../SBSystemBackup/sbsmanager.h \
 		../../../QT/5.11.1/mingw53_32/include/QtCore/qmutex.h \
 		../../../QT/5.11.1/mingw53_32/include/QtCore/qnumeric.h \
 		../../../QT/5.11.1/mingw53_32/include/QtCore/qversiontagging.h \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/qtgui-config.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qtwidgets-config.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qwidget.h \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/qwindowdefs.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qobjectdefs.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qnamespace.h \
 		../../../QT/5.11.1/mingw53_32/include/QtCore/qobjectdefs_impl.h \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/qwindowdefs_win.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qobject.h \
 		../../../QT/5.11.1/mingw53_32/include/QtCore/qstring.h \
 		../../../QT/5.11.1/mingw53_32/include/QtCore/qchar.h \
 		../../../QT/5.11.1/mingw53_32/include/QtCore/qbytearray.h \
@@ -1728,86 +2221,52 @@ debug/main.o: ../SBSystemBackup/main.cpp ../SBSystemBackup/sbsmanager.h \
 		../../../QT/5.11.1/mingw53_32/include/QtCore/qvarlengtharray.h \
 		../../../QT/5.11.1/mingw53_32/include/QtCore/qcontainerfwd.h \
 		../../../QT/5.11.1/mingw53_32/include/QtCore/qobject_impl.h \
-		../../../QT/5.11.1/mingw53_32/include/QtCore/QCoreApplication \
-		../../../QT/5.11.1/mingw53_32/include/QtCore/qcoreapplication.h \
-		../../../QT/5.11.1/mingw53_32/include/QtCore/qeventloop.h \
-		../../../QT/5.11.1/mingw53_32/include/QtSql/QSql \
-		../../../QT/5.11.1/mingw53_32/include/QtSql/qtsqlglobal.h \
-		../../../QT/5.11.1/mingw53_32/include/QtSql/QSqlDatabase \
-		../../../QT/5.11.1/mingw53_32/include/QtSql/qsqldatabase.h \
-		../../../QT/5.11.1/mingw53_32/include/QtSql/QSqlError \
-		../../../QT/5.11.1/mingw53_32/include/QtSql/qsqlerror.h \
-		../../../QT/5.11.1/mingw53_32/include/QtSql/QSqlQuery \
-		../../../QT/5.11.1/mingw53_32/include/QtSql/qsqlquery.h \
-		../../../QT/5.11.1/mingw53_32/include/QtCore/QString \
-		../../../QT/5.11.1/mingw53_32/include/QtCore/QFile \
-		../../../QT/5.11.1/mingw53_32/include/QtCore/qfile.h \
-		../../../QT/5.11.1/mingw53_32/include/QtCore/qfiledevice.h \
-		../../../QT/5.11.1/mingw53_32/include/QtCore/qiodevice.h \
-		../../../QT/5.11.1/mingw53_32/include/QtCore/QDebug \
-		../../../QT/5.11.1/mingw53_32/include/QtCore/qdebug.h \
-		../../../QT/5.11.1/mingw53_32/include/QtCore/qhash.h \
-		../../../QT/5.11.1/mingw53_32/include/QtCore/qmap.h \
-		../../../QT/5.11.1/mingw53_32/include/QtCore/qtextstream.h \
-		../../../QT/5.11.1/mingw53_32/include/QtCore/qlocale.h \
-		../../../QT/5.11.1/mingw53_32/include/QtCore/qvariant.h \
-		../../../QT/5.11.1/mingw53_32/include/QtCore/qshareddata.h \
-		../../../QT/5.11.1/mingw53_32/include/QtCore/qvector.h \
-		../../../QT/5.11.1/mingw53_32/include/QtCore/qpoint.h \
-		../../../QT/5.11.1/mingw53_32/include/QtCore/qset.h \
-		../../../QT/5.11.1/mingw53_32/include/QtCore/qcontiguouscache.h \
-		../../../QT/5.11.1/mingw53_32/include/QtCore/qsharedpointer.h \
-		../../../QT/5.11.1/mingw53_32/include/QtCore/qsharedpointer_impl.h \
-		../../../QT/5.11.1/mingw53_32/include/QtCore/QVector \
-		../../../QT/5.11.1/mingw53_32/include/QtCore/QCryptographicHash \
-		../../../QT/5.11.1/mingw53_32/include/QtCore/qcryptographichash.h \
-		../SBSystemBackup/sbsdatabase.h \
-		../../../QT/5.11.1/mingw53_32/include/QtCore/QVariantList \
-		../../../QT/5.11.1/mingw53_32/include/QtGui/QList \
-		../../../QT/5.11.1/mingw53_32/include/QtGui/qevent.h \
-		../../../QT/5.11.1/mingw53_32/include/QtGui/qtguiglobal.h \
-		../../../QT/5.11.1/mingw53_32/include/QtGui/qtgui-config.h \
-		../../../QT/5.11.1/mingw53_32/include/QtGui/qwindowdefs.h \
-		../../../QT/5.11.1/mingw53_32/include/QtGui/qwindowdefs_win.h \
-		../../../QT/5.11.1/mingw53_32/include/QtGui/qregion.h \
-		../../../QT/5.11.1/mingw53_32/include/QtCore/qrect.h \
 		../../../QT/5.11.1/mingw53_32/include/QtCore/qmargins.h \
-		../../../QT/5.11.1/mingw53_32/include/QtCore/qsize.h \
-		../../../QT/5.11.1/mingw53_32/include/QtCore/qdatastream.h \
-		../../../QT/5.11.1/mingw53_32/include/QtGui/qkeysequence.h \
-		../../../QT/5.11.1/mingw53_32/include/QtCore/qurl.h \
-		../../../QT/5.11.1/mingw53_32/include/QtCore/qurlquery.h \
-		../../../QT/5.11.1/mingw53_32/include/QtGui/qvector2d.h \
-		../../../QT/5.11.1/mingw53_32/include/QtGui/qtouchdevice.h \
-		../../../QT/5.11.1/mingw53_32/include/QtCore/QtGlobal \
-		../../../QT/5.11.1/mingw53_32/include/QtCore/QDateTime \
-		../../../QT/5.11.1/mingw53_32/include/QtCore/qdatetime.h \
-		../../../QT/5.11.1/mingw53_32/include/QtCore/Qmap \
-		../SBSystemBackup/mainwindow.h \
-		../../../QT/5.11.1/mingw53_32/include/QtWidgets/QMainWindow \
-		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qmainwindow.h \
-		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qtwidgetsglobal.h \
-		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qtwidgets-config.h \
-		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qwidget.h \
 		../../../QT/5.11.1/mingw53_32/include/QtGui/qpaintdevice.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qrect.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qsize.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qpoint.h \
 		../../../QT/5.11.1/mingw53_32/include/QtGui/qpalette.h \
 		../../../QT/5.11.1/mingw53_32/include/QtGui/qcolor.h \
 		../../../QT/5.11.1/mingw53_32/include/QtGui/qrgb.h \
 		../../../QT/5.11.1/mingw53_32/include/QtGui/qrgba64.h \
 		../../../QT/5.11.1/mingw53_32/include/QtGui/qbrush.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qvector.h \
 		../../../QT/5.11.1/mingw53_32/include/QtGui/qmatrix.h \
 		../../../QT/5.11.1/mingw53_32/include/QtGui/qpolygon.h \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/qregion.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qdatastream.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qiodevice.h \
 		../../../QT/5.11.1/mingw53_32/include/QtCore/qline.h \
 		../../../QT/5.11.1/mingw53_32/include/QtGui/qtransform.h \
 		../../../QT/5.11.1/mingw53_32/include/QtGui/qpainterpath.h \
 		../../../QT/5.11.1/mingw53_32/include/QtGui/qimage.h \
 		../../../QT/5.11.1/mingw53_32/include/QtGui/qpixelformat.h \
 		../../../QT/5.11.1/mingw53_32/include/QtGui/qpixmap.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qsharedpointer.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qshareddata.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qhash.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qsharedpointer_impl.h \
 		../../../QT/5.11.1/mingw53_32/include/QtGui/qfont.h \
 		../../../QT/5.11.1/mingw53_32/include/QtGui/qfontmetrics.h \
 		../../../QT/5.11.1/mingw53_32/include/QtGui/qfontinfo.h \
 		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qsizepolicy.h \
 		../../../QT/5.11.1/mingw53_32/include/QtGui/qcursor.h \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/qkeysequence.h \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/qevent.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qvariant.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qmap.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qdebug.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qtextstream.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qlocale.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qset.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qcontiguouscache.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qurl.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qurlquery.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qfile.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qfiledevice.h \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/qvector2d.h \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/qtouchdevice.h \
 		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qtabwidget.h \
 		../../../QT/5.11.1/mingw53_32/include/QtGui/qicon.h \
 		../SBSystemBackup/touristfunctionlist.h \
@@ -1831,13 +2290,13 @@ debug/main.o: ../SBSystemBackup/main.cpp ../SBSystemBackup/sbsmanager.h \
 		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qtabbar.h \
 		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qrubberband.h \
 		../SBSystemBackup/touristinfo.h \
-		../SBSystemBackup/orderlist.h \
-		../SBSystemBackup/adminfuntionlist.h \
-		../SBSystemBackup/addsite.h \
-		../SBSystemBackup/timelim.h \
-		../SBSystemBackup/admininfo.h \
 		../SBSystemBackup/global.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/QString \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/QList \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/QDateTime \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qdatetime.h \
 		../../../QT/5.11.1/mingw53_32/include/QtWidgets/QListWidget \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/QDebug \
 		../../../QT/5.11.1/mingw53_32/include/QtCore/QRegExp \
 		../../../QT/5.11.1/mingw53_32/include/QtGui/QRegExpValidator \
 		../../../QT/5.11.1/mingw53_32/include/QtGui/QValidator \
@@ -1866,6 +2325,35 @@ debug/main.o: ../SBSystemBackup/main.cpp ../SBSystemBackup/sbsmanager.h \
 		../../../QT/5.11.1/mingw53_32/include/QtGui/qglyphrun.h \
 		../../../QT/5.11.1/mingw53_32/include/QtGui/qrawfont.h \
 		../../../QT/5.11.1/mingw53_32/include/QtGui/qfontdatabase.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/QMessageBox \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qmessagebox.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qdialog.h \
+		../SBSystemBackup/sbsmanager.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/QObject \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/QCoreApplication \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qcoreapplication.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qeventloop.h \
+		../../../QT/5.11.1/mingw53_32/include/QtSql/QSql \
+		../../../QT/5.11.1/mingw53_32/include/QtSql/qtsqlglobal.h \
+		../../../QT/5.11.1/mingw53_32/include/QtSql/QSqlDatabase \
+		../../../QT/5.11.1/mingw53_32/include/QtSql/qsqldatabase.h \
+		../../../QT/5.11.1/mingw53_32/include/QtSql/QSqlError \
+		../../../QT/5.11.1/mingw53_32/include/QtSql/qsqlerror.h \
+		../../../QT/5.11.1/mingw53_32/include/QtSql/QSqlQuery \
+		../../../QT/5.11.1/mingw53_32/include/QtSql/qsqlquery.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/QFile \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/QVector \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/QCryptographicHash \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qcryptographichash.h \
+		../SBSystemBackup/sbsdatabase.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/QVariantList \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/QtGlobal \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/Qmap \
+		../SBSystemBackup/orderlist.h \
+		../SBSystemBackup/adminfuntionlist.h \
+		../SBSystemBackup/addsite.h \
+		../SBSystemBackup/timelim.h \
+		../SBSystemBackup/admininfo.h \
 		../../../QT/5.11.1/mingw53_32/include/QtWidgets/QApplication \
 		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qapplication.h \
 		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qdesktopwidget.h \
@@ -2004,38 +2492,6 @@ debug/mainwindow.o: ../SBSystemBackup/mainwindow.cpp ../SBSystemBackup/mainwindo
 		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qtabbar.h \
 		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qrubberband.h \
 		../SBSystemBackup/touristinfo.h \
-		../SBSystemBackup/orderlist.h \
-		../SBSystemBackup/adminfuntionlist.h \
-		../SBSystemBackup/addsite.h \
-		../SBSystemBackup/timelim.h \
-		../SBSystemBackup/admininfo.h \
-		ui_mainwindow.h \
-		../../../QT/5.11.1/mingw53_32/include/QtCore/QVariant \
-		../../../QT/5.11.1/mingw53_32/include/QtWidgets/QApplication \
-		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qapplication.h \
-		../../../QT/5.11.1/mingw53_32/include/QtCore/qcoreapplication.h \
-		../../../QT/5.11.1/mingw53_32/include/QtCore/qeventloop.h \
-		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qdesktopwidget.h \
-		../../../QT/5.11.1/mingw53_32/include/QtGui/qguiapplication.h \
-		../../../QT/5.11.1/mingw53_32/include/QtGui/qinputmethod.h \
-		../../../QT/5.11.1/mingw53_32/include/QtWidgets/QLabel \
-		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qlabel.h \
-		../../../QT/5.11.1/mingw53_32/include/QtWidgets/QLineEdit \
-		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qlineedit.h \
-		../../../QT/5.11.1/mingw53_32/include/QtGui/qtextcursor.h \
-		../../../QT/5.11.1/mingw53_32/include/QtGui/qtextformat.h \
-		../../../QT/5.11.1/mingw53_32/include/QtGui/qpen.h \
-		../../../QT/5.11.1/mingw53_32/include/QtGui/qtextoption.h \
-		../../../QT/5.11.1/mingw53_32/include/QtWidgets/QPushButton \
-		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qpushbutton.h \
-		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qabstractbutton.h \
-		../../../QT/5.11.1/mingw53_32/include/QtWidgets/QStatusBar \
-		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qstatusbar.h \
-		../../../QT/5.11.1/mingw53_32/include/QtWidgets/QTabWidget \
-		../../../QT/5.11.1/mingw53_32/include/QtWidgets/QTextEdit \
-		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qtextedit.h \
-		../../../QT/5.11.1/mingw53_32/include/QtGui/qtextdocument.h \
-		../../../QT/5.11.1/mingw53_32/include/QtWidgets/QWidget \
 		../SBSystemBackup/global.h \
 		../../../QT/5.11.1/mingw53_32/include/QtCore/QString \
 		../../../QT/5.11.1/mingw53_32/include/QtGui/QList \
@@ -2051,6 +2507,19 @@ debug/mainwindow.o: ../SBSystemBackup/mainwindow.cpp ../SBSystemBackup/mainwindo
 		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qlayout.h \
 		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qlayoutitem.h \
 		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qgridlayout.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/QLabel \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qlabel.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/QWidget \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/QTextEdit \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qtextedit.h \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/qtextdocument.h \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/qtextoption.h \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/qtextcursor.h \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/qtextformat.h \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/qpen.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/QPushButton \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qpushbutton.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qabstractbutton.h \
 		../../../QT/5.11.1/mingw53_32/include/QtWidgets/QPlainTextEdit \
 		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qplaintextedit.h \
 		../../../QT/5.11.1/mingw53_32/include/QtGui/qabstracttextdocumentlayout.h \
@@ -2058,9 +2527,14 @@ debug/mainwindow.o: ../SBSystemBackup/mainwindow.cpp ../SBSystemBackup/mainwindo
 		../../../QT/5.11.1/mingw53_32/include/QtGui/qglyphrun.h \
 		../../../QT/5.11.1/mingw53_32/include/QtGui/qrawfont.h \
 		../../../QT/5.11.1/mingw53_32/include/QtGui/qfontdatabase.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/QMessageBox \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qmessagebox.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qdialog.h \
 		../SBSystemBackup/sbsmanager.h \
 		../../../QT/5.11.1/mingw53_32/include/QtCore/QObject \
 		../../../QT/5.11.1/mingw53_32/include/QtCore/QCoreApplication \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qcoreapplication.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qeventloop.h \
 		../../../QT/5.11.1/mingw53_32/include/QtSql/QSql \
 		../../../QT/5.11.1/mingw53_32/include/QtSql/qtsqlglobal.h \
 		../../../QT/5.11.1/mingw53_32/include/QtSql/QSqlDatabase \
@@ -2076,7 +2550,24 @@ debug/mainwindow.o: ../SBSystemBackup/mainwindow.cpp ../SBSystemBackup/mainwindo
 		../SBSystemBackup/sbsdatabase.h \
 		../../../QT/5.11.1/mingw53_32/include/QtCore/QVariantList \
 		../../../QT/5.11.1/mingw53_32/include/QtCore/QtGlobal \
-		../../../QT/5.11.1/mingw53_32/include/QtCore/Qmap
+		../../../QT/5.11.1/mingw53_32/include/QtCore/Qmap \
+		../SBSystemBackup/orderlist.h \
+		../SBSystemBackup/adminfuntionlist.h \
+		../SBSystemBackup/addsite.h \
+		../SBSystemBackup/timelim.h \
+		../SBSystemBackup/admininfo.h \
+		ui_mainwindow.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/QVariant \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/QApplication \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qapplication.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qdesktopwidget.h \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/qguiapplication.h \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/qinputmethod.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/QLineEdit \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qlineedit.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/QStatusBar \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qstatusbar.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/QTabWidget
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\mainwindow.o ..\SBSystemBackup\mainwindow.cpp
 
 debug/touristfunctionlist.o: ../SBSystemBackup/touristfunctionlist.cpp ../SBSystemBackup/touristfunctionlist.h \
@@ -2206,22 +2697,6 @@ debug/touristfunctionlist.o: ../SBSystemBackup/touristfunctionlist.cpp ../SBSyst
 		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qtabbar.h \
 		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qrubberband.h \
 		../SBSystemBackup/touristinfo.h \
-		../SBSystemBackup/orderlist.h \
-		ui_touristfunctionlist.h \
-		../../../QT/5.11.1/mingw53_32/include/QtCore/QVariant \
-		../../../QT/5.11.1/mingw53_32/include/QtWidgets/QApplication \
-		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qapplication.h \
-		../../../QT/5.11.1/mingw53_32/include/QtCore/qcoreapplication.h \
-		../../../QT/5.11.1/mingw53_32/include/QtCore/qeventloop.h \
-		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qdesktopwidget.h \
-		../../../QT/5.11.1/mingw53_32/include/QtGui/qguiapplication.h \
-		../../../QT/5.11.1/mingw53_32/include/QtGui/qinputmethod.h \
-		../../../QT/5.11.1/mingw53_32/include/QtWidgets/QPushButton \
-		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qpushbutton.h \
-		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qabstractbutton.h \
-		../../../QT/5.11.1/mingw53_32/include/QtWidgets/QStatusBar \
-		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qstatusbar.h \
-		../../../QT/5.11.1/mingw53_32/include/QtWidgets/QWidget \
 		../SBSystemBackup/global.h \
 		../../../QT/5.11.1/mingw53_32/include/QtCore/QString \
 		../../../QT/5.11.1/mingw53_32/include/QtGui/QList \
@@ -2239,6 +2714,7 @@ debug/touristfunctionlist.o: ../SBSystemBackup/touristfunctionlist.cpp ../SBSyst
 		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qgridlayout.h \
 		../../../QT/5.11.1/mingw53_32/include/QtWidgets/QLabel \
 		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qlabel.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/QWidget \
 		../../../QT/5.11.1/mingw53_32/include/QtWidgets/QTextEdit \
 		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qtextedit.h \
 		../../../QT/5.11.1/mingw53_32/include/QtGui/qtextdocument.h \
@@ -2246,6 +2722,9 @@ debug/touristfunctionlist.o: ../SBSystemBackup/touristfunctionlist.cpp ../SBSyst
 		../../../QT/5.11.1/mingw53_32/include/QtGui/qtextcursor.h \
 		../../../QT/5.11.1/mingw53_32/include/QtGui/qtextformat.h \
 		../../../QT/5.11.1/mingw53_32/include/QtGui/qpen.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/QPushButton \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qpushbutton.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qabstractbutton.h \
 		../../../QT/5.11.1/mingw53_32/include/QtWidgets/QPlainTextEdit \
 		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qplaintextedit.h \
 		../../../QT/5.11.1/mingw53_32/include/QtGui/qabstracttextdocumentlayout.h \
@@ -2253,9 +2732,14 @@ debug/touristfunctionlist.o: ../SBSystemBackup/touristfunctionlist.cpp ../SBSyst
 		../../../QT/5.11.1/mingw53_32/include/QtGui/qglyphrun.h \
 		../../../QT/5.11.1/mingw53_32/include/QtGui/qrawfont.h \
 		../../../QT/5.11.1/mingw53_32/include/QtGui/qfontdatabase.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/QMessageBox \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qmessagebox.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qdialog.h \
 		../SBSystemBackup/sbsmanager.h \
 		../../../QT/5.11.1/mingw53_32/include/QtCore/QObject \
 		../../../QT/5.11.1/mingw53_32/include/QtCore/QCoreApplication \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qcoreapplication.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qeventloop.h \
 		../../../QT/5.11.1/mingw53_32/include/QtSql/QSql \
 		../../../QT/5.11.1/mingw53_32/include/QtSql/qtsqlglobal.h \
 		../../../QT/5.11.1/mingw53_32/include/QtSql/QSqlDatabase \
@@ -2271,7 +2755,17 @@ debug/touristfunctionlist.o: ../SBSystemBackup/touristfunctionlist.cpp ../SBSyst
 		../SBSystemBackup/sbsdatabase.h \
 		../../../QT/5.11.1/mingw53_32/include/QtCore/QVariantList \
 		../../../QT/5.11.1/mingw53_32/include/QtCore/QtGlobal \
-		../../../QT/5.11.1/mingw53_32/include/QtCore/Qmap
+		../../../QT/5.11.1/mingw53_32/include/QtCore/Qmap \
+		../SBSystemBackup/orderlist.h \
+		ui_touristfunctionlist.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/QVariant \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/QApplication \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qapplication.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qdesktopwidget.h \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/qguiapplication.h \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/qinputmethod.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/QStatusBar \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qstatusbar.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\touristfunctionlist.o ..\SBSystemBackup\touristfunctionlist.cpp
 
 debug/adminfuntionlist.o: ../SBSystemBackup/adminfuntionlist.cpp ../SBSystemBackup/global.h \
@@ -2431,6 +2925,9 @@ debug/adminfuntionlist.o: ../SBSystemBackup/adminfuntionlist.cpp ../SBSystemBack
 		../../../QT/5.11.1/mingw53_32/include/QtGui/qglyphrun.h \
 		../../../QT/5.11.1/mingw53_32/include/QtGui/qrawfont.h \
 		../../../QT/5.11.1/mingw53_32/include/QtGui/qfontdatabase.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/QMessageBox \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qmessagebox.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qdialog.h \
 		../SBSystemBackup/sbsmanager.h \
 		../../../QT/5.11.1/mingw53_32/include/QtCore/QObject \
 		../../../QT/5.11.1/mingw53_32/include/QtCore/QCoreApplication \
@@ -2645,6 +3142,9 @@ debug/allsite.o: ../SBSystemBackup/allsite.cpp ../SBSystemBackup/allsite.h \
 		../../../QT/5.11.1/mingw53_32/include/QtGui/qglyphrun.h \
 		../../../QT/5.11.1/mingw53_32/include/QtGui/qrawfont.h \
 		../../../QT/5.11.1/mingw53_32/include/QtGui/qfontdatabase.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/QMessageBox \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qmessagebox.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qdialog.h \
 		../SBSystemBackup/sbsmanager.h \
 		../../../QT/5.11.1/mingw53_32/include/QtCore/QObject \
 		../../../QT/5.11.1/mingw53_32/include/QtCore/QCoreApplication \
@@ -2666,7 +3166,187 @@ debug/allsite.o: ../SBSystemBackup/allsite.cpp ../SBSystemBackup/allsite.h \
 		../../../QT/5.11.1/mingw53_32/include/QtCore/Qmap
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\allsite.o ..\SBSystemBackup\allsite.cpp
 
-debug/global.o: ../SBSystemBackup/global.cpp 
+debug/global.o: ../SBSystemBackup/global.cpp ../SBSystemBackup/global.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/QString \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qstring.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qchar.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qglobal.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qconfig-bootstrapped.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qconfig.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qtcore-config.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qsystemdetection.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qprocessordetection.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qcompilerdetection.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qtypeinfo.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qsysinfo.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qlogging.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qflags.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qatomic.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qbasicatomic.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qatomic_bootstrap.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qgenericatomic.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qatomic_cxx11.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qatomic_msvc.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qglobalstatic.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qmutex.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qnumeric.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qversiontagging.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qbytearray.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qrefcount.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qnamespace.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qarraydata.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qstringliteral.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qstringalgorithms.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qstringview.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qstringbuilder.h \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/QList \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/qevent.h \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/qtguiglobal.h \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/qtgui-config.h \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/qwindowdefs.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qobjectdefs.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qobjectdefs_impl.h \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/qwindowdefs_win.h \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/qregion.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qrect.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qmargins.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qsize.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qpoint.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qdatastream.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qscopedpointer.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qiodevice.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qobject.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qlist.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qalgorithms.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qiterator.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qhashfunctions.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qpair.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qbytearraylist.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qstringlist.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qregexp.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qstringmatcher.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qcoreevent.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qmetatype.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qvarlengtharray.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qcontainerfwd.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qobject_impl.h \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/qkeysequence.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qvariant.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qmap.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qdebug.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qhash.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qtextstream.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qlocale.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qshareddata.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qvector.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qset.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qcontiguouscache.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qsharedpointer.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qsharedpointer_impl.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qurl.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qurlquery.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qfile.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qfiledevice.h \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/qvector2d.h \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/qtouchdevice.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/QDateTime \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qdatetime.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/QListWidget \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qlistwidget.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qtwidgetsglobal.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qtwidgets-config.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qlistview.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qabstractitemview.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qabstractscrollarea.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qframe.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qwidget.h \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/qpaintdevice.h \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/qpalette.h \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/qcolor.h \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/qrgb.h \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/qrgba64.h \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/qbrush.h \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/qmatrix.h \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/qpolygon.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qline.h \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/qtransform.h \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/qpainterpath.h \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/qimage.h \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/qpixelformat.h \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/qpixmap.h \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/qfont.h \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/qfontmetrics.h \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/qfontinfo.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qsizepolicy.h \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/qcursor.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qabstractitemmodel.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qitemselectionmodel.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qabstractitemdelegate.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qstyleoption.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qabstractspinbox.h \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/qvalidator.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qregularexpression.h \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/qicon.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qslider.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qabstractslider.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qstyle.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qtabbar.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qtabwidget.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qrubberband.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/QListWidgetItem \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/QDebug \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/QRegExp \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/QRegExpValidator \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/QValidator \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/QHBoxLayout \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qboxlayout.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qlayout.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qlayoutitem.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qgridlayout.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/QLabel \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qlabel.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/QWidget \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/QTextEdit \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qtextedit.h \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/qtextdocument.h \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/qtextoption.h \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/qtextcursor.h \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/qtextformat.h \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/qpen.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/QPushButton \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qpushbutton.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qabstractbutton.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/QPlainTextEdit \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qplaintextedit.h \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/qabstracttextdocumentlayout.h \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/qtextlayout.h \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/qglyphrun.h \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/qrawfont.h \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/qfontdatabase.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/QMessageBox \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qmessagebox.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qdialog.h \
+		../SBSystemBackup/sbsmanager.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/QObject \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/QCoreApplication \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qcoreapplication.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qeventloop.h \
+		../../../QT/5.11.1/mingw53_32/include/QtSql/QSql \
+		../../../QT/5.11.1/mingw53_32/include/QtSql/qtsqlglobal.h \
+		../../../QT/5.11.1/mingw53_32/include/QtSql/QSqlDatabase \
+		../../../QT/5.11.1/mingw53_32/include/QtSql/qsqldatabase.h \
+		../../../QT/5.11.1/mingw53_32/include/QtSql/QSqlError \
+		../../../QT/5.11.1/mingw53_32/include/QtSql/qsqlerror.h \
+		../../../QT/5.11.1/mingw53_32/include/QtSql/QSqlQuery \
+		../../../QT/5.11.1/mingw53_32/include/QtSql/qsqlquery.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/QFile \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/QVector \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/QCryptographicHash \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qcryptographichash.h \
+		../SBSystemBackup/sbsdatabase.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/QVariantList \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/QtGlobal \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/Qmap
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\global.o ..\SBSystemBackup\global.cpp
 
 debug/addsite.o: ../SBSystemBackup/addsite.cpp ../SBSystemBackup/global.h \
@@ -2826,6 +3506,9 @@ debug/addsite.o: ../SBSystemBackup/addsite.cpp ../SBSystemBackup/global.h \
 		../../../QT/5.11.1/mingw53_32/include/QtGui/qglyphrun.h \
 		../../../QT/5.11.1/mingw53_32/include/QtGui/qrawfont.h \
 		../../../QT/5.11.1/mingw53_32/include/QtGui/qfontdatabase.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/QMessageBox \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qmessagebox.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qdialog.h \
 		../SBSystemBackup/sbsmanager.h \
 		../../../QT/5.11.1/mingw53_32/include/QtCore/QObject \
 		../../../QT/5.11.1/mingw53_32/include/QtCore/QCoreApplication \
@@ -2979,39 +3662,6 @@ debug/touristinfo.o: ../SBSystemBackup/touristinfo.cpp ../SBSystemBackup/tourist
 		../../../QT/5.11.1/mingw53_32/include/QtGui/qtouchdevice.h \
 		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qtabwidget.h \
 		../../../QT/5.11.1/mingw53_32/include/QtGui/qicon.h \
-		ui_touristinfo.h \
-		../../../QT/5.11.1/mingw53_32/include/QtCore/QVariant \
-		../../../QT/5.11.1/mingw53_32/include/QtWidgets/QApplication \
-		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qapplication.h \
-		../../../QT/5.11.1/mingw53_32/include/QtCore/qcoreapplication.h \
-		../../../QT/5.11.1/mingw53_32/include/QtCore/qeventloop.h \
-		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qdesktopwidget.h \
-		../../../QT/5.11.1/mingw53_32/include/QtGui/qguiapplication.h \
-		../../../QT/5.11.1/mingw53_32/include/QtGui/qinputmethod.h \
-		../../../QT/5.11.1/mingw53_32/include/QtWidgets/QLabel \
-		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qlabel.h \
-		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qframe.h \
-		../../../QT/5.11.1/mingw53_32/include/QtWidgets/QPlainTextEdit \
-		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qplaintextedit.h \
-		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qtextedit.h \
-		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qabstractscrollarea.h \
-		../../../QT/5.11.1/mingw53_32/include/QtGui/qtextdocument.h \
-		../../../QT/5.11.1/mingw53_32/include/QtGui/qtextoption.h \
-		../../../QT/5.11.1/mingw53_32/include/QtGui/qtextcursor.h \
-		../../../QT/5.11.1/mingw53_32/include/QtGui/qtextformat.h \
-		../../../QT/5.11.1/mingw53_32/include/QtGui/qpen.h \
-		../../../QT/5.11.1/mingw53_32/include/QtGui/qabstracttextdocumentlayout.h \
-		../../../QT/5.11.1/mingw53_32/include/QtGui/qtextlayout.h \
-		../../../QT/5.11.1/mingw53_32/include/QtGui/qglyphrun.h \
-		../../../QT/5.11.1/mingw53_32/include/QtGui/qrawfont.h \
-		../../../QT/5.11.1/mingw53_32/include/QtGui/qfontdatabase.h \
-		../../../QT/5.11.1/mingw53_32/include/QtWidgets/QPushButton \
-		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qpushbutton.h \
-		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qabstractbutton.h \
-		../../../QT/5.11.1/mingw53_32/include/QtWidgets/QStatusBar \
-		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qstatusbar.h \
-		../../../QT/5.11.1/mingw53_32/include/QtWidgets/QTextEdit \
-		../../../QT/5.11.1/mingw53_32/include/QtWidgets/QWidget \
 		../SBSystemBackup/global.h \
 		../../../QT/5.11.1/mingw53_32/include/QtCore/QString \
 		../../../QT/5.11.1/mingw53_32/include/QtGui/QList \
@@ -3021,6 +3671,8 @@ debug/touristinfo.o: ../SBSystemBackup/touristinfo.cpp ../SBSystemBackup/tourist
 		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qlistwidget.h \
 		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qlistview.h \
 		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qabstractitemview.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qabstractscrollarea.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qframe.h \
 		../../../QT/5.11.1/mingw53_32/include/QtCore/qabstractitemmodel.h \
 		../../../QT/5.11.1/mingw53_32/include/QtCore/qitemselectionmodel.h \
 		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qabstractitemdelegate.h \
@@ -3043,9 +3695,34 @@ debug/touristinfo.o: ../SBSystemBackup/touristinfo.cpp ../SBSystemBackup/tourist
 		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qlayout.h \
 		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qlayoutitem.h \
 		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qgridlayout.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/QLabel \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qlabel.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/QWidget \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/QTextEdit \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qtextedit.h \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/qtextdocument.h \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/qtextoption.h \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/qtextcursor.h \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/qtextformat.h \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/qpen.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/QPushButton \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qpushbutton.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qabstractbutton.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/QPlainTextEdit \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qplaintextedit.h \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/qabstracttextdocumentlayout.h \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/qtextlayout.h \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/qglyphrun.h \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/qrawfont.h \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/qfontdatabase.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/QMessageBox \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qmessagebox.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qdialog.h \
 		../SBSystemBackup/sbsmanager.h \
 		../../../QT/5.11.1/mingw53_32/include/QtCore/QObject \
 		../../../QT/5.11.1/mingw53_32/include/QtCore/QCoreApplication \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qcoreapplication.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qeventloop.h \
 		../../../QT/5.11.1/mingw53_32/include/QtSql/QSql \
 		../../../QT/5.11.1/mingw53_32/include/QtSql/qtsqlglobal.h \
 		../../../QT/5.11.1/mingw53_32/include/QtSql/QSqlDatabase \
@@ -3061,7 +3738,16 @@ debug/touristinfo.o: ../SBSystemBackup/touristinfo.cpp ../SBSystemBackup/tourist
 		../SBSystemBackup/sbsdatabase.h \
 		../../../QT/5.11.1/mingw53_32/include/QtCore/QVariantList \
 		../../../QT/5.11.1/mingw53_32/include/QtCore/QtGlobal \
-		../../../QT/5.11.1/mingw53_32/include/QtCore/Qmap
+		../../../QT/5.11.1/mingw53_32/include/QtCore/Qmap \
+		ui_touristinfo.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/QVariant \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/QApplication \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qapplication.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qdesktopwidget.h \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/qguiapplication.h \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/qinputmethod.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/QStatusBar \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qstatusbar.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\touristinfo.o ..\SBSystemBackup\touristinfo.cpp
 
 debug/admininfo.o: ../SBSystemBackup/admininfo.cpp ../SBSystemBackup/global.h \
@@ -3221,6 +3907,9 @@ debug/admininfo.o: ../SBSystemBackup/admininfo.cpp ../SBSystemBackup/global.h \
 		../../../QT/5.11.1/mingw53_32/include/QtGui/qglyphrun.h \
 		../../../QT/5.11.1/mingw53_32/include/QtGui/qrawfont.h \
 		../../../QT/5.11.1/mingw53_32/include/QtGui/qfontdatabase.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/QMessageBox \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qmessagebox.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qdialog.h \
 		../SBSystemBackup/sbsmanager.h \
 		../../../QT/5.11.1/mingw53_32/include/QtCore/QObject \
 		../../../QT/5.11.1/mingw53_32/include/QtCore/QCoreApplication \
@@ -3365,15 +4054,11 @@ debug/orderlist.o: ../SBSystemBackup/orderlist.cpp ../SBSystemBackup/orderlist.h
 		../../../QT/5.11.1/mingw53_32/include/QtGui/qtouchdevice.h \
 		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qtabwidget.h \
 		../../../QT/5.11.1/mingw53_32/include/QtGui/qicon.h \
-		ui_orderlist.h \
-		../../../QT/5.11.1/mingw53_32/include/QtCore/QVariant \
-		../../../QT/5.11.1/mingw53_32/include/QtWidgets/QApplication \
-		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qapplication.h \
-		../../../QT/5.11.1/mingw53_32/include/QtCore/qcoreapplication.h \
-		../../../QT/5.11.1/mingw53_32/include/QtCore/qeventloop.h \
-		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qdesktopwidget.h \
-		../../../QT/5.11.1/mingw53_32/include/QtGui/qguiapplication.h \
-		../../../QT/5.11.1/mingw53_32/include/QtGui/qinputmethod.h \
+		../SBSystemBackup/global.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/QString \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/QList \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/QDateTime \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qdatetime.h \
 		../../../QT/5.11.1/mingw53_32/include/QtWidgets/QListWidget \
 		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qlistwidget.h \
 		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qlistview.h \
@@ -3392,17 +4077,6 @@ debug/orderlist.o: ../SBSystemBackup/orderlist.cpp ../SBSystemBackup/orderlist.h
 		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qstyle.h \
 		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qtabbar.h \
 		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qrubberband.h \
-		../../../QT/5.11.1/mingw53_32/include/QtWidgets/QPushButton \
-		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qpushbutton.h \
-		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qabstractbutton.h \
-		../../../QT/5.11.1/mingw53_32/include/QtWidgets/QStatusBar \
-		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qstatusbar.h \
-		../../../QT/5.11.1/mingw53_32/include/QtWidgets/QWidget \
-		../SBSystemBackup/global.h \
-		../../../QT/5.11.1/mingw53_32/include/QtCore/QString \
-		../../../QT/5.11.1/mingw53_32/include/QtGui/QList \
-		../../../QT/5.11.1/mingw53_32/include/QtCore/QDateTime \
-		../../../QT/5.11.1/mingw53_32/include/QtCore/qdatetime.h \
 		../../../QT/5.11.1/mingw53_32/include/QtWidgets/QListWidgetItem \
 		../../../QT/5.11.1/mingw53_32/include/QtCore/QDebug \
 		../../../QT/5.11.1/mingw53_32/include/QtCore/QRegExp \
@@ -3415,6 +4089,7 @@ debug/orderlist.o: ../SBSystemBackup/orderlist.cpp ../SBSystemBackup/orderlist.h
 		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qgridlayout.h \
 		../../../QT/5.11.1/mingw53_32/include/QtWidgets/QLabel \
 		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qlabel.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/QWidget \
 		../../../QT/5.11.1/mingw53_32/include/QtWidgets/QTextEdit \
 		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qtextedit.h \
 		../../../QT/5.11.1/mingw53_32/include/QtGui/qtextdocument.h \
@@ -3422,6 +4097,9 @@ debug/orderlist.o: ../SBSystemBackup/orderlist.cpp ../SBSystemBackup/orderlist.h
 		../../../QT/5.11.1/mingw53_32/include/QtGui/qtextcursor.h \
 		../../../QT/5.11.1/mingw53_32/include/QtGui/qtextformat.h \
 		../../../QT/5.11.1/mingw53_32/include/QtGui/qpen.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/QPushButton \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qpushbutton.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qabstractbutton.h \
 		../../../QT/5.11.1/mingw53_32/include/QtWidgets/QPlainTextEdit \
 		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qplaintextedit.h \
 		../../../QT/5.11.1/mingw53_32/include/QtGui/qabstracttextdocumentlayout.h \
@@ -3429,9 +4107,14 @@ debug/orderlist.o: ../SBSystemBackup/orderlist.cpp ../SBSystemBackup/orderlist.h
 		../../../QT/5.11.1/mingw53_32/include/QtGui/qglyphrun.h \
 		../../../QT/5.11.1/mingw53_32/include/QtGui/qrawfont.h \
 		../../../QT/5.11.1/mingw53_32/include/QtGui/qfontdatabase.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/QMessageBox \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qmessagebox.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qdialog.h \
 		../SBSystemBackup/sbsmanager.h \
 		../../../QT/5.11.1/mingw53_32/include/QtCore/QObject \
 		../../../QT/5.11.1/mingw53_32/include/QtCore/QCoreApplication \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qcoreapplication.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/qeventloop.h \
 		../../../QT/5.11.1/mingw53_32/include/QtSql/QSql \
 		../../../QT/5.11.1/mingw53_32/include/QtSql/qtsqlglobal.h \
 		../../../QT/5.11.1/mingw53_32/include/QtSql/QSqlDatabase \
@@ -3447,7 +4130,16 @@ debug/orderlist.o: ../SBSystemBackup/orderlist.cpp ../SBSystemBackup/orderlist.h
 		../SBSystemBackup/sbsdatabase.h \
 		../../../QT/5.11.1/mingw53_32/include/QtCore/QVariantList \
 		../../../QT/5.11.1/mingw53_32/include/QtCore/QtGlobal \
-		../../../QT/5.11.1/mingw53_32/include/QtCore/Qmap
+		../../../QT/5.11.1/mingw53_32/include/QtCore/Qmap \
+		ui_orderlist.h \
+		../../../QT/5.11.1/mingw53_32/include/QtCore/QVariant \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/QApplication \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qapplication.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qdesktopwidget.h \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/qguiapplication.h \
+		../../../QT/5.11.1/mingw53_32/include/QtGui/qinputmethod.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/QStatusBar \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qstatusbar.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\orderlist.o ..\SBSystemBackup\orderlist.cpp
 
 debug/ordersite.o: ../SBSystemBackup/ordersite.cpp ../SBSystemBackup/global.h \
@@ -3607,6 +4299,9 @@ debug/ordersite.o: ../SBSystemBackup/ordersite.cpp ../SBSystemBackup/global.h \
 		../../../QT/5.11.1/mingw53_32/include/QtGui/qglyphrun.h \
 		../../../QT/5.11.1/mingw53_32/include/QtGui/qrawfont.h \
 		../../../QT/5.11.1/mingw53_32/include/QtGui/qfontdatabase.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/QMessageBox \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qmessagebox.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qdialog.h \
 		../SBSystemBackup/sbsmanager.h \
 		../../../QT/5.11.1/mingw53_32/include/QtCore/QObject \
 		../../../QT/5.11.1/mingw53_32/include/QtCore/QCoreApplication \
@@ -3638,6 +4333,8 @@ debug/ordersite.o: ../SBSystemBackup/ordersite.cpp ../SBSystemBackup/global.h \
 		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qdesktopwidget.h \
 		../../../QT/5.11.1/mingw53_32/include/QtGui/qguiapplication.h \
 		../../../QT/5.11.1/mingw53_32/include/QtGui/qinputmethod.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/QGroupBox \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qgroupbox.h \
 		../../../QT/5.11.1/mingw53_32/include/QtWidgets/QStatusBar \
 		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qstatusbar.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\ordersite.o ..\SBSystemBackup\ordersite.cpp
@@ -3817,6 +4514,9 @@ debug/timelim.o: ../SBSystemBackup/timelim.cpp ../SBSystemBackup/timelim.h \
 		../../../QT/5.11.1/mingw53_32/include/QtGui/qglyphrun.h \
 		../../../QT/5.11.1/mingw53_32/include/QtGui/qrawfont.h \
 		../../../QT/5.11.1/mingw53_32/include/QtGui/qfontdatabase.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/QMessageBox \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qmessagebox.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qdialog.h \
 		../SBSystemBackup/sbsmanager.h \
 		../../../QT/5.11.1/mingw53_32/include/QtCore/QObject \
 		../../../QT/5.11.1/mingw53_32/include/QtCore/QCoreApplication \
@@ -4011,6 +4711,9 @@ debug/onesite.o: ../SBSystemBackup/onesite.cpp ../SBSystemBackup/onesite.h \
 		../../../QT/5.11.1/mingw53_32/include/QtGui/qglyphrun.h \
 		../../../QT/5.11.1/mingw53_32/include/QtGui/qrawfont.h \
 		../../../QT/5.11.1/mingw53_32/include/QtGui/qfontdatabase.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/QMessageBox \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qmessagebox.h \
+		../../../QT/5.11.1/mingw53_32/include/QtWidgets/qdialog.h \
 		../SBSystemBackup/sbsmanager.h \
 		../../../QT/5.11.1/mingw53_32/include/QtCore/QObject \
 		../../../QT/5.11.1/mingw53_32/include/QtCore/QCoreApplication \

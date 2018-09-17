@@ -23,11 +23,18 @@ private slots:
     void on_editemail_clicked();
 
     void on_save_clicked();
+    void on_newpasswd_textChanged();
+
+    void on_newtel_textChanged();
+
+    void on_newemail_textChanged(const QString &arg1);
+
 signals:
     void hide_now();
 private:
     Ui::admininfo *ui;
     admin user;
+    bool is_email(QString now);
 };
 
 #endif // ADMININFO_H

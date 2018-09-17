@@ -36,6 +36,7 @@ void AdminFuntionList::on_addsite_clicked()
 {
     qDebug()<<"addsite";
     //this->hide();
+    Addsite->clear_all();
     Addsite->show();
 }
 

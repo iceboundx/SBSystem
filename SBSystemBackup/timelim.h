@@ -2,7 +2,7 @@
 #define TIMELIM_H
 
 #include <QMainWindow>
-
+#include "global.h"
 namespace Ui {
 class timelim;
 }
@@ -19,6 +19,7 @@ private slots:
     void on_addtimelim_clicked();
 signals:
     void hide_now();
+    void add_lim(t_lim lim);
 private:
     Ui::timelim *ui;
 };

@@ -444,10 +444,11 @@
     <property name="font">
      <font>
       <family>Arial</family>
+      <pointsize>9</pointsize>
      </font>
     </property>
     <property name="currentIndex">
-     <number>1</number>
+     <number>0</number>
     </property>
     <widget class="QWidget" name="tourist">
      <attribute name="title">
@@ -461,6 +462,11 @@
         <width>351</width>
         <height>51</height>
        </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
       </property>
      </widget>
      <widget class="QLabel" name="label_5">
@@ -632,6 +638,11 @@
         <width>351</width>
         <height>51</height>
        </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
       </property>
      </widget>
      <widget class="QPushButton" name="adminlogin">

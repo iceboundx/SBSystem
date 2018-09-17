@@ -87,7 +87,6 @@ void MainWindow::on_tusername_textChanged()
 
     if(length>MAX_LEN){
         ui->tprompt->show();
-
         int position;
         position = ui->tusername->textCursor().position();
         QTextCursor textCursor = ui->tusername->textCursor();
@@ -106,7 +105,6 @@ void MainWindow::on_ausername_textChanged()
     QString textContent;
     textContent = ui->ausername->toPlainText();
     int length = textContent.count();
-
     if(length>MAX_LEN){
         ui->aprompt->show();
         int position;
