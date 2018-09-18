@@ -21,4 +21,5 @@
 #include "sbsmanager.h"
 extern SBSmanager *man;
 //int back;
-//extern int now_window;
+extern site empty_site;
+extern order empty_order;

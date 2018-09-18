@@ -14,6 +14,9 @@ INPUT(
 ./debug\onesite.o
 ./debug\sbsdatabase.o
 ./debug\sbsmanager.o
+./debug\show_site.o
+./debug\getvistime.o
+./debug\show_order.o
 ./debug\moc_mainwindow.o
 ./debug\moc_touristfunctionlist.o
 ./debug\moc_adminfuntionlist.o
@@ -26,4 +29,7 @@ INPUT(
 ./debug\moc_timelim.o
 ./debug\moc_onesite.o
 ./debug\moc_sbsmanager.o
+./debug\moc_show_site.o
+./debug\moc_getvistime.o
+./debug\moc_show_order.o
 );

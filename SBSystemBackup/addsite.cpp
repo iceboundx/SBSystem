@@ -12,7 +12,6 @@ addsite::addsite(QWidget *parent) :
 {
     ui->setupUi(this);
     Timelim = new timelim(this);
-    connect(Timelim,SIGNAL(add_lim(t_lim)),this,SLOT(get_lim(t_lim)));
     QDoubleValidator *double_v=new QDoubleValidator(0.01,0.99,2,ui->dis_num);
     double_v->setNotation(QDoubleValidator::StandardNotation);
     ui->dis_num->setValidator(double_v);
@@ -46,7 +45,8 @@ void addsite::clear_all()
     ui->level->clear();
     ui->maprice->clear();
     ui->time->clear();
-    ui->ticketnum->clear();
+    man->clear_lim();
+    now_site=empty_site;
 }
 
 void addsite::get_lim(t_lim lim)
@@ -68,11 +68,17 @@ void addsite::on_save_clicked()
     if(man->add_site(now_site))
     {
         QMessageBox::about(this,"添加成功","添加成功了！");
+        man->clear_lim();
+        Timelim->clear_all();
+        now_site=empty_site;
+        this->hide();
     }
     else
     {
         QMessageBox::about(this,"添加失败","添加失败，可能是ID冲突");
     }
+    man->clear_lim();
+    now_site=empty_site;
 }
 
 //添加特殊票价
@@ -105,6 +111,10 @@ void addsite::on_publish_clicked()
     if(man->add_site(now_site))
     {
         QMessageBox::about(this,"添加成功","添加成功了！");
+        man->clear_lim();
+        Timelim->clear_all();
+        now_site=empty_site;
+        this->hide();
     }
     else
     {
@@ -144,6 +154,7 @@ void addsite::save_site()
     now_site.age_type=ui->people->currentIndex();
     now_site.begin_time=ui->date_begin->dateTime();
     now_site.end_time=ui->date_end->dateTime();
+    now_site.lim=Timelim->get_lim();
     now_site.is_pub=0;
 }
 
@@ -160,6 +171,12 @@ void addsite::change_date_tip()
 void addsite::on_saveprice_clicked()
 {
     QString now_type=ui->dis_name->text();
+    for(int i=0;i<now_site.dis.size();i++)
+        if(now_site.dis.at(i).type==now_type)
+        {
+            QMessageBox::about(this,"错误","折扣种类错误");
+            return;
+        }
     QString now_num=ui->dis_num->text();
     discount dis;
     dis.d_price =now_num.toDouble();
@@ -168,4 +185,5 @@ void addsite::on_saveprice_clicked()
     ui->price_list->addItem(now_type+"  折扣:"+now_num);
     ui->dis_name->clear();
     ui->dis_num->clear();
+
 }

@@ -13,11 +13,12 @@
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QCheckBox>
 #include <QtWidgets/QCommandLinkButton>
+#include <QtWidgets/QLabel>
+#include <QtWidgets/QLineEdit>
 #include <QtWidgets/QListWidget>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QStatusBar>
-#include <QtWidgets/QTextEdit>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -28,53 +29,87 @@ public:
     QWidget *centralwidget;
     QCheckBox *ticket;
     QCheckBox *discount;
-    QTextEdit *textEdit;
-    QPushButton *pushButton;
-    QCommandLinkButton *commandLinkButton;
-    QPushButton *back;
-    QListWidget *listWidget;
+    QCommandLinkButton *name_s;
+    QListWidget *site_list;
+    QCommandLinkButton *area_s;
+    QLineEdit *lineEdit;
+    QLabel *label;
+    QLabel *label_2;
+    QPushButton *save_order;
+    QPushButton *save_order_2;
+    QLabel *time_La;
+    QListWidget *o_list;
     QStatusBar *statusbar;
 
     void setupUi(QMainWindow *allsite)
     {
         if (allsite->objectName().isEmpty())
             allsite->setObjectName(QStringLiteral("allsite"));
-        allsite->resize(800, 600);
+        allsite->resize(1199, 611);
         centralwidget = new QWidget(allsite);
         centralwidget->setObjectName(QStringLiteral("centralwidget"));
         ticket = new QCheckBox(centralwidget);
         ticket->setObjectName(QStringLiteral("ticket"));
-        ticket->setGeometry(QRect(110, 140, 91, 21));
+        ticket->setGeometry(QRect(90, 130, 91, 21));
         QFont font;
         font.setPointSize(9);
         ticket->setFont(font);
         discount = new QCheckBox(centralwidget);
         discount->setObjectName(QStringLiteral("discount"));
-        discount->setGeometry(QRect(210, 140, 91, 21));
+        discount->setGeometry(QRect(210, 130, 91, 21));
         discount->setFont(font);
-        textEdit = new QTextEdit(centralwidget);
-        textEdit->setObjectName(QStringLiteral("textEdit"));
-        textEdit->setGeometry(QRect(210, 60, 291, 41));
+        name_s = new QCommandLinkButton(centralwidget);
+        name_s->setObjectName(QStringLiteral("name_s"));
+        name_s->setGeometry(QRect(400, 60, 161, 41));
         QFont font1;
-        font1.setFamily(QString::fromUtf8("\345\276\256\350\275\257\351\233\205\351\273\221"));
-        font1.setPointSize(11);
-        textEdit->setFont(font1);
-        pushButton = new QPushButton(centralwidget);
-        pushButton->setObjectName(QStringLiteral("pushButton"));
-        pushButton->setGeometry(QRect(510, 110, 111, 41));
-        pushButton->setFont(font1);
-        commandLinkButton = new QCommandLinkButton(centralwidget);
-        commandLinkButton->setObjectName(QStringLiteral("commandLinkButton"));
-        commandLinkButton->setGeometry(QRect(510, 60, 111, 41));
+        font1.setFamily(QStringLiteral("Segoe UI"));
+        name_s->setFont(font1);
+        site_list = new QListWidget(centralwidget);
+        site_list->setObjectName(QStringLiteral("site_list"));
+        site_list->setGeometry(QRect(20, 160, 721, 351));
+        area_s = new QCommandLinkButton(centralwidget);
+        area_s->setObjectName(QStringLiteral("area_s"));
+        area_s->setGeometry(QRect(570, 60, 181, 41));
+        area_s->setFont(font1);
+        lineEdit = new QLineEdit(centralwidget);
+        lineEdit->setObjectName(QStringLiteral("lineEdit"));
+        lineEdit->setGeometry(QRect(120, 60, 271, 41));
+        label = new QLabel(centralwidget);
+        label->setObjectName(QStringLiteral("label"));
+        label->setGeometry(QRect(940, 160, 171, 41));
         QFont font2;
-        font2.setFamily(QStringLiteral("Segoe UI"));
-        commandLinkButton->setFont(font2);
-        back = new QPushButton(centralwidget);
-        back->setObjectName(QStringLiteral("back"));
-        back->setGeometry(QRect(10, 10, 93, 28));
-        listWidget = new QListWidget(centralwidget);
-        listWidget->setObjectName(QStringLiteral("listWidget"));
-        listWidget->setGeometry(QRect(110, 170, 541, 331));
+        font2.setFamily(QString::fromUtf8("\347\255\211\347\272\277"));
+        font2.setPointSize(19);
+        label->setFont(font2);
+        label_2 = new QLabel(centralwidget);
+        label_2->setObjectName(QStringLiteral("label_2"));
+        label_2->setGeometry(QRect(870, 210, 231, 16));
+        save_order = new QPushButton(centralwidget);
+        save_order->setObjectName(QStringLiteral("save_order"));
+        save_order->setGeometry(QRect(250, 530, 211, 41));
+        QFont font3;
+        font3.setFamily(QString::fromUtf8("\345\276\256\350\275\257\351\233\205\351\273\221"));
+        font3.setPointSize(16);
+        save_order->setFont(font3);
+        save_order_2 = new QPushButton(centralwidget);
+        save_order_2->setObjectName(QStringLiteral("save_order_2"));
+        save_order_2->setGeometry(QRect(910, 520, 161, 31));
+        QFont font4;
+        font4.setFamily(QString::fromUtf8("\345\276\256\350\275\257\351\233\205\351\273\221"));
+        font4.setPointSize(11);
+        save_order_2->setFont(font4);
+        time_La = new QLabel(centralwidget);
+        time_La->setObjectName(QStringLiteral("time_La"));
+        time_La->setGeometry(QRect(280, 10, 511, 31));
+        QFont font5;
+        font5.setFamily(QString::fromUtf8("\345\276\256\350\275\257\351\233\205\351\273\221"));
+        font5.setPointSize(14);
+        time_La->setFont(font5);
+        o_list = new QListWidget(centralwidget);
+        o_list->setObjectName(QStringLiteral("o_list"));
+        o_list->setGeometry(QRect(770, 240, 411, 271));
+        o_list->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+        o_list->setEditTriggers(QAbstractItemView::NoEditTriggers);
         allsite->setCentralWidget(centralwidget);
         statusbar = new QStatusBar(allsite);
         statusbar->setObjectName(QStringLiteral("statusbar"));
@@ -90,9 +125,13 @@ public:
         allsite->setWindowTitle(QApplication::translate("allsite", "MainWindow", nullptr));
         ticket->setText(QApplication::translate("allsite", "\346\234\211\347\245\250", nullptr));
         discount->setText(QApplication::translate("allsite", "\346\212\230\346\211\243", nullptr));
-        pushButton->setText(QApplication::translate("allsite", "\346\220\234\347\264\242", nullptr));
-        commandLinkButton->setText(QApplication::translate("allsite", "\346\220\234\347\264\242", nullptr));
-        back->setText(QApplication::translate("allsite", "\350\277\224\345\233\236", nullptr));
+        name_s->setText(QApplication::translate("allsite", "\346\214\211\345\220\215\345\255\227\346\220\234\347\264\242", nullptr));
+        area_s->setText(QApplication::translate("allsite", "\346\214\211\345\234\260\345\214\272\346\220\234\347\264\242", nullptr));
+        label->setText(QApplication::translate("allsite", "\350\264\255\347\211\251\350\275\246", nullptr));
+        label_2->setText(QApplication::translate("allsite", "\347\202\271\345\207\273\345\257\271\345\272\224\351\241\271\345\217\257\345\260\206\345\205\266\344\273\216\350\264\255\347\211\251\350\275\246\344\270\255\345\210\240\351\231\244", nullptr));
+        save_order->setText(QApplication::translate("allsite", "\347\273\223\347\256\227", nullptr));
+        save_order_2->setText(QApplication::translate("allsite", "\346\270\205\347\251\272\350\264\255\347\211\251\350\275\246", nullptr));
+        time_La->setText(QApplication::translate("allsite", "\346\202\250\347\232\204\345\207\272\346\270\270\346\227\266\351\227\264\344\270\272\357\274\2322018\345\271\26412\346\234\21012\346\227\24510:20", nullptr));
     } // retranslateUi
 
 };

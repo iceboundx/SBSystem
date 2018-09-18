@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>576</width>
-    <height>312</height>
+    <width>743</width>
+    <height>326</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,10 +17,10 @@
    <widget class="QLabel" name="label_3">
     <property name="geometry">
      <rect>
-      <x>30</x>
-      <y>160</y>
-      <width>72</width>
-      <height>21</height>
+      <x>50</x>
+      <y>130</y>
+      <width>181</width>
+      <height>51</height>
      </rect>
     </property>
     <property name="font">
@@ -30,14 +30,14 @@
      </font>
     </property>
     <property name="text">
-     <string>门票量为</string>
+     <string>每日的该时段限制门票量为</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_4">
     <property name="geometry">
      <rect>
-      <x>30</x>
-      <y>70</y>
+      <x>10</x>
+      <y>40</y>
       <width>31</width>
       <height>21</height>
      </rect>
@@ -55,8 +55,8 @@
    <widget class="QLabel" name="label_5">
     <property name="geometry">
      <rect>
-      <x>30</x>
-      <y>110</y>
+      <x>160</x>
+      <y>40</y>
       <width>72</width>
       <height>21</height>
      </rect>
@@ -93,8 +93,8 @@
    <widget class="QSpinBox" name="ticketnum">
     <property name="geometry">
      <rect>
-      <x>110</x>
-      <y>160</y>
+      <x>90</x>
+      <y>170</y>
       <width>121</width>
       <height>31</height>
      </rect>
@@ -107,8 +107,11 @@
     <property name="frame">
      <bool>false</bool>
     </property>
+    <property name="accelerated">
+     <bool>true</bool>
+    </property>
     <property name="minimum">
-     <number>1000</number>
+     <number>0</number>
     </property>
     <property name="maximum">
      <number>999999</number>
@@ -117,7 +120,7 @@
      <number>100</number>
     </property>
     <property name="value">
-     <number>1000</number>
+     <number>0</number>
     </property>
     <property name="displayIntegerBase">
      <number>10</number>
@@ -127,7 +130,7 @@
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>220</y>
+      <y>230</y>
       <width>91</width>
       <height>31</height>
      </rect>
@@ -142,46 +145,139 @@
      <string>取消</string>
     </property>
    </widget>
-   <widget class="QDateTimeEdit" name="begin">
+   <widget class="QListWidget" name="time_list">
     <property name="geometry">
      <rect>
-      <x>70</x>
-      <y>70</y>
-      <width>194</width>
+      <x>340</x>
+      <y>50</y>
+      <width>391</width>
+      <height>211</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QDateEdit" name="datesta">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>40</y>
+      <width>110</width>
       <height>22</height>
      </rect>
     </property>
-    <property name="frame">
-     <bool>false</bool>
+    <property name="maximumDateTime">
+     <datetime>
+      <hour>23</hour>
+      <minute>59</minute>
+      <second>59</second>
+      <year>2017</year>
+      <month>12</month>
+      <day>31</day>
+     </datetime>
+    </property>
+    <property name="minimumDateTime">
+     <datetime>
+      <hour>0</hour>
+      <minute>0</minute>
+      <second>0</second>
+      <year>2017</year>
+      <month>1</month>
+      <day>1</day>
+     </datetime>
     </property>
     <property name="displayFormat">
-     <string>yyyy/Mm/dd HH:mm</string>
+     <string>MM/dd</string>
     </property>
    </widget>
-   <widget class="QDateTimeEdit" name="end">
+   <widget class="QTimeEdit" name="timesta">
     <property name="geometry">
      <rect>
-      <x>70</x>
-      <y>110</y>
-      <width>194</width>
+      <x>30</x>
+      <y>100</y>
+      <width>118</width>
       <height>22</height>
      </rect>
     </property>
-    <property name="frame">
-     <bool>false</bool>
-    </property>
     <property name="displayFormat">
-     <string>yyyy/Mm/dd HH:mm</string>
+     <string>HH:mm</string>
     </property>
    </widget>
-   <widget class="QListView" name="listView">
+   <widget class="QTimeEdit" name="timeed">
     <property name="geometry">
      <rect>
-      <x>290</x>
-      <y>70</y>
-      <width>256</width>
-      <height>192</height>
+      <x>170</x>
+      <y>100</y>
+      <width>118</width>
+      <height>22</height>
      </rect>
+    </property>
+    <property name="displayFormat">
+     <string>HH:mm</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>80</y>
+      <width>72</width>
+      <height>15</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>开始时间</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>200</x>
+      <y>80</y>
+      <width>72</width>
+      <height>15</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>结束时间</string>
+    </property>
+   </widget>
+   <widget class="QDateEdit" name="dateed">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>40</y>
+      <width>110</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="maximumDateTime">
+     <datetime>
+      <hour>23</hour>
+      <minute>59</minute>
+      <second>59</second>
+      <year>2017</year>
+      <month>12</month>
+      <day>31</day>
+     </datetime>
+    </property>
+    <property name="minimumDateTime">
+     <datetime>
+      <hour>0</hour>
+      <minute>0</minute>
+      <second>0</second>
+      <year>2017</year>
+      <month>1</month>
+      <day>1</day>
+     </datetime>
+    </property>
+    <property name="displayFormat">
+     <string>MM/dd</string>
+    </property>
+    <property name="date">
+     <date>
+      <year>2017</year>
+      <month>12</month>
+      <day>31</day>
+     </date>
     </property>
    </widget>
   </widget>

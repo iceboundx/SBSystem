@@ -5,6 +5,7 @@
 #include "allsite.h"
 #include "touristinfo.h"
 #include "orderlist.h"
+#include "getvistime.h"
 
 namespace Ui {
 class TouristFunctionList;
@@ -17,7 +18,8 @@ class TouristFunctionList : public QMainWindow
 public:
     explicit TouristFunctionList(QWidget *parent = 0);
     ~TouristFunctionList();
-
+public slots:
+    void show_all_site(QDateTime vis_time);
 private slots:
 
     void on_allsite_clicked();
@@ -32,6 +34,7 @@ private:
     allsite *Allsite;
     touristinfo *Touristinfo;
     orderlist *Orderlist;
+    getvistime *getVisTime;
 
 };
 

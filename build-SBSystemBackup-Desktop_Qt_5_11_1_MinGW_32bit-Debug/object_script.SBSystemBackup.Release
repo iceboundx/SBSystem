@@ -14,6 +14,9 @@ INPUT(
 ./release\onesite.o
 ./release\sbsdatabase.o
 ./release\sbsmanager.o
+./release\show_site.o
+./release\getvistime.o
+./release\show_order.o
 ./release\moc_mainwindow.o
 ./release\moc_touristfunctionlist.o
 ./release\moc_adminfuntionlist.o
@@ -26,4 +29,7 @@ INPUT(
 ./release\moc_timelim.o
 ./release\moc_onesite.o
 ./release\moc_sbsmanager.o
+./release\moc_show_site.o
+./release\moc_getvistime.o
+./release\moc_show_order.o
 );

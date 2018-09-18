@@ -14,14 +14,15 @@ class timelim : public QMainWindow
 public:
     explicit timelim(QWidget *parent = 0);
     ~timelim();
-
+    QList<t_lim>get_lim();
+    void clear_all();
 private slots:
     void on_addtimelim_clicked();
 signals:
     void hide_now();
-    void add_lim(t_lim lim);
 private:
     Ui::timelim *ui;
+    QList<t_lim>limque;
 };
 
 #endif // TIMELIM_H

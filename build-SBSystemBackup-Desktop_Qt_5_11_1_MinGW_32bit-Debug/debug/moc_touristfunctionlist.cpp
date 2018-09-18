@@ -6,7 +6,7 @@
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
 
-#include "../../../SBS_temp/SBSystem/SBSystemBackup/touristfunctionlist.h"
+#include "../../SBSystemBackup/touristfunctionlist.h"
 #include <QtCore/qbytearray.h>
 #include <QtCore/qmetatype.h>
 #if !defined(Q_MOC_OUTPUT_REVISION)
@@ -21,8 +21,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_TouristFunctionList_t {
-    QByteArrayData data[6];
-    char stringdata0[80];
+    QByteArrayData data[8];
+    char stringdata0[103];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -32,16 +32,18 @@ struct qt_meta_stringdata_TouristFunctionList_t {
 static const qt_meta_stringdata_TouristFunctionList_t qt_meta_stringdata_TouristFunctionList = {
     {
 QT_MOC_LITERAL(0, 0, 19), // "TouristFunctionList"
-QT_MOC_LITERAL(1, 20, 18), // "on_allsite_clicked"
-QT_MOC_LITERAL(2, 39, 0), // ""
-QT_MOC_LITERAL(3, 40, 15), // "on_info_clicked"
-QT_MOC_LITERAL(4, 56, 16), // "on_order_clicked"
-QT_MOC_LITERAL(5, 73, 6) // "reshow"
+QT_MOC_LITERAL(1, 20, 13), // "show_all_site"
+QT_MOC_LITERAL(2, 34, 0), // ""
+QT_MOC_LITERAL(3, 35, 8), // "vis_time"
+QT_MOC_LITERAL(4, 44, 18), // "on_allsite_clicked"
+QT_MOC_LITERAL(5, 63, 15), // "on_info_clicked"
+QT_MOC_LITERAL(6, 79, 16), // "on_order_clicked"
+QT_MOC_LITERAL(7, 96, 6) // "reshow"
 
     },
-    "TouristFunctionList\0on_allsite_clicked\0"
-    "\0on_info_clicked\0on_order_clicked\0"
-    "reshow"
+    "TouristFunctionList\0show_all_site\0\0"
+    "vis_time\0on_allsite_clicked\0on_info_clicked\0"
+    "on_order_clicked\0reshow"
 };
 #undef QT_MOC_LITERAL
 
@@ -51,7 +53,7 @@ static const uint qt_meta_data_TouristFunctionList[] = {
        7,       // revision
        0,       // classname
        0,    0, // classinfo
-       4,   14, // methods
+       5,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -59,12 +61,14 @@ static const uint qt_meta_data_TouristFunctionList[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags
-       1,    0,   34,    2, 0x08 /* Private */,
-       3,    0,   35,    2, 0x08 /* Private */,
-       4,    0,   36,    2, 0x08 /* Private */,
-       5,    0,   37,    2, 0x08 /* Private */,
+       1,    1,   39,    2, 0x0a /* Public */,
+       4,    0,   42,    2, 0x08 /* Private */,
+       5,    0,   43,    2, 0x08 /* Private */,
+       6,    0,   44,    2, 0x08 /* Private */,
+       7,    0,   45,    2, 0x08 /* Private */,
 
  // slots: parameters
+    QMetaType::Void, QMetaType::QDateTime,    3,
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
@@ -79,14 +83,14 @@ void TouristFunctionList::qt_static_metacall(QObject *_o, QMetaObject::Call _c, 
         TouristFunctionList *_t = static_cast<TouristFunctionList *>(_o);
         Q_UNUSED(_t)
         switch (_id) {
-        case 0: _t->on_allsite_clicked(); break;
-        case 1: _t->on_info_clicked(); break;
-        case 2: _t->on_order_clicked(); break;
-        case 3: _t->reshow(); break;
+        case 0: _t->show_all_site((*reinterpret_cast< QDateTime(*)>(_a[1]))); break;
+        case 1: _t->on_allsite_clicked(); break;
+        case 2: _t->on_info_clicked(); break;
+        case 3: _t->on_order_clicked(); break;
+        case 4: _t->reshow(); break;
         default: ;
         }
     }
-    Q_UNUSED(_a);
 }
 
 QT_INIT_METAOBJECT const QMetaObject TouristFunctionList::staticMetaObject = {
@@ -114,13 +118,13 @@ int TouristFunctionList::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 4)
+        if (_id < 5)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 4;
+        _id -= 5;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 4)
+        if (_id < 5)
             *reinterpret_cast<int*>(_a[0]) = -1;
-        _id -= 4;
+        _id -= 5;
     }
     return _id;
 }

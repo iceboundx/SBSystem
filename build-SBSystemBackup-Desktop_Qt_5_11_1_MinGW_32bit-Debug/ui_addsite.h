@@ -9,6 +9,7 @@
 #ifndef UI_ADDSITE_H
 #define UI_ADDSITE_H
 
+#include <QtCore/QDate>
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QComboBox>
@@ -31,10 +32,8 @@ public:
     QWidget *centralwidget;
     QGroupBox *groupbox;
     QLabel *label_2;
-    QSpinBox *ticketnum;
     QLabel *label;
     QLabel *label_3;
-    QLabel *label_4;
     QDateEdit *date_begin;
     QLabel *label_5;
     QLabel *label_6;
@@ -58,7 +57,6 @@ public:
     QLabel *newlabel;
     QLabel *label_16;
     QPushButton *saveprice;
-    QLabel *idprompt;
     QPushButton *publish;
     QPushButton *cancel;
     QPushButton *save;
@@ -94,16 +92,6 @@ public:
         font1.setFamily(QString::fromUtf8("\345\276\256\350\275\257\351\233\205\351\273\221"));
         font1.setPointSize(10);
         label_2->setFont(font1);
-        ticketnum = new QSpinBox(groupbox);
-        ticketnum->setObjectName(QStringLiteral("ticketnum"));
-        ticketnum->setGeometry(QRect(160, 330, 201, 41));
-        ticketnum->setFont(font);
-        ticketnum->setFrame(false);
-        ticketnum->setMinimum(1000);
-        ticketnum->setMaximum(999999);
-        ticketnum->setSingleStep(100);
-        ticketnum->setValue(1000);
-        ticketnum->setDisplayIntegerBase(10);
         label = new QLabel(groupbox);
         label->setObjectName(QStringLiteral("label"));
         label->setGeometry(QRect(60, 30, 81, 21));
@@ -112,16 +100,13 @@ public:
         label_3->setObjectName(QStringLiteral("label_3"));
         label_3->setGeometry(QRect(60, 130, 91, 21));
         label_3->setFont(font1);
-        label_4 = new QLabel(groupbox);
-        label_4->setObjectName(QStringLiteral("label_4"));
-        label_4->setGeometry(QRect(60, 340, 91, 21));
-        label_4->setFont(font1);
         date_begin = new QDateEdit(groupbox);
         date_begin->setObjectName(QStringLiteral("date_begin"));
         date_begin->setGeometry(QRect(580, 130, 110, 22));
         date_begin->setFont(font);
         date_begin->setFrame(false);
         date_begin->setMinimumDateTime(QDateTime(QDate(1752, 9, 14), QTime(0, 0, 0)));
+        date_begin->setDate(QDate(2017, 1, 1));
         label_5 = new QLabel(groupbox);
         label_5->setObjectName(QStringLiteral("label_5"));
         label_5->setGeometry(QRect(490, 130, 81, 20));
@@ -158,7 +143,7 @@ public:
         label_9->setFont(font);
         price_list = new QListWidget(groupbox);
         price_list->setObjectName(QStringLiteral("price_list"));
-        price_list->setGeometry(QRect(630, 210, 191, 81));
+        price_list->setGeometry(QRect(630, 210, 191, 91));
         label_10 = new QLabel(groupbox);
         label_10->setObjectName(QStringLiteral("label_10"));
         label_10->setGeometry(QRect(60, 440, 91, 21));
@@ -178,13 +163,14 @@ public:
         date_end->setGeometry(QRect(760, 130, 110, 22));
         date_end->setFont(font);
         date_end->setFrame(false);
+        date_end->setDate(QDate(2017, 6, 1));
         profile = new QTextEdit(groupbox);
         profile->setObjectName(QStringLiteral("profile"));
         profile->setGeometry(QRect(160, 560, 561, 121));
         profile->setAcceptRichText(false);
         label_11 = new QLabel(groupbox);
         label_11->setObjectName(QStringLiteral("label_11"));
-        label_11->setGeometry(QRect(60, 380, 91, 21));
+        label_11->setGeometry(QRect(40, 330, 91, 21));
         label_11->setFont(font1);
         label_12 = new QLabel(groupbox);
         label_12->setObjectName(QStringLiteral("label_12"));
@@ -192,7 +178,7 @@ public:
         label_12->setFont(font1);
         maprice = new QSpinBox(groupbox);
         maprice->setObjectName(QStringLiteral("maprice"));
-        maprice->setGeometry(QRect(160, 380, 201, 41));
+        maprice->setGeometry(QRect(160, 320, 201, 41));
         maprice->setFont(font);
         maprice->setFrame(false);
         maprice->setMinimum(0);
@@ -202,7 +188,7 @@ public:
         maprice->setDisplayIntegerBase(10);
         timelimit = new QPushButton(groupbox);
         timelimit->setObjectName(QStringLiteral("timelimit"));
-        timelimit->setGeometry(QRect(480, 350, 121, 41));
+        timelimit->setGeometry(QRect(430, 320, 121, 41));
         QFont font2;
         font2.setFamily(QString::fromUtf8("\345\276\256\350\275\257\351\233\205\351\273\221"));
         font2.setPointSize(8);
@@ -231,9 +217,6 @@ public:
         QFont font3;
         font3.setPointSize(10);
         saveprice->setFont(font3);
-        idprompt = new QLabel(groupbox);
-        idprompt->setObjectName(QStringLiteral("idprompt"));
-        idprompt->setGeometry(QRect(400, 80, 111, 16));
         publish = new QPushButton(groupbox);
         publish->setObjectName(QStringLiteral("publish"));
         publish->setGeometry(QRect(700, 690, 161, 51));
@@ -251,7 +234,7 @@ public:
         save->setFont(font1);
         disprompt = new QLabel(groupbox);
         disprompt->setObjectName(QStringLiteral("disprompt"));
-        disprompt->setGeometry(QRect(180, 260, 171, 21));
+        disprompt->setGeometry(QRect(400, 80, 171, 21));
         QFont font5;
         font5.setPointSize(10);
         font5.setBold(true);
@@ -299,6 +282,9 @@ public:
 
         retranslateUi(addsite);
 
+        people->setCurrentIndex(0);
+
+
         QMetaObject::connectSlotsByName(addsite);
     } // setupUi
 
@@ -309,9 +295,8 @@ public:
         label_2->setText(QApplication::translate("addsite", "\346\231\257\347\202\271ID", nullptr));
         label->setText(QApplication::translate("addsite", "\346\231\257\347\202\271\345\220\215\347\247\260", nullptr));
         label_3->setText(QApplication::translate("addsite", "\346\231\257\347\202\271\347\245\250\344\273\267", nullptr));
-        label_4->setText(QApplication::translate("addsite", "\346\231\257\347\202\271\351\227\250\347\245\250\351\207\217", nullptr));
         date_begin->setDisplayFormat(QApplication::translate("addsite", "MM/dd", nullptr));
-        label_5->setText(QApplication::translate("addsite", "\346\227\272\345\255\243\347\224\261\344\273\212\345\271\264", nullptr));
+        label_5->setText(QApplication::translate("addsite", "\346\267\241\345\255\243\347\224\261\344\273\212\345\271\264", nullptr));
         label_6->setText(QApplication::translate("addsite", "\346\227\272\345\255\243\347\245\250\344\273\267", nullptr));
         label_y->setText(QApplication::translate("addsite", "\350\207\263\344\273\212\345\271\264", nullptr));
         label_8->setText(QApplication::translate("addsite", "\346\267\241\345\255\243\347\245\250\344\273\267", nullptr));
@@ -327,11 +312,10 @@ public:
         newlabel->setText(QApplication::translate("addsite", "\346\212\230\346\211\243\347\263\273\346\225\260", nullptr));
         label_16->setText(QApplication::translate("addsite", "(200\345\255\227\347\254\246\344\273\245\345\206\205)", nullptr));
         saveprice->setText(QApplication::translate("addsite", "\344\277\235\345\255\230", nullptr));
-        idprompt->setText(QApplication::translate("addsite", "\345\277\205\351\241\273\344\270\2726\344\275\215\346\225\260\345\255\227", nullptr));
         publish->setText(QApplication::translate("addsite", "\345\217\221\345\270\203", nullptr));
         cancel->setText(QApplication::translate("addsite", "\345\217\226\346\266\210", nullptr));
         save->setText(QApplication::translate("addsite", "\344\277\235\345\255\230\350\215\211\347\250\277", nullptr));
-        disprompt->setText(QApplication::translate("addsite", "\346\212\230\346\211\243\346\240\274\345\274\217\344\270\215\346\255\243\347\241\256", nullptr));
+        disprompt->setText(QApplication::translate("addsite", "\345\277\205\351\241\273\344\270\2726\344\275\215\346\225\260\345\255\227", nullptr));
         people->setItemText(0, QApplication::translate("addsite", "\346\211\200\346\234\211\344\272\272", nullptr));
         people->setItemText(1, QApplication::translate("addsite", "\344\270\215\351\200\202\345\220\210\345\204\277\347\253\245", nullptr));
         people->setItemText(2, QApplication::translate("addsite", "\344\270\215\351\200\202\345\220\210\351\225\277\350\200\205", nullptr));

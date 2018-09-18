@@ -44,7 +44,9 @@ struct site
     QList<t_lim> lim;
     int is_pub;
     int num;
+    int left;
     int age_type;
+    bool is_re;
     QDateTime begin_time;
     QDateTime end_time;
 };
@@ -69,7 +71,7 @@ struct order_site
     QDateTime vis_time;
     int num;
     double price;
-    QString type;
+    QString type;//单价！！
 };
 struct order
 {
@@ -90,13 +92,11 @@ public:
     bool del_site(QString site_id);
     bool pub_site(QString site_id);
     bool add_time_lim(t_lim time_lim);
-    double get_price(site now,QDateTime vis_time, QString type);
     bool del_order(QString order_id);
-    int add_order(QString site_id, QDateTime vis_time, QString type, int num);
+    int add_order(order_site o_site);
     bool set_order(QDateTime order_time);
     void clear_order();
     void clear_lim();
-    int get_now_site_num(QDateTime vis_time,t_lim lim);
     void change_admin(admin user,bool is_pa);
     void change_tourist(tourist user,bool is_pa);
     admin get_admin();
@@ -104,9 +104,12 @@ public:
     QList<site>get_every_site(QDateTime vis_time);
     QList<order>get_every_order();
     QList<site> get_every_site();
+    QList<order_site>get_order_que();
     QList<site>filter_site(QList<site>site_buf,int type,QString str);
     site get_site(QString id);
     order get_order(QString id);
+    int get_site_num(QString site_id, QDateTime vis_time);
+    bool is_in(QDateTime now,QDateTime l,QDateTime r);
     bool is_admin() const;
 signals:
 
@@ -118,7 +121,7 @@ private:
     SBSdatabase *db;
     const char* TIME_FM="yyyy:MM:dd:HH:mm";
     const char* DATE_FM="MM:dd";
-    const int MAX_NUM=1000000;
+    const int MAX_NUM=0;
     site site_empty;
     order order_empty;
     QString now_id;
@@ -127,10 +130,10 @@ private:
     QList<t_lim>lim_que;
     QList<site>site_buf;
     QList<order>order_buf;
+    int get_now_site_num(QString site_id,QDateTime vis_time,t_lim lim);
     bool is_in(QDateTime vis_time,t_lim lim);
-    bool is_in(QDateTime now,QDateTime l,QDateTime r);
-    int get_site_num(QString site_id, QDateTime vis_time);
     int get_already_site_num(QString site_id);
+    QList<order_site>get_o_site_que();
     QList<order>get_all_order();
     QList<site> get_all_site();
 };

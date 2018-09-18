@@ -35,11 +35,15 @@ QString SBSmanager::get_salt(int lenth)
 
 bool SBSmanager::is_in(QDateTime vis_time, t_lim lim)
 {
-    QDateTime l=QDateTime::fromString(lim.begin.toString("MM:dd:HH:mm"),"MM:dd:HH:mm");
-    QDateTime r=QDateTime::fromString(lim.end.toString("MM:dd:HH:mm"),"MM:dd:HH:mm");
-    QDateTime now=QDateTime::fromString(vis_time.toString("MM:dd:HH:mm"),"MM:dd:HH:mm");
-    return is_in(now,l,r);
-    return 0;
+    QDateTime l=QDateTime::fromString(lim.begin.toString("2000:MM:dd:HH:mm"),"yyyy:MM:dd:HH:mm");
+    QDateTime r=QDateTime::fromString(lim.end.toString("2000:MM:dd:HH:mm"),"yyyy:MM:dd:HH:mm");
+    QDateTime now=QDateTime::fromString(vis_time.toString("2000:MM:dd:HH:mm"),"yyyy:MM:dd:HH:mm");
+    //qDebug()<<l.toString("MM:dd:HH:mm")<<" xx "<<r.toString("MM:dd:HH:mm");
+    if(!is_in(now,l,r))return 0;
+    QDateTime ll=QDateTime::fromString(lim.begin.toString("2000:01:01:HH:mm"),"yyyy:MM:dd:HH:mm");
+    QDateTime rr=QDateTime::fromString(lim.end.toString("2000:01:01:HH:mm"),"yyyy:MM:dd:HH:mm");
+    QDateTime nnow=QDateTime::fromString(vis_time.toString("2000:01:01:HH:mm"),"yyyy:MM:dd:HH:mm");
+    return is_in(nnow,ll,rr);
 }
 
 bool SBSmanager::is_in(QDateTime now, QDateTime l, QDateTime r)
@@ -52,13 +56,20 @@ bool SBSmanager::is_in(QDateTime now, QDateTime l, QDateTime r)
 int SBSmanager::get_site_num(QString site_id, QDateTime vis_time)
 {
     site now=get_site(site_id);
+    int ans=0;
+    for(int i=0;i<order_que.size();i++)
+        if(order_que.at(i).site_id==site_id)ans+=order_que.at(i).num;
+    qDebug()<<"ans "<<ans;
     for(int i=0;i<(int)now.lim.size();i++)
     {
+        qDebug()<<vis_time<<" "<<now.lim.at(i).begin<<" "<<now.lim.at(i).end;
         if(is_in(vis_time,now.lim.at(i)))
         {
-            return get_now_site_num(vis_time,now.lim.at(i));//注意是now!
+            qDebug()<<"catch";
+            return get_now_site_num(site_id,vis_time,now.lim.at(i))-ans;//注意是now!
         }
     }
+    qDebug()<<"return "<<MAX_NUM;
     return MAX_NUM;
 }
 
@@ -227,45 +238,25 @@ bool SBSmanager::pub_site(QString site_id)
 
 bool SBSmanager::add_time_lim(t_lim time_lim)
 {
+    QDateTime l2=time_lim.begin,r2=time_lim.end;
+    if(r2<l2)return 0;
+    if(r2.time()<l2.time())return 0;
     for(int i=0;i<(int)lim_que.size();i++)
     {
         QDateTime l1=lim_que.at(i).begin;
         QDateTime r1=lim_que.at(i).end;
-        QDateTime l2=time_lim.begin,r2=time_lim.end;
         if(r2<l1||r1<l2)continue;
-        l1=QDateTime::fromString(l1.toString("HH:mm"));
-        l2=QDateTime::fromString(l2.toString("HH:mm"));
-        r1=QDateTime::fromString(l1.toString("HH:mm"));
-        r2=QDateTime::fromString(l2.toString("HH:mm"));
-        if(r1<l1||r1<l2)continue;
+        QTime L1=l1.time();
+        QTime L2=l2.time();
+        QTime R1=r1.time();
+        QTime R2=r2.time();
+        if(R1<L2||R2<L1)continue;
+        return 0;
     }
     lim_que.append(time_lim);
     return 1;
 }
 
-double SBSmanager::get_price(site now, QDateTime vis_time, QString type)
-{
-    double now_price=0;
-    if(now.begin_time>now.end_time)
-    {
-        if(vis_time>=now.begin_time||vis_time<=now.end_time)now_price=now.price_low;
-        else now_price=now.price_high;
-    }
-    else
-    {
-        if(vis_time>=now.begin_time&&vis_time<=now.end_time)now_price=now.price_low;
-        else now_price=now.price_high;
-    }
-    if(type!="")
-    {
-        for(int i=0;i<(int)now.dis.size();i++)
-            if(now.dis.at(i).type==type)
-            {
-                return now_price*now.dis.at(i).d_price;
-            }
-    }
-    return now_price;
-}
 
 bool SBSmanager::del_order(QString order_id)
 {
@@ -278,27 +269,21 @@ bool SBSmanager::del_order(QString order_id)
     return 1;
 }
 
-int SBSmanager::add_order(QString site_id, QDateTime vis_time, QString type, int num)
+int SBSmanager::add_order(order_site o_site)
 {
-    site now=get_site(site_id);
-    if(get_site_num(site_id,vis_time)<num)return 0;
-    order_site o_now;
-    o_now.site_id=now.id;
-    o_now.vis_time=vis_time;
-    o_now.type=type;
-    o_now.num=num;
-    o_now.price=get_price(now,vis_time,type)*num;
+    site now=get_site(o_site.site_id);
+    if(get_site_num(o_site.site_id,o_site.vis_time)<o_site.num)return 0;
     for(int i=0;i<(int)order_que.size();i++)
     {
-        if(order_que.at(i).site_id==site_id)continue;
+        if(order_que.at(i).site_id==o_site.site_id)continue;
         site tep=get_site(order_que.at(i).site_id);
         QDateTime l1=order_que.at(i).vis_time;
         QDateTime r1=l1.addSecs(tep.time*60);
-        QDateTime l2=vis_time,r2=vis_time.addSecs(now.time*60);
+        QDateTime l2=o_site.vis_time,r2=l2.addSecs(now.time*60);
         if(r2<l1||r1<l2)continue;
         else return -1;
     }
-    order_que.append(o_now);
+    order_que.append(o_site);
     return 1;
 }
 
@@ -352,6 +337,11 @@ int SBSmanager::get_already_site_num(QString site_id)
         }
     }
     return ret;
+}
+
+QList<order_site> SBSmanager::get_o_site_que()
+{
+    return order_que;
 }
 
 void SBSmanager::change_admin(admin user,bool is_pa)
@@ -411,6 +401,7 @@ tourist SBSmanager::get_tourist()
 QList<site> SBSmanager::get_every_site(QDateTime vis_time)
 {
     QList<site>buf;
+    qDebug()<<"get every site by vis_time";
     for(int i=0;i<site_buf.size();i++)
     {
         int site_num=get_site_num(site_buf.at(i).id,vis_time);
@@ -427,6 +418,11 @@ QList<order> SBSmanager::get_every_order()
 QList<site> SBSmanager::get_every_site()
 {
     return site_buf;
+}
+
+QList<order_site> SBSmanager::get_order_que()
+{
+    return order_que;
 }
 
 QList<site> SBSmanager::filter_site(QList<site> site_buf, int type, QString str)
@@ -555,7 +551,7 @@ QList<site> SBSmanager::filter_site(QList<site> site_buf, int type, QString str)
     }
 }
 
-int SBSmanager::get_now_site_num(QDateTime vis_time, t_lim lim)
+int SBSmanager::get_now_site_num(QString site_id,QDateTime vis_time, t_lim lim)
 {
     QString year=vis_time.toString("yyyy");
     QDateTime l=QDateTime::fromString(year+lim.begin.toString("MM:dd:HH:mm"),TIME_FM);
@@ -566,6 +562,7 @@ int SBSmanager::get_now_site_num(QDateTime vis_time, t_lim lim)
         order now=order_buf.at(i);
         for(int j=0;j<(int)now.o_site.size();j++)
         {
+            if(now.o_site.at(j).site_id!=site_id)continue;
             if(is_in(now.o_site.at(j).vis_time,l,r))ret-=now.o_site.at(j).num;
         }
     }

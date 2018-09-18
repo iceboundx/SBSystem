@@ -50,39 +50,6 @@
       <string>景点ID</string>
      </property>
     </widget>
-    <widget class="QSpinBox" name="ticketnum">
-     <property name="geometry">
-      <rect>
-       <x>160</x>
-       <y>330</y>
-       <width>201</width>
-       <height>41</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>微软雅黑</family>
-      </font>
-     </property>
-     <property name="frame">
-      <bool>false</bool>
-     </property>
-     <property name="minimum">
-      <number>1000</number>
-     </property>
-     <property name="maximum">
-      <number>999999</number>
-     </property>
-     <property name="singleStep">
-      <number>100</number>
-     </property>
-     <property name="value">
-      <number>1000</number>
-     </property>
-     <property name="displayIntegerBase">
-      <number>10</number>
-     </property>
-    </widget>
     <widget class="QLabel" name="label">
      <property name="geometry">
       <rect>
@@ -121,25 +88,6 @@
       <string>景点票价</string>
      </property>
     </widget>
-    <widget class="QLabel" name="label_4">
-     <property name="geometry">
-      <rect>
-       <x>60</x>
-       <y>340</y>
-       <width>91</width>
-       <height>21</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>微软雅黑</family>
-       <pointsize>10</pointsize>
-      </font>
-     </property>
-     <property name="text">
-      <string>景点门票量</string>
-     </property>
-    </widget>
     <widget class="QDateEdit" name="date_begin">
      <property name="geometry">
       <rect>
@@ -170,6 +118,13 @@
      <property name="displayFormat">
       <string>MM/dd</string>
      </property>
+     <property name="date">
+      <date>
+       <year>2017</year>
+       <month>1</month>
+       <day>1</day>
+      </date>
+     </property>
     </widget>
     <widget class="QLabel" name="label_5">
      <property name="geometry">
@@ -186,7 +141,7 @@
       </font>
      </property>
      <property name="text">
-      <string>旺季由今年</string>
+      <string>淡季由今年</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_6">
@@ -315,7 +270,7 @@
        <x>630</x>
        <y>210</y>
        <width>191</width>
-       <height>81</height>
+       <height>91</height>
       </rect>
      </property>
     </widget>
@@ -391,6 +346,13 @@
      <property name="displayFormat">
       <string>MM/dd</string>
      </property>
+     <property name="date">
+      <date>
+       <year>2017</year>
+       <month>6</month>
+       <day>1</day>
+      </date>
+     </property>
     </widget>
     <widget class="QTextEdit" name="profile">
      <property name="geometry">
@@ -408,8 +370,8 @@
     <widget class="QLabel" name="label_11">
      <property name="geometry">
       <rect>
-       <x>60</x>
-       <y>380</y>
+       <x>40</x>
+       <y>330</y>
        <width>91</width>
        <height>21</height>
       </rect>
@@ -447,7 +409,7 @@
      <property name="geometry">
       <rect>
        <x>160</x>
-       <y>380</y>
+       <y>320</y>
        <width>201</width>
        <height>41</height>
       </rect>
@@ -479,8 +441,8 @@
     <widget class="QPushButton" name="timelimit">
      <property name="geometry">
       <rect>
-       <x>480</x>
-       <y>350</y>
+       <x>430</x>
+       <y>320</y>
        <width>121</width>
        <height>41</height>
       </rect>
@@ -596,19 +558,6 @@
       <string>保存</string>
      </property>
     </widget>
-    <widget class="QLabel" name="idprompt">
-     <property name="geometry">
-      <rect>
-       <x>400</x>
-       <y>80</y>
-       <width>111</width>
-       <height>16</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>必须为6位数字</string>
-     </property>
-    </widget>
     <widget class="QPushButton" name="publish">
      <property name="geometry">
       <rect>
@@ -669,8 +618,8 @@
     <widget class="QLabel" name="disprompt">
      <property name="geometry">
       <rect>
-       <x>180</x>
-       <y>260</y>
+       <x>400</x>
+       <y>80</y>
        <width>171</width>
        <height>21</height>
       </rect>
@@ -683,7 +632,7 @@
       </font>
      </property>
      <property name="text">
-      <string>折扣格式不正确</string>
+      <string>必须为6位数字</string>
      </property>
     </widget>
     <widget class="QComboBox" name="people">
@@ -697,6 +646,9 @@
      </property>
      <property name="currentText">
       <string>所有人</string>
+     </property>
+     <property name="currentIndex">
+      <number>0</number>
      </property>
      <item>
       <property name="text">

@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>945</width>
-    <height>729</height>
+    <height>642</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -52,68 +52,11 @@
      <string>景点级别</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_2">
-    <property name="geometry">
-     <rect>
-      <x>70</x>
-      <y>70</y>
-      <width>81</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>微软雅黑</family>
-      <pointsize>10</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>景点ID</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_17">
-    <property name="geometry">
-     <rect>
-      <x>540</x>
-      <y>310</y>
-      <width>91</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>微软雅黑</family>
-      <pointsize>10</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>适合人群</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label">
-    <property name="geometry">
-     <rect>
-      <x>70</x>
-      <y>20</y>
-      <width>81</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>微软雅黑</family>
-      <pointsize>10</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>景点名称</string>
-    </property>
-   </widget>
    <widget class="QLabel" name="label_14">
     <property name="geometry">
      <rect>
       <x>80</x>
-      <y>310</y>
+      <y>280</y>
       <width>111</width>
       <height>21</height>
      </rect>
@@ -150,45 +93,26 @@
    <widget class="QLabel" name="name">
     <property name="geometry">
      <rect>
-      <x>180</x>
-      <y>20</y>
-      <width>81</width>
-      <height>21</height>
+      <x>70</x>
+      <y>10</y>
+      <width>321</width>
+      <height>91</height>
      </rect>
     </property>
     <property name="font">
      <font>
       <family>微软雅黑</family>
-      <pointsize>10</pointsize>
+      <pointsize>25</pointsize>
      </font>
     </property>
     <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QLabel" name="id">
-    <property name="geometry">
-     <rect>
-      <x>180</x>
-      <y>70</y>
-      <width>81</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>微软雅黑</family>
-      <pointsize>10</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string/>
+     <string>景点名称</string>
     </property>
    </widget>
    <widget class="QLabel" name="area">
     <property name="geometry">
      <rect>
-      <x>610</x>
+      <x>570</x>
       <y>20</y>
       <width>91</width>
       <height>21</height>
@@ -201,13 +125,13 @@
      </font>
     </property>
     <property name="text">
-     <string/>
+     <string>区域</string>
     </property>
    </widget>
    <widget class="QLabel" name="level">
     <property name="geometry">
      <rect>
-      <x>610</x>
+      <x>570</x>
       <y>70</y>
       <width>91</width>
       <height>21</height>
@@ -220,14 +144,14 @@
      </font>
     </property>
     <property name="text">
-     <string/>
+     <string>5级</string>
     </property>
    </widget>
    <widget class="QGroupBox" name="groupBox">
     <property name="geometry">
      <rect>
-      <x>40</x>
-      <y>390</y>
+      <x>30</x>
+      <y>320</y>
       <width>871</width>
       <height>201</height>
      </rect>
@@ -238,7 +162,7 @@
     <widget class="QLabel" name="pricehigh">
      <property name="geometry">
       <rect>
-       <x>210</x>
+       <x>190</x>
        <y>50</y>
        <width>71</width>
        <height>16</height>
@@ -250,27 +174,27 @@
       </font>
      </property>
      <property name="text">
-      <string/>
+      <string>1000</string>
      </property>
     </widget>
     <widget class="QLabel" name="begintime">
      <property name="geometry">
       <rect>
-       <x>460</x>
-       <y>50</y>
+       <x>450</x>
+       <y>40</y>
        <width>72</width>
-       <height>15</height>
+       <height>20</height>
       </rect>
      </property>
      <property name="text">
-      <string/>
+      <string>12月12日</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_5">
      <property name="geometry">
       <rect>
        <x>370</x>
-       <y>50</y>
+       <y>40</y>
        <width>81</width>
        <height>20</height>
       </rect>
@@ -281,7 +205,7 @@
       </font>
      </property>
      <property name="text">
-      <string>旺季由每年</string>
+      <string>淡季由今年</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_6">
@@ -306,7 +230,7 @@
      <property name="geometry">
       <rect>
        <x>20</x>
-       <y>40</y>
+       <y>30</y>
        <width>91</width>
        <height>21</height>
       </rect>
@@ -324,10 +248,10 @@
     <widget class="QLabel" name="label_9">
      <property name="geometry">
       <rect>
-       <x>110</x>
-       <y>120</y>
-       <width>61</width>
-       <height>16</height>
+       <x>20</x>
+       <y>160</y>
+       <width>261</width>
+       <height>21</height>
       </rect>
      </property>
      <property name="font">
@@ -336,13 +260,13 @@
       </font>
      </property>
      <property name="text">
-      <string>特殊票价</string>
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;按您选择的时间和折扣，当前单价为&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
     </widget>
     <widget class="QLabel" name="pricelow">
      <property name="geometry">
       <rect>
-       <x>210</x>
+       <x>190</x>
        <y>80</y>
        <width>71</width>
        <height>16</height>
@@ -354,20 +278,20 @@
       </font>
      </property>
      <property name="text">
-      <string/>
+      <string>1000</string>
      </property>
     </widget>
     <widget class="QLabel" name="endtime">
      <property name="geometry">
       <rect>
-       <x>620</x>
-       <y>50</y>
+       <x>580</x>
+       <y>40</y>
        <width>72</width>
        <height>15</height>
       </rect>
      </property>
      <property name="text">
-      <string/>
+      <string>12月12日</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_8">
@@ -388,11 +312,11 @@
       <string>淡季票价</string>
      </property>
     </widget>
-    <widget class="QLabel" name="label_7">
+    <widget class="QLabel" name="label_y">
      <property name="geometry">
       <rect>
-       <x>580</x>
-       <y>50</y>
+       <x>520</x>
+       <y>40</y>
        <width>51</width>
        <height>16</height>
       </rect>
@@ -403,15 +327,70 @@
       </font>
      </property>
      <property name="text">
-      <string>至</string>
+      <string>至今年</string>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="dis_type">
+     <property name="geometry">
+      <rect>
+       <x>520</x>
+       <y>101</y>
+       <width>91</width>
+       <height>21</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>440</x>
+       <y>100</y>
+       <width>101</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>选择折扣：</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="cur_dis">
+     <property name="geometry">
+      <rect>
+       <x>640</x>
+       <y>100</y>
+       <width>191</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>当前折扣可打85折</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="per_price">
+     <property name="geometry">
+      <rect>
+       <x>290</x>
+       <y>150</y>
+       <width>121</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>黑体</family>
+       <pointsize>13</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>300元</string>
      </property>
     </widget>
    </widget>
    <widget class="QLabel" name="time">
     <property name="geometry">
      <rect>
-      <x>250</x>
-      <y>310</y>
+      <x>200</x>
+      <y>280</y>
       <width>81</width>
       <height>21</height>
      </rect>
@@ -423,15 +402,15 @@
      </font>
     </property>
     <property name="text">
-     <string/>
+     <string>100分钟</string>
     </property>
    </widget>
    <widget class="QLabel" name="agetype">
     <property name="geometry">
      <rect>
-      <x>670</x>
-      <y>310</y>
-      <width>81</width>
+      <x>570</x>
+      <y>280</y>
+      <width>161</width>
       <height>21</height>
      </rect>
     </property>
@@ -442,15 +421,15 @@
      </font>
     </property>
     <property name="text">
-     <string/>
+     <string>不适合长者及儿童</string>
     </property>
    </widget>
    <widget class="QPushButton" name="add">
     <property name="geometry">
      <rect>
-      <x>680</x>
-      <y>600</y>
-      <width>151</width>
+      <x>670</x>
+      <y>550</y>
+      <width>171</width>
       <height>51</height>
      </rect>
     </property>
@@ -461,35 +440,16 @@
      </font>
     </property>
     <property name="text">
-     <string>加入订单</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="add_2">
-    <property name="geometry">
-     <rect>
-      <x>510</x>
-      <y>610</y>
-      <width>131</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>微软雅黑</family>
-      <pointsize>10</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>返回</string>
+     <string>加入购物车</string>
     </property>
    </widget>
    <widget class="QLabel" name="profile">
     <property name="geometry">
      <rect>
-      <x>170</x>
-      <y>140</y>
-      <width>581</width>
-      <height>101</height>
+      <x>140</x>
+      <y>130</y>
+      <width>731</width>
+      <height>131</height>
      </rect>
     </property>
     <property name="font">
@@ -499,7 +459,89 @@
      </font>
     </property>
     <property name="text">
-     <string/>
+     <string>北京动物园位于北京市西城区西直门外大街，东邻北京展览馆和莫斯科餐厅，占地面积约86公顷，水面8.6公顷。始建于清光绪三十二年（1906年），是中国开放最早、饲养展出动物种类最多的动物园。饲养展览动物500余种5000多只；海洋鱼类及海洋生物500余种10000多尾。每年接待中外游客600多万人次。是中国最大的动物园之一，也是一所世界知名的动物园。</string>
+    </property>
+    <property name="textFormat">
+     <enum>Qt::PlainText</enum>
+    </property>
+    <property name="wordWrap">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="buy_num">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>550</y>
+      <width>91</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="minimum">
+     <number>1</number>
+    </property>
+    <property name="maximum">
+     <number>1000</number>
+    </property>
+    <property name="displayIntegerBase">
+     <number>10</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>560</y>
+      <width>91</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>等线</family>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>购买数量</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_11">
+    <property name="geometry">
+     <rect>
+      <x>300</x>
+      <y>550</y>
+      <width>71</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>黑体</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>总价：</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="all_price">
+    <property name="geometry">
+     <rect>
+      <x>370</x>
+      <y>550</y>
+      <width>151</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>黑体</family>
+      <pointsize>16</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>100000元</string>
     </property>
    </widget>
   </widget>

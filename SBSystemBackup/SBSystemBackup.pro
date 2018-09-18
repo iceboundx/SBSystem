@@ -39,7 +39,10 @@ SOURCES += \
     timelim.cpp \
     onesite.cpp \
     sbsdatabase.cpp \
-    sbsmanager.cpp
+    sbsmanager.cpp \
+    show_site.cpp \
+    getvistime.cpp \
+    show_order.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -55,7 +58,10 @@ HEADERS += \
     onesite.h \
     sbsdatabase.h \
     sbsmanager.h \
-    global.h
+    global.h \
+    show_site.h \
+    getvistime.h \
+    show_order.h
 
 FORMS += \
         mainwindow.ui \
@@ -68,6 +74,9 @@ FORMS += \
     orderlist.ui \
     ordersite.ui \
     timelim.ui \
-    onesite.ui
+    onesite.ui \
+    show_site.ui \
+    getvistime.ui \
+    show_order.ui
 
 DISTFILES +=
