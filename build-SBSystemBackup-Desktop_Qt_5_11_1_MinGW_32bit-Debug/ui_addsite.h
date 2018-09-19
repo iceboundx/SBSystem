@@ -21,6 +21,7 @@
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QSpinBox>
+#include <QtWidgets/QSplitter>
 #include <QtWidgets/QTextEdit>
 #include <QtWidgets/QWidget>
 
@@ -63,14 +64,15 @@ public:
     QLabel *disprompt;
     QComboBox *people;
     QLabel *label_17;
-    QLineEdit *id;
-    QLineEdit *name;
     QLineEdit *dis_name;
     QLineEdit *dis_num;
     QLabel *label_18;
     QLabel *label_19;
     QLineEdit *area;
     QLineEdit *time;
+    QSplitter *splitter;
+    QLineEdit *name;
+    QLineEdit *id;
 
     void setupUi(QMainWindow *addsite)
     {
@@ -251,12 +253,6 @@ public:
         label_17->setObjectName(QStringLiteral("label_17"));
         label_17->setGeometry(QRect(450, 520, 91, 21));
         label_17->setFont(font1);
-        id = new QLineEdit(groupbox);
-        id->setObjectName(QStringLiteral("id"));
-        id->setGeometry(QRect(160, 70, 231, 41));
-        name = new QLineEdit(groupbox);
-        name->setObjectName(QStringLiteral("name"));
-        name->setGeometry(QRect(160, 20, 231, 41));
         dis_name = new QLineEdit(groupbox);
         dis_name->setObjectName(QStringLiteral("dis_name"));
         dis_name->setGeometry(QRect(120, 200, 81, 41));
@@ -278,6 +274,16 @@ public:
         time = new QLineEdit(groupbox);
         time->setObjectName(QStringLiteral("time"));
         time->setGeometry(QRect(180, 510, 111, 31));
+        splitter = new QSplitter(groupbox);
+        splitter->setObjectName(QStringLiteral("splitter"));
+        splitter->setGeometry(QRect(160, 20, 221, 91));
+        splitter->setOrientation(Qt::Vertical);
+        name = new QLineEdit(splitter);
+        name->setObjectName(QStringLiteral("name"));
+        splitter->addWidget(name);
+        id = new QLineEdit(splitter);
+        id->setObjectName(QStringLiteral("id"));
+        splitter->addWidget(id);
         addsite->setCentralWidget(centralwidget);
 
         retranslateUi(addsite);

@@ -17,6 +17,12 @@ INPUT(
 ./release\show_site.o
 ./release\getvistime.o
 ./release\show_order.o
+./release\show_admin_site.o
+./release\donutbreakdownchart.o
+./release\mainslice.o
+./release\moreadminsite.o
+./release\admincount.o
+./release\registtour.o
 ./release\moc_mainwindow.o
 ./release\moc_touristfunctionlist.o
 ./release\moc_adminfuntionlist.o
@@ -32,4 +38,9 @@ INPUT(
 ./release\moc_show_site.o
 ./release\moc_getvistime.o
 ./release\moc_show_order.o
+./release\moc_show_admin_site.o
+./release\moc_mainslice.o
+./release\moc_moreadminsite.o
+./release\moc_admincount.o
+./release\moc_registtour.o
 );

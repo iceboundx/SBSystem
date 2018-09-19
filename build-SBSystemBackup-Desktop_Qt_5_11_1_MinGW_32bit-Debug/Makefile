@@ -105,6 +105,8 @@ Makefile: ../SBSystemBackup/SBSystemBackup.pro ../../../QT/5.11.1/mingw53_32/mks
 		../../../QT/5.11.1/mingw53_32/mkspecs/modules/qt_lib_bluetooth.pri \
 		../../../QT/5.11.1/mingw53_32/mkspecs/modules/qt_lib_bluetooth_private.pri \
 		../../../QT/5.11.1/mingw53_32/mkspecs/modules/qt_lib_bootstrap_private.pri \
+		../../../QT/5.11.1/mingw53_32/mkspecs/modules/qt_lib_charts.pri \
+		../../../QT/5.11.1/mingw53_32/mkspecs/modules/qt_lib_charts_private.pri \
 		../../../QT/5.11.1/mingw53_32/mkspecs/modules/qt_lib_concurrent.pri \
 		../../../QT/5.11.1/mingw53_32/mkspecs/modules/qt_lib_concurrent_private.pri \
 		../../../QT/5.11.1/mingw53_32/mkspecs/modules/qt_lib_core.pri \
@@ -225,6 +227,7 @@ Makefile: ../SBSystemBackup/SBSystemBackup.pro ../../../QT/5.11.1/mingw53_32/mks
 		../../../QT/5.11.1/mingw53_32/mkspecs/features/lex.prf \
 		../SBSystemBackup/SBSystemBackup.pro \
 		../../../QT/5.11.1/mingw53_32/lib/qtmaind.prl \
+		../../../QT/5.11.1/mingw53_32/lib/Qt5Charts.prl \
 		../../../QT/5.11.1/mingw53_32/lib/Qt5Widgets.prl \
 		../../../QT/5.11.1/mingw53_32/lib/Qt5Gui.prl \
 		../../../QT/5.11.1/mingw53_32/lib/Qt5Sql.prl \
@@ -274,6 +277,8 @@ Makefile: ../SBSystemBackup/SBSystemBackup.pro ../../../QT/5.11.1/mingw53_32/mks
 ../../../QT/5.11.1/mingw53_32/mkspecs/modules/qt_lib_bluetooth.pri:
 ../../../QT/5.11.1/mingw53_32/mkspecs/modules/qt_lib_bluetooth_private.pri:
 ../../../QT/5.11.1/mingw53_32/mkspecs/modules/qt_lib_bootstrap_private.pri:
+../../../QT/5.11.1/mingw53_32/mkspecs/modules/qt_lib_charts.pri:
+../../../QT/5.11.1/mingw53_32/mkspecs/modules/qt_lib_charts_private.pri:
 ../../../QT/5.11.1/mingw53_32/mkspecs/modules/qt_lib_concurrent.pri:
 ../../../QT/5.11.1/mingw53_32/mkspecs/modules/qt_lib_concurrent_private.pri:
 ../../../QT/5.11.1/mingw53_32/mkspecs/modules/qt_lib_core.pri:
@@ -394,6 +399,7 @@ Makefile: ../SBSystemBackup/SBSystemBackup.pro ../../../QT/5.11.1/mingw53_32/mks
 ../../../QT/5.11.1/mingw53_32/mkspecs/features/lex.prf:
 ../SBSystemBackup/SBSystemBackup.pro:
 ../../../QT/5.11.1/mingw53_32/lib/qtmaind.prl:
+../../../QT/5.11.1/mingw53_32/lib/Qt5Charts.prl:
 ../../../QT/5.11.1/mingw53_32/lib/Qt5Widgets.prl:
 ../../../QT/5.11.1/mingw53_32/lib/Qt5Gui.prl:
 ../../../QT/5.11.1/mingw53_32/lib/Qt5Sql.prl:

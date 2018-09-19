@@ -72,7 +72,7 @@ public:
     void retranslateUi(QMainWindow *AdminFuntionList)
     {
         AdminFuntionList->setWindowTitle(QApplication::translate("AdminFuntionList", "MainWindow", nullptr));
-        vieworder->setText(QApplication::translate("AdminFuntionList", "\346\237\245\350\257\242\350\256\242\345\215\225", nullptr));
+        vieworder->setText(QApplication::translate("AdminFuntionList", "\346\237\245\347\234\213\346\211\200\346\234\211\350\256\242\345\215\225", nullptr));
         allsite->setText(QApplication::translate("AdminFuntionList", "\346\211\200\346\234\211\346\231\257\347\202\271", nullptr));
         orderinfo->setText(QApplication::translate("AdminFuntionList", "\347\273\237\350\256\241\350\256\242\345\215\225\344\277\241\346\201\257", nullptr));
         addsite->setText(QApplication::translate("AdminFuntionList", "\346\267\273\345\212\240\346\231\257\347\202\271", nullptr));

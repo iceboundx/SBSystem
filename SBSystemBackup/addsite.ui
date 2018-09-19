@@ -690,26 +690,6 @@
       <string>适合人群</string>
      </property>
     </widget>
-    <widget class="QLineEdit" name="id">
-     <property name="geometry">
-      <rect>
-       <x>160</x>
-       <y>70</y>
-       <width>231</width>
-       <height>41</height>
-      </rect>
-     </property>
-    </widget>
-    <widget class="QLineEdit" name="name">
-     <property name="geometry">
-      <rect>
-       <x>160</x>
-       <y>20</y>
-       <width>231</width>
-       <height>41</height>
-      </rect>
-     </property>
-    </widget>
     <widget class="QLineEdit" name="dis_name">
      <property name="geometry">
       <rect>
@@ -780,6 +760,21 @@
        <height>31</height>
       </rect>
      </property>
+    </widget>
+    <widget class="QSplitter" name="splitter">
+     <property name="geometry">
+      <rect>
+       <x>160</x>
+       <y>20</y>
+       <width>221</width>
+       <height>91</height>
+      </rect>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <widget class="QLineEdit" name="name"/>
+     <widget class="QLineEdit" name="id"/>
     </widget>
    </widget>
   </widget>

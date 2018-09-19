@@ -7,9 +7,13 @@ AdminFuntionList::AdminFuntionList(QWidget *parent) :
     ui(new Ui::AdminFuntionList)
 {
     ui->setupUi(this);
+    AdminCount =new admincount(this);
+    AdminCount->hide();
    // Allsite = new allsite(this);
     Addsite = new addsite(this);
     Admininfo = new admininfo(this);
+    OrderList = new orderlist(this);
+
   //  connect(Allsite,SIGNAL(hide_now()),this,SLOT(reshow()));
    // connect(Admininfo,SIGNAL(hide_now()),this,SLOT(reshow()));
 }
@@ -56,5 +60,12 @@ void AdminFuntionList::reshow()
 
 void AdminFuntionList::on_vieworder_clicked()
 {
+    OrderList->send_info(1);
+    OrderList->show();
+}
 
+void AdminFuntionList::on_orderinfo_clicked()
+{
+    AdminCount->send_info();
+    AdminCount->show();
 }

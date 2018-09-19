@@ -46,6 +46,17 @@ bool SBSmanager::is_in(QDateTime vis_time, t_lim lim)
     return is_in(nnow,ll,rr);
 }
 
+bool SBSmanager::same_lim(QString site_id, QDateTime a, QDateTime b)
+{
+    site now=get_site(site_id);
+    for(int i=0;i<now.lim.size();i++)
+    {
+        t_lim l=now.lim.at(i);
+        if(is_in(a,l)&&is_in(b,l))return 1;
+    }
+    return 0;
+}
+
 bool SBSmanager::is_in(QDateTime now, QDateTime l, QDateTime r)
 {
     if(l<r)
@@ -58,7 +69,14 @@ int SBSmanager::get_site_num(QString site_id, QDateTime vis_time)
     site now=get_site(site_id);
     int ans=0;
     for(int i=0;i<order_que.size();i++)
-        if(order_que.at(i).site_id==site_id)ans+=order_que.at(i).num;
+    {
+        if(order_que.at(i).site_id==site_id)
+        {
+            if(!same_lim(site_id,vis_time,order_que.at(i).vis_time))continue;//两段是否在一段时间限制中
+            if(vis_time.date()!=order_que.at(i).vis_time.date())continue;
+            ans+=order_que.at(i).num;
+        }
+    }
     qDebug()<<"ans "<<ans;
     for(int i=0;i<(int)now.lim.size();i++)
     {
@@ -121,6 +139,19 @@ bool SBSmanager::reg(admin user)
     return db->insert(buf,"admin");
 }
 
+tourist SBSmanager::get_tour_by_id(QString id)
+{
+    QVariantList buf=db->search("id",id,"tourist",7);
+    tourist ret;ret.id="";
+    if(buf.size()==0)return ret;
+    ret.id=buf.at(0).toString();
+    ret.num=buf.at(3).toInt();
+    ret.age_low=buf.at(4).toInt();
+    ret.age_max=buf.at(5).toInt();
+    ret.phone=buf.at(6).toString();
+    return ret;
+}
+
 bool SBSmanager::reg(tourist user)
 {
     if(db->exist("id",user.id,"tourist"))return 0;
@@ -179,6 +210,95 @@ QList<site> SBSmanager::get_all_site()
 bool SBSmanager::is_admin() const
 {
     return Is_admin;
+}
+
+int SBSmanager::get_season_num(QString site_id,QString str)
+{
+    int ret=0;
+    QDateTime l,r;
+    l=QDateTime::fromString("2000:01:01","yyyy:MM:dd");
+    if(str=="春")l=l.addMonths(2),r=l.addMonths(3);
+    else if(str=="夏")l=l.addMonths(5),r=l.addMonths(3);
+    else if(str=="秋")l=l.addMonths(8),r=l.addMonths(3);
+    else l=l.addMonths(11),r=QDateTime::fromString("2000:03:01","yyyy:MM:dd");;
+    QList<order>o_buf=get_every_order();
+    for(int i=0;i<o_buf.size();i++)
+    {
+        order now=o_buf.at(i);
+        for(int j=0;j<now.o_site.size();j++)
+        {
+            QString now_id=now.o_site.at(j).site_id;
+            if(now_id!=site_id)continue;
+            QDateTime tep=now.o_site.at(j).vis_time;
+            if(tep>QDateTime::currentDateTime())continue;
+            tep=QDateTime::fromString("2000:"+tep.date().toString("MM:dd"),"yyyy:MM:dd");
+            qDebug()<<tep<<" "<<l<<" "<<r;
+            if(is_in(tep,l,r))
+            ret+=now.o_site.at(j).num;
+        }
+    }
+    return ret;
+}
+
+double SBSmanager::get_profit(QString site_id)
+{
+    QList<order>o_buf=get_every_order();
+    double ret=0;
+    for(int i=0;i<o_buf.size();i++)
+    {
+        order now=o_buf.at(i);
+        if(now.order_time.addYears(1)<QDateTime::currentDateTime())continue;//一年前订单
+        if(now.order_time>QDateTime::currentDateTime().addYears(1))continue;//一年后订单
+        for(int j=0;j<now.o_site.size();j++)
+        {
+            QString now_id=now.o_site.at(j).site_id;
+            if(now.id!=site_id)continue;
+            ret+=now.o_site.at(j).price*now.o_site.at(j).num;
+        }
+    }
+    return ret-get_site(site_id).ma_price;
+}
+
+int SBSmanager::get_people_num(QString site_id)
+{
+    int ret=0;
+    QList<order>o_buf=get_every_order();
+    for(int i=0;i<o_buf.size();i++)
+    {
+        order now=o_buf.at(i);
+        for(int j=0;j<now.o_site.size();j++)
+        {
+            QString now_id=now.o_site.at(j).site_id;
+            if(now_id!=site_id)continue;
+            if(now.o_site.at(j).vis_time<QDateTime::currentDateTime())
+            ret+=now.o_site.at(j).num;
+        }
+    }
+    return ret;
+}
+
+QList<int> SBSmanager::get_age(QString site_id)
+{
+    QList<int>ret;
+    //0~10 11~20 21~30 31~40 41~50 51~60 61~70 71~80 81~90=
+    for(int i=0;i<9;i++)ret.append(0);
+    order_buf=get_all_order();
+    for(int i=0;i<order_buf.size();i++)
+    {
+        order now=order_buf.at(i);
+        tourist now_tour=get_tour_by_id(now.tour_id);
+        for(int j=0;j<now.o_site.size();j++)
+        {
+            int l=(now_tour.age_low/10)*10;
+            int r=(now_tour.age_max/10)*10;
+            qDebug()<<l<<" "<<r;
+            for(int k=l;k<=r;k++)
+            {
+                ret[k/10]+=(now.o_site.at(j).num/(r-l+1)+1);
+            }
+        }
+    }
+    return ret;
 }
 
 bool SBSmanager::add_site(site now)
@@ -266,6 +386,8 @@ bool SBSmanager::del_order(QString order_id)
     if(now.order_time<now_time)return 0;
     if(!db->del(now.id,"sorder"))return 0;
     if(!db->del(now.id,"order_site"))return 0;
+    order_buf=get_all_order();
+    site_buf=get_all_site();
     return 1;
 }
 
@@ -290,15 +412,16 @@ int SBSmanager::add_order(order_site o_site)
 bool SBSmanager::set_order(QDateTime order_time)
 {
     QVariantList buf;
-    QString id=now_id+order_time.toString(TIME_FM);
-    buf.append(id);buf.append(now_id);buf.append(order_time.toString(TIME_FM));
+    qDebug()<<"add order "<<order_time;
+    QString id=now_id+order_time.toString("yyyy:MM:dd:hh:mm:ss");
+    buf.append(id);buf.append(now_id);buf.append(order_time.toString("yyyy:MM:dd:hh:mm:ss"));
     if(!db->insert(buf,"sorder"))return 0;
     for(int i=0;i<(int)order_que.size();i++)
     {
         buf.clear();
         buf.append(id);
         buf.append(order_que.at(i).site_id);
-        buf.append(order_que.at(i).vis_time);
+        buf.append(order_que.at(i).vis_time.toString(TIME_FM));
         buf.append(order_que.at(i).num);
         buf.append(order_que.at(i).type);
         buf.append(order_que.at(i).price);
@@ -483,7 +606,9 @@ QList<site> SBSmanager::filter_site(QList<site> site_buf, int type, QString str)
                 if(qrand()%5)cnt[now_area]++;
             }
         }
+        qDebug()<<buf.size();
         qSort(buf.begin(),buf.end(),[cnt](site a,site b){return cnt[a.area]>cnt[b.area];});
+        buf[0].is_re=1;
         return buf;
     }
     else if(type==7)//访问人数
@@ -507,45 +632,18 @@ QList<site> SBSmanager::filter_site(QList<site> site_buf, int type, QString str)
     else if(type==8)//今年利润
     {
         buf=site_buf;
-        QList<order>o_buf=get_every_order();
         QMap<QString,double>cnt;
-        for(int i=0;i<o_buf.size();i++)
-        {
-            order now=o_buf.at(i);
-            if(now.order_time.addYears(1)<QDateTime::currentDateTime())continue;//一年前订单
-            if(now.order_time>QDateTime::currentDateTime().addYears(1))continue;//一年后订单
-            for(int j=0;j<now.o_site.size();j++)
-            {
-                QString now_id=now.o_site.at(j).site_id;
-                cnt[now_id]+=now.o_site.at(j).price;
-            }
-        }
+        for(int i=0;i<buf.size();i++)
+            cnt[buf.at(i).id]=get_profit(buf.at(i).id);
         qSort(buf.begin(),buf.end(),[cnt](site a,site b){return cnt[a.id]-1.0*a.ma_price>cnt[b.id]-1.0*b.ma_price;});
         return buf;
     }
     else if(type==9)//季节排序
     {
-        QDateTime l,r;
-        l=r=QDateTime::currentDateTime();
-        l=QDateTime::fromString(l.toString("yyyy")+":01:01","yyyy:MM:dd");
-        if(str=="春")l=l.addMonths(3),r=l.addMonths(2);
-        else if(str=="夏")l=l.addMonths(6),r=l.addMonths(2);
-        else if(str=="秋")l=l.addMonths(9),r=l.addMonths(2);
-        else l=l.addMonths(12),r=r.addMonths(2);
         buf=site_buf;
-        QList<order>o_buf=get_every_order();
         QMap<QString,int>cnt;
-        for(int i=0;i<o_buf.size();i++)
-        {
-            order now=o_buf.at(i);
-            for(int j=0;j<now.o_site.size();j++)
-            {
-                QString now_id=now.o_site.at(j).site_id;
-                QDateTime tep=now.o_site.at(j).vis_time;
-                if(is_in(tep,l,r))
-                cnt[now_id]+=now.o_site.at(j).num;
-            }
-        }
+        for(int i=0;i<site_buf.size();i++)
+        cnt[site_buf.at(i).id]=get_season_num(site_buf.at(i).id,str);
         qSort(buf.begin(),buf.end(),[cnt](site a,site b){return cnt[a.id]>cnt[b.id];});
         return buf;
     }
@@ -553,7 +651,7 @@ QList<site> SBSmanager::filter_site(QList<site> site_buf, int type, QString str)
 
 int SBSmanager::get_now_site_num(QString site_id,QDateTime vis_time, t_lim lim)
 {
-    QString year=vis_time.toString("yyyy");
+    QString year=vis_time.toString("yyyy:");
     QDateTime l=QDateTime::fromString(year+lim.begin.toString("MM:dd:HH:mm"),TIME_FM);
     QDateTime r=QDateTime::fromString(year+lim.end.toString("MM:dd:HH:mm"),TIME_FM);
     int ret=lim.lim;
@@ -563,6 +661,8 @@ int SBSmanager::get_now_site_num(QString site_id,QDateTime vis_time, t_lim lim)
         for(int j=0;j<(int)now.o_site.size();j++)
         {
             if(now.o_site.at(j).site_id!=site_id)continue;
+            qDebug()<<now.o_site.at(j).vis_time.date()<<" xxx "<<vis_time.date();
+            if(now.o_site.at(j).vis_time.date()!=vis_time.date())continue;
             if(is_in(now.o_site.at(j).vis_time,l,r))ret-=now.o_site.at(j).num;
         }
     }
@@ -580,7 +680,7 @@ QList<order> SBSmanager::get_all_order()
         now.tour_id=buf.at(i+1).toString();
         if(!Is_admin&&now.tour_id!=now_id)continue;
         now.id=buf.at(i).toString();
-        now.order_time==QDateTime::fromString(buf.at(i+2).toString(),TIME_FM);
+        now.order_time=QDateTime::fromString(buf.at(i+2).toString(),"yyyy:MM:dd:hh:mm:ss");
         QVariantList o_buf;
         o_buf=db->search("id",now.id,"order_site",6);
         for(int j=0;j<(int)o_buf.size();j+=6)

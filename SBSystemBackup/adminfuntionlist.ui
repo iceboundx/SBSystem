@@ -30,7 +30,7 @@
      </font>
     </property>
     <property name="text">
-     <string>查询订单</string>
+     <string>查看所有订单</string>
     </property>
    </widget>
    <widget class="QPushButton" name="allsite">

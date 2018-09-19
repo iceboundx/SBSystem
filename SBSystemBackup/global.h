@@ -18,7 +18,10 @@
 #include <QPushButton>
 #include <QPlainTextEdit>
 #include <QMessageBox>
+#include <QtCharts/QChart>
+#include <QtCharts/QPieSeries>
 #include "sbsmanager.h"
+
 extern SBSmanager *man;
 //int back;
 extern site empty_site;

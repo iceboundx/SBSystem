@@ -5,7 +5,8 @@
 #include "allsite.h"
 #include "addsite.h"
 #include "admininfo.h"
-
+#include "orderlist.h"
+#include "admincount.h"
 namespace Ui {
 class AdminFuntionList;
 }
@@ -27,11 +28,15 @@ private slots:
     void reshow();
     void on_vieworder_clicked();
 
+    void on_orderinfo_clicked();
+
 private:
     Ui::AdminFuntionList *ui;
     allsite *Allsite;
     addsite *Addsite;
     admininfo *Admininfo;
+    orderlist *OrderList;
+    admincount *AdminCount;
 };
 
 #endif // ADMINFUNTIONLIST_H

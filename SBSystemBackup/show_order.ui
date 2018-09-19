@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>390</width>
+    <width>456</width>
     <height>100</height>
    </rect>
   </property>
@@ -18,14 +18,14 @@
     <rect>
      <x>10</x>
      <y>0</y>
-     <width>161</width>
+     <width>191</width>
      <height>71</height>
     </rect>
    </property>
    <property name="font">
     <font>
      <family>微软雅黑</family>
-     <pointsize>14</pointsize>
+     <pointsize>13</pointsize>
     </font>
    </property>
    <property name="acceptDrops">
@@ -41,7 +41,7 @@
   <widget class="QLabel" name="time">
    <property name="geometry">
     <rect>
-     <x>50</x>
+     <x>80</x>
      <y>70</y>
      <width>291</width>
      <height>16</height>
@@ -59,7 +59,7 @@
   <widget class="QLabel" name="all_price">
    <property name="geometry">
     <rect>
-     <x>250</x>
+     <x>300</x>
      <y>40</y>
      <width>131</width>
      <height>16</height>
@@ -77,10 +77,10 @@
   <widget class="QLabel" name="num">
    <property name="geometry">
     <rect>
-     <x>170</x>
+     <x>210</x>
      <y>40</y>
-     <width>72</width>
-     <height>15</height>
+     <width>91</width>
+     <height>20</height>
     </rect>
    </property>
    <property name="font">
@@ -95,7 +95,7 @@
   <widget class="QLabel" name="type">
    <property name="geometry">
     <rect>
-     <x>170</x>
+     <x>210</x>
      <y>20</y>
      <width>81</width>
      <height>16</height>
@@ -113,7 +113,7 @@
   <widget class="QLabel" name="pe_price">
    <property name="geometry">
     <rect>
-     <x>250</x>
+     <x>300</x>
      <y>20</y>
      <width>151</width>
      <height>16</height>

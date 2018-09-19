@@ -6,7 +6,7 @@
 
 QT       += core gui
 QT       += sql
-
+QT       += charts
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 TARGET = SBSystemBackup
@@ -42,7 +42,13 @@ SOURCES += \
     sbsmanager.cpp \
     show_site.cpp \
     getvistime.cpp \
-    show_order.cpp
+    show_order.cpp \
+    show_admin_site.cpp \
+    donutbreakdownchart.cpp \
+    mainslice.cpp \
+    moreadminsite.cpp \
+    admincount.cpp \
+    registtour.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -61,7 +67,13 @@ HEADERS += \
     global.h \
     show_site.h \
     getvistime.h \
-    show_order.h
+    show_order.h \
+    show_admin_site.h \
+    mainslice.h \
+    donutbreakdownchart.h \
+    moreadminsite.h \
+    admincount.h \
+    registtour.h
 
 FORMS += \
         mainwindow.ui \
@@ -77,6 +89,10 @@ FORMS += \
     onesite.ui \
     show_site.ui \
     getvistime.ui \
-    show_order.ui
+    show_order.ui \
+    show_admin_site.ui \
+    moreadminsite.ui \
+    admincount.ui \
+    registtour.ui
 
 DISTFILES +=

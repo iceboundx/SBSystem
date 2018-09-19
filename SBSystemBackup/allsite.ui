@@ -31,11 +31,17 @@
     <property name="text">
      <string>有票</string>
     </property>
+    <property name="checked">
+     <bool>false</bool>
+    </property>
+    <property name="tristate">
+     <bool>false</bool>
+    </property>
    </widget>
    <widget class="QCheckBox" name="discount">
     <property name="geometry">
      <rect>
-      <x>210</x>
+      <x>300</x>
       <y>130</y>
       <width>91</width>
       <height>21</height>
@@ -96,7 +102,7 @@
      <string>按地区搜索</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit">
+   <widget class="QLineEdit" name="search">
     <property name="geometry">
      <rect>
       <x>120</x>
@@ -157,11 +163,11 @@
      <string>结算</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="save_order_2">
+   <widget class="QPushButton" name="clear_o_list">
     <property name="geometry">
      <rect>
       <x>910</x>
-      <y>520</y>
+      <y>530</y>
       <width>161</width>
       <height>31</height>
      </rect>
@@ -179,7 +185,7 @@
    <widget class="QLabel" name="time_La">
     <property name="geometry">
      <rect>
-      <x>280</x>
+      <x>230</x>
       <y>10</y>
       <width>511</width>
       <height>31</height>
@@ -209,6 +215,63 @@
     </property>
     <property name="editTriggers">
      <set>QAbstractItemView::NoEditTriggers</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton">
+    <property name="geometry">
+     <rect>
+      <x>750</x>
+      <y>10</y>
+      <width>131</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>等线</family>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>修改出游时间</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="sort_by">
+    <property name="geometry">
+     <rect>
+      <x>500</x>
+      <y>130</y>
+      <width>91</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string>推荐排序</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>价格排序</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>预订量排序</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QPushButton" name="pushButton_2">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>60</y>
+      <width>71</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>取消搜索</string>
     </property>
    </widget>
   </widget>

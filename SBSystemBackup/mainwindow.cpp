@@ -4,6 +4,7 @@
 #include "global.h"
 #include "touristfunctionlist.h"
 #include "adminfuntionlist.h"
+#include <QTextCursor>
 
 #define MIN_LEN 6
 #define MAX_LEN 10
@@ -16,7 +17,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->setupUi(this);
     touristfunction = new TouristFunctionList();
     adminfunction = new AdminFuntionList();
-
+    regtour=new RegistTour(this);
     ui->warn->hide();
     ui->warn_2->hide();
     ui->tprompt->hide();
@@ -37,7 +38,7 @@ void MainWindow::on_touristlogin_clicked()
 {
     struct tourist tou;
 
-    tou.id = ui->tusername->toPlainText();
+    tou.id = ui->tusername->text();
     tou.password = ui->tpasswd->text();
     qDebug()<<tou.id<<" "<<tou.password;
 
@@ -54,7 +55,7 @@ void MainWindow::on_touristlogin_clicked()
 void MainWindow::on_adminlogin_clicked()
 {
     struct admin ad;
-    ad.id = ui->ausername->toPlainText();
+    ad.id = ui->ausername->text();
     ad.password = ui->apasswd->text();
     qDebug()<<ad.id<<" "<<ad.password;
 
@@ -75,37 +76,19 @@ void MainWindow::on_cancel_2_clicked()
 
 void MainWindow::on_cancel_3_clicked()
 {
-    exit(0);
+    regtour->clear_all();
+    regtour->show();
 }
-
-//控制ID输入长度
-void MainWindow::on_tusername_textChanged()
-{
-    QString textContent;
-    textContent = ui->tusername->toPlainText();
-    int length = textContent.count();
-
-    if(length>MAX_LEN){
-        ui->tprompt->show();
-        int position;
-        position = ui->tusername->textCursor().position();
-        QTextCursor textCursor = ui->tusername->textCursor();
-        textContent.remove(position - (length - MAX_LEN), length - MAX_LEN);
-        ui->tusername->setText(textContent);
-        textCursor.setPosition(position - (length - MAX_LEN));
-        ui->tusername->setTextCursor(textCursor);
-    }
-
-}
-
 
 //控制ID输入长度
 void MainWindow::on_ausername_textChanged()
 {
     QString textContent;
-    textContent = ui->ausername->toPlainText();
+    textContent = ui->ausername->text();
     int length = textContent.count();
-    if(length>MAX_LEN){
+    if(length>=MIN_LEN&&length<MAX_LEN) ui->aprompt->hide();
+    else ui->aprompt->show();
+/*    if(length>MAX_LEN){
         ui->aprompt->show();
         int position;
         position = ui->ausername->textCursor().position();
@@ -114,5 +97,15 @@ void MainWindow::on_ausername_textChanged()
         ui->ausername->setText(textContent);
         textCursor.setPosition(position - (length - MAX_LEN));
         ui->ausername->setTextCursor(textCursor);
-    }
+    }*/
+}
+
+void MainWindow::on_tusername_textChanged(const QString &arg1)
+{
+    QString textContent;
+    textContent = ui->tusername->text();
+    int length = textContent.count();
+    if(length>=MIN_LEN&&length<MAX_LEN) ui->tprompt->hide();
+    else ui->tprompt->show();
+
 }

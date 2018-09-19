@@ -3,6 +3,8 @@
 
 #include <QMainWindow>
 #include "global.h"
+#include "ordersite.h"
+
 namespace Ui {
 class orderlist;
 }
@@ -14,15 +16,19 @@ class orderlist : public QMainWindow
 public:
     explicit orderlist(QWidget *parent = 0);
     ~orderlist();
-
-    void create_item( );
-
+    void send_info(bool is_admin);
+public slots:
+    void refresh();
 private slots:
 
-signals:
-    void hide_now();
+    void on_o_list_doubleClicked(const QModelIndex &index);
+
 private:
     Ui::orderlist *ui;
+    ordersite *OrderSite;
+    void admin_show();
+    void tour_show();
+    QList<order>order_list;
 };
 
 #endif // ORDERLIST_H

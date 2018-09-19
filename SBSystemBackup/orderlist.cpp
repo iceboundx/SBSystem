@@ -10,8 +10,8 @@ orderlist::orderlist(QWidget *parent) :
     ui(new Ui::orderlist)
 {
     ui->setupUi(this);
-
-    create_item();
+    OrderSite=new ordersite(this);
+    connect(OrderSite,SIGNAL(del_ok()),this,SLOT(refresh()));
 }
 
 orderlist::~orderlist()
@@ -19,26 +19,72 @@ orderlist::~orderlist()
     delete ui;
 }
 
-//单个订单
-void orderlist::create_item()
+void orderlist::send_info(bool is_admin)
 {
-    struct order orders;
-
-    QWidget *container = new QWidget;
-    QHBoxLayout *hLayout = new QHBoxLayout();
-    hLayout->addWidget(new QLabel(orders.id));
-//    hLayout->addWidget(new QDateTime(orders.order_time));
-//    hLayout->addWidget(new QList(orders.o_site));
-    hLayout->addWidget(new QPushButton("查看"));
-    container->setLayout(hLayout);
-
-    QListWidgetItem *item = new QListWidgetItem();
-    QSize size = item->sizeHint();
-    item->setSizeHint(QSize(size.width(),50));
-
-    ui->list->addItem(item);
-    container->setSizeIncrement(size.width(),20);
-    ui->list->setItemWidget(item,container);
+    qDebug()<<"重新获取";
+    order_list=man->get_every_order();
+    if(is_admin)
+    {
+        admin_show();
+    }
+    else tour_show();
 }
 
+void orderlist::refresh()
+{
+    send_info(man->is_admin());
+}
 
+void orderlist::admin_show()
+{
+    int cnt=ui->o_list->count();
+    for(int i=0;i<cnt;i++)
+    {
+       QListWidgetItem *item =ui->o_list->takeItem(0);
+       delete item;
+    }
+    for(int i=0;i<order_list.size();i++)
+    {
+        order now=order_list.at(i);
+        QString add="旅游团id: "+now.tour_id+"  预定时间: "+now.order_time.toString("yyyy年MM月dd日hh时mm分ss秒");
+        double price=0;
+        for(int j=0;j<now.o_site.size();j++)
+            price+=now.o_site.at(j).price*now.o_site.at(j).num;
+        add+=" 总价: "+QString::number(price);
+        ui->o_list->addItem(add);
+    }
+}
+
+void orderlist::tour_show()
+{
+    int cnt=ui->o_list->count();
+    for(int i=0;i<cnt;i++)
+    {
+       QListWidgetItem *item =ui->o_list->takeItem(0);
+       delete item;
+    }
+    for(int i=0;i<order_list.size();i++)
+    {
+        order now=order_list.at(i);
+        qDebug()<<now.order_time;
+        QString add="  预定时间: "+now.order_time.toString("yyyy年MM月dd日hh时mm分ss秒");
+        double price=0;
+        for(int j=0;j<now.o_site.size();j++)
+            price+=now.o_site.at(j).price*now.o_site.at(j).num;
+        add+=" 总价: "+QString::number(price);
+        if(now.o_site.size()>0)
+        add+=" 包含:"+man->get_site(now.o_site.at(0).site_id).name+"等景点";
+        ui->o_list->addItem(add);
+    }
+}
+
+//单个订单
+
+
+
+void orderlist::on_o_list_doubleClicked(const QModelIndex &index)
+{
+    int r=index.row();
+    OrderSite->send_info(order_list.at(r));
+    OrderSite->show();
+}

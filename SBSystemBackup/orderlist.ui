@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
+    <width>997</width>
     <height>600</height>
    </rect>
   </property>
@@ -14,33 +14,52 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QListWidget" name="list">
+   <widget class="QListWidget" name="o_list">
     <property name="geometry">
      <rect>
-      <x>70</x>
-      <y>110</y>
-      <width>651</width>
-      <height>401</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="seeall">
-    <property name="geometry">
-     <rect>
-      <x>70</x>
-      <y>30</y>
-      <width>111</width>
-      <height>31</height>
+      <x>20</x>
+      <y>100</y>
+      <width>961</width>
+      <height>421</height>
      </rect>
     </property>
     <property name="font">
      <font>
       <family>微软雅黑</family>
-      <pointsize>10</pointsize>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>410</x>
+      <y>20</y>
+      <width>211</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>等线</family>
+      <pointsize>18</pointsize>
      </font>
     </property>
     <property name="text">
-     <string>查看所有订单</string>
+     <string>所有订单如下</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>400</x>
+      <y>70</y>
+      <width>211</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>点击其中某项可以查看详细信息</string>
     </property>
    </widget>
   </widget>

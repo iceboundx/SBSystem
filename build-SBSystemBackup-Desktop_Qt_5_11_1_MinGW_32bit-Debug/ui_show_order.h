@@ -30,37 +30,37 @@ public:
     {
         if (show_order->objectName().isEmpty())
             show_order->setObjectName(QStringLiteral("show_order"));
-        show_order->resize(390, 100);
+        show_order->resize(456, 100);
         name = new QLabel(show_order);
         name->setObjectName(QStringLiteral("name"));
-        name->setGeometry(QRect(10, 0, 161, 71));
+        name->setGeometry(QRect(10, 0, 191, 71));
         QFont font;
         font.setFamily(QString::fromUtf8("\345\276\256\350\275\257\351\233\205\351\273\221"));
-        font.setPointSize(14);
+        font.setPointSize(13);
         name->setFont(font);
         name->setAcceptDrops(false);
         name->setWordWrap(true);
         time = new QLabel(show_order);
         time->setObjectName(QStringLiteral("time"));
-        time->setGeometry(QRect(50, 70, 291, 16));
+        time->setGeometry(QRect(80, 70, 291, 16));
         QFont font1;
         font1.setFamily(QString::fromUtf8("\347\255\211\347\272\277"));
         time->setFont(font1);
         all_price = new QLabel(show_order);
         all_price->setObjectName(QStringLiteral("all_price"));
-        all_price->setGeometry(QRect(250, 40, 131, 16));
+        all_price->setGeometry(QRect(300, 40, 131, 16));
         all_price->setFont(font1);
         num = new QLabel(show_order);
         num->setObjectName(QStringLiteral("num"));
-        num->setGeometry(QRect(170, 40, 72, 15));
+        num->setGeometry(QRect(210, 40, 91, 20));
         num->setFont(font1);
         type = new QLabel(show_order);
         type->setObjectName(QStringLiteral("type"));
-        type->setGeometry(QRect(170, 20, 81, 16));
+        type->setGeometry(QRect(210, 20, 81, 16));
         type->setFont(font1);
         pe_price = new QLabel(show_order);
         pe_price->setObjectName(QStringLiteral("pe_price"));
-        pe_price->setGeometry(QRect(250, 20, 151, 16));
+        pe_price->setGeometry(QRect(300, 20, 151, 16));
         pe_price->setFont(font1);
 
         retranslateUi(show_order);

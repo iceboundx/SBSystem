@@ -34,10 +34,10 @@ public:
     {
         if (show_site->objectName().isEmpty())
             show_site->setObjectName(QStringLiteral("show_site"));
-        show_site->resize(691, 90);
+        show_site->resize(705, 91);
         name = new QLabel(show_site);
         name->setObjectName(QStringLiteral("name"));
-        name->setGeometry(QRect(10, 0, 261, 41));
+        name->setGeometry(QRect(10, 0, 271, 41));
         QFont font;
         font.setFamily(QString::fromUtf8("\347\255\211\347\272\277"));
         font.setPointSize(19);
@@ -59,7 +59,7 @@ public:
         left->setFont(font1);
         price = new QLabel(show_site);
         price->setObjectName(QStringLiteral("price"));
-        price->setGeometry(QRect(280, 0, 161, 41));
+        price->setGeometry(QRect(280, 0, 181, 41));
         QFont font2;
         font2.setFamily(QString::fromUtf8("\345\276\256\350\275\257\351\233\205\351\273\221"));
         font2.setPointSize(15);

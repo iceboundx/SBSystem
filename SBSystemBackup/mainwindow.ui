@@ -454,21 +454,6 @@
      <attribute name="title">
       <string>Tourist</string>
      </attribute>
-     <widget class="QTextEdit" name="tusername">
-      <property name="geometry">
-       <rect>
-        <x>310</x>
-        <y>100</y>
-        <width>351</width>
-        <height>51</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <pointsize>12</pointsize>
-       </font>
-      </property>
-     </widget>
      <widget class="QLabel" name="label_5">
       <property name="geometry">
        <rect>
@@ -592,6 +577,11 @@
         <height>51</height>
        </rect>
       </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
      </widget>
      <widget class="QLabel" name="tprompt">
       <property name="geometry">
@@ -604,6 +594,27 @@
       </property>
       <property name="text">
        <string>用户名长度为6-10</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="tusername">
+      <property name="geometry">
+       <rect>
+        <x>310</x>
+        <y>110</y>
+        <width>351</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="maxLength">
+       <number>10</number>
+      </property>
+      <property name="cursorPosition">
+       <number>0</number>
       </property>
      </widget>
     </widget>
@@ -628,21 +639,6 @@
       </property>
       <property name="text">
        <string> 注册</string>
-      </property>
-     </widget>
-     <widget class="QTextEdit" name="ausername">
-      <property name="geometry">
-       <rect>
-        <x>320</x>
-        <y>110</y>
-        <width>351</width>
-        <height>51</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <pointsize>12</pointsize>
-       </font>
       </property>
      </widget>
      <widget class="QPushButton" name="adminlogin">
@@ -749,6 +745,11 @@
         <height>51</height>
        </rect>
       </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
      </widget>
      <widget class="QLabel" name="aprompt">
       <property name="geometry">
@@ -761,6 +762,24 @@
       </property>
       <property name="text">
        <string>用户名长度为6-10</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="ausername">
+      <property name="geometry">
+       <rect>
+        <x>320</x>
+        <y>110</y>
+        <width>351</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="maxLength">
+       <number>10</number>
       </property>
      </widget>
     </widget>

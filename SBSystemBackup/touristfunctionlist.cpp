@@ -14,6 +14,7 @@ TouristFunctionList::TouristFunctionList(QWidget *parent) :
     Orderlist = new orderlist(this);
     getVisTime=new getvistime(this);
     connect(getVisTime,SIGNAL(send_time(QDateTime)),this,SLOT(show_all_site(QDateTime)));
+    connect(Allsite,SIGNAL(change_time()),this,SLOT(show_change_time()));
    // connect(Allsite,SIGNAL(hide_now()),this,SLOT(reshow()));
    // connect(Touristinfo,SIGNAL(hide_now()),this,SLOT(reshow()));
    // connect(Orderlist,SIGNAL(hide_now()),this,SLOT(reshow()));
@@ -32,6 +33,12 @@ void TouristFunctionList::show_all_site(QDateTime vis_time)
     Allsite->get_time(vis_time);
     Allsite->show_info();
     Allsite->show();
+}
+
+void TouristFunctionList::show_change_time()
+{
+    getVisTime->init();
+    getVisTime->show();
 }
 
 //点击“所有景点”
@@ -56,6 +63,7 @@ void TouristFunctionList::on_info_clicked()
 //点击历史订单
 void TouristFunctionList::on_order_clicked()
 {
+    Orderlist->send_info(man->is_admin());
     Orderlist->show();
 }
 

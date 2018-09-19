@@ -20,6 +20,7 @@ public:
     ~TouristFunctionList();
 public slots:
     void show_all_site(QDateTime vis_time);
+    void show_change_time();
 private slots:
 
     void on_allsite_clicked();

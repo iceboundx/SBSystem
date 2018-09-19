@@ -17,6 +17,12 @@ INPUT(
 ./debug\show_site.o
 ./debug\getvistime.o
 ./debug\show_order.o
+./debug\show_admin_site.o
+./debug\donutbreakdownchart.o
+./debug\mainslice.o
+./debug\moreadminsite.o
+./debug\admincount.o
+./debug\registtour.o
 ./debug\moc_mainwindow.o
 ./debug\moc_touristfunctionlist.o
 ./debug\moc_adminfuntionlist.o
@@ -32,4 +38,9 @@ INPUT(
 ./debug\moc_show_site.o
 ./debug\moc_getvistime.o
 ./debug\moc_show_order.o
+./debug\moc_show_admin_site.o
+./debug\moc_mainslice.o
+./debug\moc_moreadminsite.o
+./debug\moc_admincount.o
+./debug\moc_registtour.o
 );

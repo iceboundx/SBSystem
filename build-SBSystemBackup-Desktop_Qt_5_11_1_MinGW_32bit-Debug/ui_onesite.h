@@ -67,7 +67,7 @@ public:
         centralwidget->setObjectName(QStringLiteral("centralwidget"));
         label_12 = new QLabel(centralwidget);
         label_12->setObjectName(QStringLiteral("label_12"));
-        label_12->setGeometry(QRect(70, 140, 91, 21));
+        label_12->setGeometry(QRect(30, 180, 91, 21));
         QFont font;
         font.setFamily(QString::fromUtf8("\345\276\256\350\275\257\351\233\205\351\273\221"));
         font.setPointSize(10);
@@ -86,7 +86,7 @@ public:
         label_13->setFont(font);
         name = new QLabel(centralwidget);
         name->setObjectName(QStringLiteral("name"));
-        name->setGeometry(QRect(70, 10, 321, 91));
+        name->setGeometry(QRect(20, 10, 451, 91));
         QFont font1;
         font1.setFamily(QString::fromUtf8("\345\276\256\350\275\257\351\233\205\351\273\221"));
         font1.setPointSize(25);

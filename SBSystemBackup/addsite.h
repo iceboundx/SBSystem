@@ -38,6 +38,8 @@ private slots:
 
     void on_date_end_userDateChanged(const QDate &date);
 
+    void on_price_list_itemDoubleClicked(QListWidgetItem *item);
+
 private:
     Ui::addsite *ui;
     timelim *Timelim;

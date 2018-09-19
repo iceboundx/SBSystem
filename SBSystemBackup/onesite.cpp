@@ -44,6 +44,7 @@ void onesite::get_info(site now_site,QDateTime v_time)
     ui->pricehigh->setText(QString::number(now_site.price_high));
     ui->pricelow->setText(QString::number(now_site.price_low));
     ui->level->setText(QString::number(now_site.level)+"级");
+    ui->dis_type->clear();
     ui->dis_type->addItem("普通票");
     for(int i=0;i<now_site.dis.size();i++)
         ui->dis_type->addItem(now_site.dis.at(i).type);
@@ -81,6 +82,7 @@ void onesite::on_buy_num_valueChanged(int arg1)
 
 void onesite::on_dis_type_currentIndexChanged(int index)
 {
+    if(index<0)return;
     get_price();
 }
 
@@ -92,6 +94,7 @@ void onesite::on_add_clicked()
     o_site.type=ui->dis_type->currentText();
     o_site.vis_time=vis_time;
     o_site.num=ui->buy_num->text().toInt();
+    qDebug()<<"vis time "<<o_site.vis_time;
     if(o_site.num==0)
     {
         QMessageBox::about(this,"失败","没票啦！");

@@ -16,6 +16,8 @@ addsite::addsite(QWidget *parent) :
     double_v->setNotation(QDoubleValidator::StandardNotation);
     ui->dis_num->setValidator(double_v);
     ui->id->setMaxLength(ID_LEN);
+    QIntValidator *int_q=new QIntValidator(0,999999,ui->id);
+    ui->id->setValidator(int_q);
     ui->name->setMaxLength(R_LEN);
     ui->area->setMaxLength(R_LEN);
     ui->dis_name->setMaxLength(4);
@@ -186,4 +188,18 @@ void addsite::on_saveprice_clicked()
     ui->dis_name->clear();
     ui->dis_num->clear();
 
+}
+
+void addsite::on_price_list_itemDoubleClicked(QListWidgetItem *item)
+{
+    int row=ui->price_list->currentRow();
+    ui->price_list->takeItem(row);
+
+    QList<discount> buf;
+
+    for(int i=0;i<now_site.dis.size();i++){
+        if(i==row)continue;
+        buf.append(now_site.dis.at(i));
+    }
+    now_site.dis=buf;
 }

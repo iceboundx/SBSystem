@@ -31,14 +31,31 @@ private slots:
 
     void on_back_clicked();
 
+    void on_clear_o_list_clicked();
+
+    void on_save_order_clicked();
+
+    void on_pushButton_clicked();
+
+    void on_sort_by_currentIndexChanged(int index);
+
+    void on_name_s_clicked();
+
+    void on_area_s_clicked();
+
+    void on_pushButton_2_clicked();
+
 signals:
     void hide_now();
+    void change_time();
 private:
     Ui::allsite *ui;
     void create_item(site sites);
     void create_item(order_site o_site);
+    void fl_info();
     QDateTime vis_time;
-
+    QList<site>all_site;
+    int search_type;
 };
 
 #endif // ALLSITE_H

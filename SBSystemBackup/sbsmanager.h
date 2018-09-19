@@ -87,6 +87,7 @@ public:
     explicit SBSmanager(QString db_name,QObject *parent = nullptr);
     bool login(QString id,QString password,bool is_admin);
     bool reg(admin user);
+    tourist get_tour_by_id(QString id);
     bool reg(tourist user);
     bool add_site(site now);
     bool del_site(QString site_id);
@@ -111,6 +112,10 @@ public:
     int get_site_num(QString site_id, QDateTime vis_time);
     bool is_in(QDateTime now,QDateTime l,QDateTime r);
     bool is_admin() const;
+    int get_season_num(QString site_id,QString str);
+    double get_profit(QString site_id);
+    int get_people_num(QString site_id);
+    QList<int>get_age(QString site_id);
 signals:
 
 public slots:
@@ -133,6 +138,7 @@ private:
     int get_now_site_num(QString site_id,QDateTime vis_time,t_lim lim);
     bool is_in(QDateTime vis_time,t_lim lim);
     int get_already_site_num(QString site_id);
+    bool same_lim(QString site_id,QDateTime a,QDateTime b);
     QList<order_site>get_o_site_que();
     QList<order>get_all_order();
     QList<site> get_all_site();
