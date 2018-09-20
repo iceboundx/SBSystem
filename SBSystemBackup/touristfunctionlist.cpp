@@ -13,11 +13,15 @@ TouristFunctionList::TouristFunctionList(QWidget *parent) :
     Touristinfo = new touristinfo(this);
     Orderlist = new orderlist(this);
     getVisTime=new getvistime(this);
+    Allsite->setWindowModality(Qt::WindowModal);
+    Orderlist->setWindowModality(Qt::WindowModal);
+    getVisTime->setWindowModality(Qt::WindowModal);
+    Touristinfo->setWindowModality(Qt::WindowModal);
     connect(getVisTime,SIGNAL(send_time(QDateTime)),this,SLOT(show_all_site(QDateTime)));
     connect(Allsite,SIGNAL(change_time()),this,SLOT(show_change_time()));
-   // connect(Allsite,SIGNAL(hide_now()),this,SLOT(reshow()));
-   // connect(Touristinfo,SIGNAL(hide_now()),this,SLOT(reshow()));
-   // connect(Orderlist,SIGNAL(hide_now()),this,SLOT(reshow()));
+    this->setWindowFlags(this->windowFlags()&~Qt::WindowMaximizeButtonHint);
+    this->setMaximumSize(this->size());
+    this->setMinimumSize(this->size());
 }
 
 TouristFunctionList::~TouristFunctionList()
@@ -31,6 +35,7 @@ TouristFunctionList::~TouristFunctionList()
 void TouristFunctionList::show_all_site(QDateTime vis_time)
 {
     Allsite->get_time(vis_time);
+    Allsite->refresh();
     Allsite->show_info();
     Allsite->show();
 }
@@ -70,4 +75,10 @@ void TouristFunctionList::on_order_clicked()
 void TouristFunctionList::reshow()
 {
     this->show();
+}
+
+void TouristFunctionList::on_pushButton_clicked()
+{
+    qApp->quit();
+    QProcess::startDetached(qApp->applicationFilePath(), QStringList());
 }

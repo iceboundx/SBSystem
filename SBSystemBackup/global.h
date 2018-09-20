@@ -21,8 +21,10 @@
 #include <QtCharts/QChart>
 #include <QtCharts/QPieSeries>
 #include "sbsmanager.h"
-
+#include <QProcess>
 extern SBSmanager *man;
 //int back;
 extern site empty_site;
+extern site init_site;
 extern order empty_order;
+extern QDateTime lst_vis_time;

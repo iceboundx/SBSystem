@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>注册旅行团</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QPushButton" name="pushButton">
@@ -251,9 +251,9 @@
    <widget class="QLabel" name="pro_id">
     <property name="geometry">
      <rect>
-      <x>40</x>
+      <x>20</x>
       <y>60</y>
-      <width>251</width>
+      <width>281</width>
       <height>21</height>
      </rect>
     </property>
@@ -265,7 +265,7 @@
      </font>
     </property>
     <property name="text">
-     <string>ID必须为大于6位并小于11位的数字</string>
+     <string>ID必须为大于6位并小于11位的数字或字母</string>
     </property>
    </widget>
    <widget class="QLabel" name="pro_pa">

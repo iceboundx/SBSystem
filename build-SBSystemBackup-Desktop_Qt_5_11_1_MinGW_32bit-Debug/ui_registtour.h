@@ -146,7 +146,7 @@ public:
 
     void retranslateUi(QMainWindow *RegistTour)
     {
-        RegistTour->setWindowTitle(QApplication::translate("RegistTour", "MainWindow", nullptr));
+        RegistTour->setWindowTitle(QApplication::translate("RegistTour", "\346\263\250\345\206\214\346\227\205\350\241\214\345\233\242", nullptr));
         pushButton->setText(QApplication::translate("RegistTour", "\347\241\256\345\256\232", nullptr));
         id->setText(QApplication::translate("RegistTour", "8888888", nullptr));
         passwd->setText(QApplication::translate("RegistTour", "1123213", nullptr));

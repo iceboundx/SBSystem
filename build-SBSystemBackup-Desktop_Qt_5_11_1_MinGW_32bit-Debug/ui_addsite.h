@@ -59,7 +59,6 @@ public:
     QLabel *label_16;
     QPushButton *saveprice;
     QPushButton *publish;
-    QPushButton *cancel;
     QPushButton *save;
     QLabel *disprompt;
     QComboBox *people;
@@ -226,10 +225,6 @@ public:
         font4.setFamily(QString::fromUtf8("\345\276\256\350\275\257\351\233\205\351\273\221"));
         font4.setPointSize(14);
         publish->setFont(font4);
-        cancel = new QPushButton(groupbox);
-        cancel->setObjectName(QStringLiteral("cancel"));
-        cancel->setGeometry(QRect(400, 700, 121, 41));
-        cancel->setFont(font1);
         save = new QPushButton(groupbox);
         save->setObjectName(QStringLiteral("save"));
         save->setGeometry(QRect(550, 700, 121, 41));
@@ -296,7 +291,7 @@ public:
 
     void retranslateUi(QMainWindow *addsite)
     {
-        addsite->setWindowTitle(QApplication::translate("addsite", "MainWindow", nullptr));
+        addsite->setWindowTitle(QApplication::translate("addsite", "\346\267\273\345\212\240\346\210\226\344\277\256\346\224\271\346\231\257\347\202\271", nullptr));
         groupbox->setTitle(QApplication::translate("addsite", "\346\267\273\345\212\240\346\231\257\347\202\271", nullptr));
         label_2->setText(QApplication::translate("addsite", "\346\231\257\347\202\271ID", nullptr));
         label->setText(QApplication::translate("addsite", "\346\231\257\347\202\271\345\220\215\347\247\260", nullptr));
@@ -319,7 +314,6 @@ public:
         label_16->setText(QApplication::translate("addsite", "(200\345\255\227\347\254\246\344\273\245\345\206\205)", nullptr));
         saveprice->setText(QApplication::translate("addsite", "\344\277\235\345\255\230", nullptr));
         publish->setText(QApplication::translate("addsite", "\345\217\221\345\270\203", nullptr));
-        cancel->setText(QApplication::translate("addsite", "\345\217\226\346\266\210", nullptr));
         save->setText(QApplication::translate("addsite", "\344\277\235\345\255\230\350\215\211\347\250\277", nullptr));
         disprompt->setText(QApplication::translate("addsite", "\345\277\205\351\241\273\344\270\2726\344\275\215\346\225\260\345\255\227", nullptr));
         people->setItemText(0, QApplication::translate("addsite", "\346\211\200\346\234\211\344\272\272", nullptr));

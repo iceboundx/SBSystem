@@ -100,6 +100,7 @@ public:
     void clear_lim();
     void change_admin(admin user,bool is_pa);
     void change_tourist(tourist user,bool is_pa);
+    QList<t_lim>get_lim_que() const;
     admin get_admin();
     tourist get_tourist();
     QList<site>get_every_site(QDateTime vis_time);
@@ -112,6 +113,7 @@ public:
     int get_site_num(QString site_id, QDateTime vis_time);
     bool is_in(QDateTime now,QDateTime l,QDateTime r);
     bool is_admin() const;
+    void change_site(site now_site);
     int get_season_num(QString site_id,QString str);
     double get_profit(QString site_id);
     int get_people_num(QString site_id);

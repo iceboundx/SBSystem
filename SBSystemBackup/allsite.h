@@ -21,6 +21,7 @@ public:
 
     void show_info();
     void get_time(QDateTime v_time);
+    void clear_sort();
 public slots:
     void refresh();
 private slots:
@@ -44,6 +45,8 @@ private slots:
     void on_area_s_clicked();
 
     void on_pushButton_2_clicked();
+
+    void on_o_list_doubleClicked(const QModelIndex &index);
 
 signals:
     void hide_now();

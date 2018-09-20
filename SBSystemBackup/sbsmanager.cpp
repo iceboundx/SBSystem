@@ -2,7 +2,7 @@
 
 SBSmanager::SBSmanager(QString db_name,QObject *parent) : QObject(parent)
 {
-    db=new SBSdatabase(db_name);
+    db=new SBSdatabase(db_name);//新建数据库
     Is_admin=0;
     if(!db->exist("name","tourist","sqlite_master"))//7
     db->create("tourist (id varchar(40) primary key, password varchar(35), salt varchar(16), num int, age_low int, age_max int, phone varchar(15))");
@@ -18,11 +18,11 @@ SBSmanager::SBSmanager(QString db_name,QObject *parent) : QObject(parent)
     db->create("sorder (id varchar(60) primary key, tourist_id varchar(35), order_time varchar(20))");
     if(!db->exist("name","order_site","sqlite_master"))//6
     db->create("order_site (id varchar(60) , site_id varchar(20), time_begin varchar(20), num int, type nvarchar(20), price float)");
-    site_buf=get_all_site();
+    site_buf=get_all_site();//set buffer
     order_buf=get_all_order();
 }
 
-QString SBSmanager::get_salt(int lenth)
+QString SBSmanager::get_salt(int lenth)//密码加盐
 {
     QString ret;
     for(int i=0;i<lenth;i++)
@@ -35,11 +35,13 @@ QString SBSmanager::get_salt(int lenth)
 
 bool SBSmanager::is_in(QDateTime vis_time, t_lim lim)
 {
+    //首先检查是否在同一个date时间段 2000年是闰年
     QDateTime l=QDateTime::fromString(lim.begin.toString("2000:MM:dd:HH:mm"),"yyyy:MM:dd:HH:mm");
     QDateTime r=QDateTime::fromString(lim.end.toString("2000:MM:dd:HH:mm"),"yyyy:MM:dd:HH:mm");
     QDateTime now=QDateTime::fromString(vis_time.toString("2000:MM:dd:HH:mm"),"yyyy:MM:dd:HH:mm");
     //qDebug()<<l.toString("MM:dd:HH:mm")<<" xx "<<r.toString("MM:dd:HH:mm");
     if(!is_in(now,l,r))return 0;
+    //检查是否在一个time时间段
     QDateTime ll=QDateTime::fromString(lim.begin.toString("2000:01:01:HH:mm"),"yyyy:MM:dd:HH:mm");
     QDateTime rr=QDateTime::fromString(lim.end.toString("2000:01:01:HH:mm"),"yyyy:MM:dd:HH:mm");
     QDateTime nnow=QDateTime::fromString(vis_time.toString("2000:01:01:HH:mm"),"yyyy:MM:dd:HH:mm");
@@ -83,7 +85,7 @@ int SBSmanager::get_site_num(QString site_id, QDateTime vis_time)
         qDebug()<<vis_time<<" "<<now.lim.at(i).begin<<" "<<now.lim.at(i).end;
         if(is_in(vis_time,now.lim.at(i)))
         {
-            qDebug()<<"catch";
+            qDebug()<<"catch";//这里写的太挫了。。。。
             return get_now_site_num(site_id,vis_time,now.lim.at(i))-ans;//注意是now!
         }
     }
@@ -170,7 +172,7 @@ QList<site> SBSmanager::get_all_site()
     for(int i=0;i<(int)buf.size();i+=13)
     {
        site now;
-       //at!!!
+       //at!!! 这写的太挫了。。。。
        now.id=buf[i].toString();
        now.name=buf[i+1].toString();
        now.profile=buf[i+2].toString();
@@ -212,16 +214,26 @@ bool SBSmanager::is_admin() const
     return Is_admin;
 }
 
+void SBSmanager::change_site(site now_site)
+{
+    del_site(now_site.id);
+    add_site(now_site);
+}
+
 int SBSmanager::get_season_num(QString site_id,QString str)
 {
     int ret=0;
     QDateTime l,r;
-    l=QDateTime::fromString("2000:01:01","yyyy:MM:dd");
-    if(str=="春")l=l.addMonths(2),r=l.addMonths(3);
-    else if(str=="夏")l=l.addMonths(5),r=l.addMonths(3);
-    else if(str=="秋")l=l.addMonths(8),r=l.addMonths(3);
-    else l=l.addMonths(11),r=QDateTime::fromString("2000:03:01","yyyy:MM:dd");;
-    QList<order>o_buf=get_every_order();
+    //这里小心区间不能重叠!
+    if(str=="春")
+        l=QDateTime::fromString("2000:03:02","yyyy:MM:dd"),r=QDateTime::fromString("2000:06:01","yyyy:MM:dd");
+    else if(str=="夏")
+        l=QDateTime::fromString("2000:06:02","yyyy:MM:dd"),r=QDateTime::fromString("2000:09:01","yyyy:MM:dd");
+    else if(str=="秋")
+        l=QDateTime::fromString("2000:09:02","yyyy:MM:dd"),r=QDateTime::fromString("2000:12:01","yyyy:MM:dd");
+    else
+        l=QDateTime::fromString("2000:12:02","yyyy:MM:dd"),r=QDateTime::fromString("2000:03:01","yyyy:MM:dd");
+    QList<order>o_buf=get_all_order();
     for(int i=0;i<o_buf.size();i++)
     {
         order now=o_buf.at(i);
@@ -230,7 +242,7 @@ int SBSmanager::get_season_num(QString site_id,QString str)
             QString now_id=now.o_site.at(j).site_id;
             if(now_id!=site_id)continue;
             QDateTime tep=now.o_site.at(j).vis_time;
-            if(tep>QDateTime::currentDateTime())continue;
+            //if(tep>QDateTime::currentDateTime())continue;
             tep=QDateTime::fromString("2000:"+tep.date().toString("MM:dd"),"yyyy:MM:dd");
             qDebug()<<tep<<" "<<l<<" "<<r;
             if(is_in(tep,l,r))
@@ -242,18 +254,22 @@ int SBSmanager::get_season_num(QString site_id,QString str)
 
 double SBSmanager::get_profit(QString site_id)
 {
-    QList<order>o_buf=get_every_order();
+    //利润只计算今年利润
+    QList<order>o_buf=get_all_order();
     double ret=0;
     for(int i=0;i<o_buf.size();i++)
     {
         order now=o_buf.at(i);
-        if(now.order_time.addYears(1)<QDateTime::currentDateTime())continue;//一年前订单
-        if(now.order_time>QDateTime::currentDateTime().addYears(1))continue;//一年后订单
+        qDebug()<<"nono";
         for(int j=0;j<now.o_site.size();j++)
         {
+            qDebug()<<"vistime "<<now.o_site.at(j).vis_time;
+            if(now.o_site.at(j).vis_time.addYears(1)<=QDateTime::currentDateTime())continue;//一年前订单
+            if(now.o_site.at(j).vis_time>=QDateTime::currentDateTime().addYears(1))continue;//一年后订单
             QString now_id=now.o_site.at(j).site_id;
-            if(now.id!=site_id)continue;
-            ret+=now.o_site.at(j).price*now.o_site.at(j).num;
+            if(now_id!=site_id)continue;
+            qDebug()<<now.o_site.at(j).price<<" qqq "<<now.o_site.at(j).num<<" "<<now.o_site.at(j).vis_time;
+            ret+=1.0*now.o_site.at(j).price*now.o_site.at(j).num;
         }
     }
     return ret-get_site(site_id).ma_price;
@@ -262,7 +278,7 @@ double SBSmanager::get_profit(QString site_id)
 int SBSmanager::get_people_num(QString site_id)
 {
     int ret=0;
-    QList<order>o_buf=get_every_order();
+    QList<order>o_buf=get_all_order();
     for(int i=0;i<o_buf.size();i++)
     {
         order now=o_buf.at(i);
@@ -280,30 +296,36 @@ int SBSmanager::get_people_num(QString site_id)
 QList<int> SBSmanager::get_age(QString site_id)
 {
     QList<int>ret;
-    //0~10 11~20 21~30 31~40 41~50 51~60 61~70 71~80 81~90=
-    for(int i=0;i<9;i++)ret.append(0);
-    order_buf=get_all_order();
+    //0~10 11~20 21~30 31~40 41~50 51~60 61~70 71~80 81~90
+    int s[11];memset(s,0,sizeof s);
     for(int i=0;i<order_buf.size();i++)
     {
         order now=order_buf.at(i);
-        tourist now_tour=get_tour_by_id(now.tour_id);
         for(int j=0;j<now.o_site.size();j++)
         {
+            if(now.o_site.at(j).site_id!=site_id)continue;
+            tourist now_tour=get_tour_by_id(now.tour_id);
             int l=(now_tour.age_low/10)*10;
             int r=(now_tour.age_max/10)*10;
             qDebug()<<l<<" "<<r;
-            for(int k=l;k<=r;k++)
+            int len=r-l==0?1:r-l;
+            for(int k=l;k<=r;k+=10)
             {
-                ret[k/10]+=(now.o_site.at(j).num/(r-l+1)+1);
-            }
+                qDebug()<<"tt "<<k<<" "<<k/10<<" "<<now.o_site.at(j).num;
+                //qDebug()<<ret.size()<<" "<<k/10<<" "<<len;
+                s[k/10]+=(now.o_site.at(j).num/len+1);
+            }//平均分布曲线
         }
     }
+    for(int i=0;i<10;i++)ret.append(s[i]);
+    qDebug()<<"ret ret!";
     return ret;
 }
 
 bool SBSmanager::add_site(site now)
 {
     if(db->exist("id",now.id,"site"))return 0;
+    if(db->exist("name",now.name,"site"))return 0;
     QVariantList buf;
     buf.append(now.id);
     buf.append(now.name);
@@ -336,8 +358,8 @@ bool SBSmanager::add_site(site now)
         buf.append(now.lim.at(i).lim);
         if(!db->insert(buf,"site_lim"))return 0;
     }
-    site_buf.clear();
-    site_buf=get_all_site();
+    site_buf.clear();site_buf=get_all_site();
+    order_buf.clear();order_buf=get_all_order();
     clear_lim();
     return 1;
 }
@@ -404,6 +426,21 @@ int SBSmanager::add_order(order_site o_site)
         QDateTime l2=o_site.vis_time,r2=l2.addSecs(now.time*60);
         if(r2<l1||r1<l2)continue;
         else return -1;
+    }
+    for(int i=0;i<order_buf.size();i++)
+    {
+        if(order_buf.at(i).tour_id!=now_id)continue;
+        order o_now=order_buf.at(i);
+        for(int i=0;i<o_now.o_site.size();i++)
+        {
+            if(o_now.o_site.at(i).site_id==o_site.site_id)continue;
+            site tep=get_site(o_now.o_site.at(i).site_id);
+            QDateTime l1=o_now.o_site.at(i).vis_time;
+            QDateTime r1=l1.addSecs(tep.time*60);
+            QDateTime l2=o_site.vis_time,r2=l2.addSecs(now.time*60);
+            if(r2<l1||r1<l2)continue;
+            else return -1;
+        }
     }
     order_que.append(o_site);
     return 1;
@@ -497,6 +534,11 @@ void SBSmanager::change_tourist(tourist user,bool is_pa)
     }
 }
 
+QList<t_lim> SBSmanager::get_lim_que() const
+{
+    return lim_que;
+}
+
 admin SBSmanager::get_admin()
 {
     QVariantList buf=db->search("id",now_id,"admin",5);
@@ -535,7 +577,15 @@ QList<site> SBSmanager::get_every_site(QDateTime vis_time)
 
 QList<order> SBSmanager::get_every_order()
 {
-    return order_buf;
+    if(is_admin())return order_buf;
+    QList<order>buf;
+    for(int i=0;i<order_buf.size();i++)
+    {
+        qDebug()<<order_buf.at(i).tour_id<<" "<<now_id;
+        if(order_buf.at(i).tour_id==now_id)
+            buf.append(order_buf.at(i));
+    }
+    return buf;
 }
 
 QList<site> SBSmanager::get_every_site()
@@ -551,6 +601,7 @@ QList<order_site> SBSmanager::get_order_que()
 QList<site> SBSmanager::filter_site(QList<site> site_buf, int type, QString str)
 {
     QList<site>buf;
+    if(site_buf.size()==0)return buf;
     if(type==0)
     return site_buf;
     else if(type==1)//搜名字
@@ -592,9 +643,13 @@ QList<site> SBSmanager::filter_site(QList<site> site_buf, int type, QString str)
     }
     else if(type==6)//推荐顺序
     {
-        //推荐
+        //推荐相同地区中预订量高的
         buf=site_buf;
-        QList<order>o_buf=get_every_order();
+        for(int i=0;i<buf.size();i++)
+        {
+            buf[i].is_re=0;//先都不推荐 避免多次添加出锅
+        }
+        QList<order>o_buf=get_every_order();//他自己的
         QMap<QString,int>cnt;
         for(int i=0;i<o_buf.size();i++)
         {
@@ -602,11 +657,10 @@ QList<site> SBSmanager::filter_site(QList<site> site_buf, int type, QString str)
             for(int j=0;j<now.o_site.size();j++)
             {
                 QString now_area=get_site(now.o_site.at(j).site_id).area;
-                cnt[now_area]++;
-                if(qrand()%5)cnt[now_area]++;
+                cnt[now_area]+=now.o_site.at(j).num;
+                if(qrand()%5)cnt[now_area]+=now.o_site.at(j).num/10;//随机乱蹦一下
             }
         }
-        qDebug()<<buf.size();
         qSort(buf.begin(),buf.end(),[cnt](site a,site b){return cnt[a.area]>cnt[b.area];});
         buf[0].is_re=1;
         return buf;
@@ -614,7 +668,7 @@ QList<site> SBSmanager::filter_site(QList<site> site_buf, int type, QString str)
     else if(type==7)//访问人数
     {
         buf=site_buf;
-        QList<order>o_buf=get_every_order();
+        QList<order>o_buf=get_all_order();
         QMap<QString,int>cnt;
         for(int i=0;i<o_buf.size();i++)
         {
@@ -635,7 +689,7 @@ QList<site> SBSmanager::filter_site(QList<site> site_buf, int type, QString str)
         QMap<QString,double>cnt;
         for(int i=0;i<buf.size();i++)
             cnt[buf.at(i).id]=get_profit(buf.at(i).id);
-        qSort(buf.begin(),buf.end(),[cnt](site a,site b){return cnt[a.id]-1.0*a.ma_price>cnt[b.id]-1.0*b.ma_price;});
+        qSort(buf.begin(),buf.end(),[cnt](site a,site b){return cnt[a.id]>cnt[b.id];});
         return buf;
     }
     else if(type==9)//季节排序
@@ -671,6 +725,7 @@ int SBSmanager::get_now_site_num(QString site_id,QDateTime vis_time, t_lim lim)
 
 QList<order> SBSmanager::get_all_order()
 {
+    //所有all都是从数据库获取
     QList<order>ret;
     QVariantList buf;
     buf=db->get_all("sorder",3);
@@ -678,7 +733,6 @@ QList<order> SBSmanager::get_all_order()
     {
         order now;
         now.tour_id=buf.at(i+1).toString();
-        if(!Is_admin&&now.tour_id!=now_id)continue;
         now.id=buf.at(i).toString();
         now.order_time=QDateTime::fromString(buf.at(i+2).toString(),"yyyy:MM:dd:hh:mm:ss");
         QVariantList o_buf;
@@ -697,7 +751,7 @@ QList<order> SBSmanager::get_all_order()
     }
     return ret;
 }
-QString SBSmanager::md5(QString text)
+QString SBSmanager::md5(QString text)//MD5哈希
 {
     QString MD5;
     QByteArray ba_md5;

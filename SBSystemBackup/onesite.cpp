@@ -10,9 +10,9 @@ onesite::onesite(QWidget *parent) :
     ui(new Ui::onesite)
 {
     ui->setupUi(this);
-
-    //显示景点信息
-
+    this->setWindowFlags(this->windowFlags()&~Qt::WindowMaximizeButtonHint);
+    this->setMaximumSize(this->size());
+    this->setMinimumSize(this->size());
 }
 
 onesite::~onesite()
@@ -20,13 +20,14 @@ onesite::~onesite()
     delete ui;
 }
 
+//
 void onesite::get_info(site now_site,QDateTime v_time)
 {
     Site=now_site;
     vis_time=v_time;
     ui->name->setText(now_site.name);
     ui->area->setText(now_site.area);
-    ui->time->setText(QString::number(now_site.time));
+    ui->time->setText(QString::number(now_site.time)+"分钟");
     ui->profile->setText(now_site.profile);
     qDebug()<<"agetype "<<now_site.age_type;
     if(now_site.age_type==0)
@@ -62,7 +63,7 @@ void onesite::get_price()
         disc=Site.dis.at(cindex-1).d_price;
     }
     if(disc!=1.0)
-    ui->cur_dis->setText("当前折扣为"+QString::number(disc*10));
+    ui->cur_dis->setText("当前折扣为"+QString::number(disc*10)+"折");
     else ui->cur_dis->setText("当前无折扣");
     double now_price=Site.price_high;
     QDateTime l=QDateTime::fromString("2000:"+Site.begin_time.toString("MM:dd"),"yyyy:MM:dd");

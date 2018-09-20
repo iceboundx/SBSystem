@@ -15,6 +15,10 @@ SBSdatabase::SBSdatabase(QString db_name)//数据库构造函数
         qDebug()<<"Database Opened";
         on_con=1;
     }
+    QString fst="PRAGMA synchronous = OFF";
+    QSqlQuery sql_query;
+    sql_query.prepare(fst);
+    if(sql_query.exec())qDebug()<<666;
 }
 
 bool SBSdatabase::is_connected() const
@@ -89,7 +93,6 @@ QVariantList SBSdatabase::search(QString name, QString info, QString table, int 
         {
             for(int i=0;i<value_size;i++)ret.append(sql_query.value(i));
         }
-        qDebug()<<"ok";
         return ret;
     }
 }
@@ -110,7 +113,6 @@ QVariantList SBSdatabase::get_all(QString table,int value_size)
         {
             for(int i=0;i<value_size;i++)ret.append(sql_query.value(i));
         }
-        qDebug()<<"ok";
         return ret;
     }
 }
